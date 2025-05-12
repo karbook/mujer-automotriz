@@ -15,9 +15,6 @@ ENV COMMIT_SHA=$COMMIT_SHA
 ARG OP_SERVICE_ACCOUNT_TOKEN
 ENV OP_SERVICE_ACCOUNT_TOKEN=$OP_SERVICE_ACCOUNT_TOKEN
 
-ARG OP_ENV
-ENV OP_ENV=$OP_ENV
-
 # 🔋 Install 1Password CLI dependencies and binary
 RUN apt-get update && apt-get install -y curl unzip jq && apt-get clean
 

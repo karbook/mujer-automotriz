@@ -43,14 +43,13 @@ export default function Hero() {
 							data-heading
 							className="animate-slide-top text-foreground xl:animate-slide-left mt-8 text-4xl font-medium [animation-delay:0.3s] [animation-fill-mode:backwards] md:text-5xl xl:mt-4 xl:text-6xl xl:[animation-delay:0.8s] xl:[animation-fill-mode:backwards]"
 						>
-							TEDI Stack
+							Mujer Automotriz
 						</h1>
 						<p
 							data-paragraph
 							className="animate-slide-top text-muted-foreground xl:animate-slide-left mt-6 text-xl/7 [animation-delay:0.8s] [animation-fill-mode:backwards] xl:mt-8 xl:text-xl/6 xl:leading-10 xl:[animation-delay:1s] xl:[animation-fill-mode:backwards]"
 						>
-							{t('TEDI stands for')} <b>T</b>echnology <b>E</b>ducation <b>D</b>iversity <b>I</b>
-							nnovation!
+							{t('Welcome')}
 						</p>
 					</div>
 					<ul className="mt-16 flex max-w-3xl flex-wrap justify-center gap-2 sm:gap-4 xl:mt-0 xl:grid xl:grid-flow-col xl:grid-cols-5 xl:grid-rows-6">
