@@ -18,5 +18,11 @@
 	"The page you are looking for doesn't exist or has been moved. Please go back to the homepage.": "The page you are looking for doesn't exist or has been moved. Please go back to the homepage.",
 	"There was an error, please try again later.": "There was an error, please try again later.",
 	"We can't find this page:": "We can't find this page:",
-	"Welcome": "Welcome"
+	"Welcome": "Welcome",
+	"Home": "Home",
+	"Events": "Eventos",
+	"Ambassadors":"Embajadores",
+	"Programs":"Programas",
+	"Sponsors":"Patrocinadores",
+	"Register":"Registrate"
 }

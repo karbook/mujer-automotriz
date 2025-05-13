@@ -17,7 +17,7 @@ export default defineConfig((config) => {
 	return {
 		sentryConfig,
 		server: {
-			open: true,
+			open: false,
 			// biome-ignore lint/nursery/noProcessEnv: <explanation>
 			port: Number(process.env.PORT) || 3000,
 		},

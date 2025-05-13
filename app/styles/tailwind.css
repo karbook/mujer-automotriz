@@ -93,6 +93,10 @@
 	--button-input-hover: var(--accent);
 	--button-input-active: var(--primary);
 
+    --button-black: #000000; 
+    --button-black-foreground: #ffffff;
+    --button-black-hover: #1a1a1a; 
+
 	/* POPOVER */
 	--popover: var(--card);
 	--popover-foreground: var(--card-foreground);

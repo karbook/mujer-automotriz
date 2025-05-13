@@ -45,8 +45,8 @@ const LanguageDropDown = () => {
 							src={'/images/flag/mx.svg'}
 							alt="logo"
 							className="mr-2"
-							width={27}
-							height={27}
+							width={47}
+							height={47}
 							loading="lazy"
 						/>
 						{t('Español')}
