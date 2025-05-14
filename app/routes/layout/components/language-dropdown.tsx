@@ -29,11 +29,12 @@ const LanguageDropDown = () => {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="ghost" size="icon">
+				<Button variant="ghost" size="icon" className="hover:bg-gray-200 rounded-full hover:text-black">
 					<Icon name="globe" />
 					<span className="sr-only">Language</span>
 				</Button>
 			</DropdownMenuTrigger>
+
 			<DropdownMenuContent align="start">
 				<DropdownMenuRadioGroup value={i18n.language} onValueChange={onValueChange}>
 					<DropdownMenuRadioItem
@@ -45,8 +46,8 @@ const LanguageDropDown = () => {
 							src={'/images/flag/mx.svg'}
 							alt="logo"
 							className="mr-2"
-							width={47}
-							height={47}
+							width={27}
+							height={27}
 							loading="lazy"
 						/>
 						{t('Español')}

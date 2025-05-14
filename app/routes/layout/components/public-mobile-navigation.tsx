@@ -1,4 +1,3 @@
-// CORE
 import { Link } from 'react-router'
 
 // UTILS
@@ -12,15 +11,39 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from '@/components/ui/
 import { Icon } from '@/components/ui/icon'
 import LanguageDropDown from './language-dropdown'
 import Logo from './logo'
+import { useColorScheme } from '@/routes/resource/color-scheme'
 
 export function MobileNavigation() {
 	const { t } = useTranslation()
+	const colorScheme = useColorScheme()
+
+	const COLOR_SCHEME_OPTIONS = [
+		{
+			value: 'light',
+			name: t('Light'),
+			bgColor: ' text-white', // Fondo blanco y texto negro para el tema claro
+			hoverColor: 'hover:bg-gray-200', // Fondo gris claro en hover para el tema claro
+		},
+		{
+			value: 'dark',
+			name: t('Dark'),
+			bgColor: 'bg-black text-white', // Fondo negro y texto blanco para el tema oscuro
+			hoverColor: 'hover:bg-gray-200', // Fondo gris oscuro en hover para el tema oscuro
+		},
+	]
+
+	const mode = colorScheme
+	const currentOption = COLOR_SCHEME_OPTIONS.find(option => option.value === mode)
 
 	return (
 		<Sheet>
 			<SheetTrigger asChild className="lg:hidden">
-				<Button variant="ghost" size="icon">
-					<Icon name="menu" />
+				<Button
+					variant="ghost"
+					size="icon"
+					className={`${currentOption?.bgColor} ${currentOption?.hoverColor} p-3 rounded-full transition-colors duration-200`} // Aplica el fondo y el hover
+				>
+					<Icon name="menu" className={mode === 'dark' ? 'text-white' : 'text-black'} />
 					<span className="sr-only">Menu</span>
 				</Button>
 			</SheetTrigger>

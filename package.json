@@ -66,6 +66,7 @@
 		"slick-carousel": "^1.8.1",
 		"source-map-support": "^0.5.21",
 		"spin-delay": "^2.0.1",
+		"swiper": "^11.2.6",
 		"tailwind-merge": "^3.3.0",
 		"tailwindcss": "^4.1.6",
 		"tailwindcss-radix": "^4.0.2",

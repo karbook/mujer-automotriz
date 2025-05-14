@@ -40,10 +40,13 @@ const buttonVariants = cva(
                     // CUSTOM STYLES OVERRIDE
                     'text-button-primary'
                 ),
-				black: cn(
-                    'bg-black text-white hover:bg-neutral-800', 
-                    'bg-[var(--button-black)] text-[var(--button-black-foreground)] hover:bg-[var(--button-black-hover)] font-bold rounded-xl'
-                  ),
+                black: cn(
+                    // Estilo de fondo en modo claro (gris oscuro) y modo oscuro (blanco)
+                    'bg-black text-white hover:bg-neutral-800',
+                    // Estilos para modo oscuro
+                    'dark:bg-white dark:text-black dark:hover:bg-neutral-300 dark:hover:text-black',
+                    'font-bold rounded-3xl'
+                ),
                 // CUSTOM VARIANTS
                 input: cn(
                     'bg-button-input text-button-input-foreground hover:bg-button-input-hover hover:text-accent-foreground border border-input-border justify-start text-left overflow-auto'

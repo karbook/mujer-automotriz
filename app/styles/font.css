@@ -87,3 +87,27 @@ etc...
 	line-gap-override: 0%;
 	size-adjust: 99.62%;
 }
+
+@font-face {
+	font-family: "Poppins-Light";
+	font-style: normal;
+	font-weight: light;
+	font-display: swap;
+	src: url("/fonts/poppins/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Poppins-Bold";
+	font-style: normal;
+	font-weight: bold;
+	font-display: swap;
+	src: url("/fonts/poppins/Poppins-Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: light;
+	font-display: swap;
+	src: url("/fonts/poppins/Inter-Variable.ttf") format("truetype");
+}

@@ -22,14 +22,19 @@
 
 :root {
 	--font-sans: nunito, nunito fallback;
+	--font-poppins: 'Poppins-Light', sans-serif;
+	--font-poppins-bold: 'Poppins-Bold', sans-serif;
+	--font-inter: 'Inter-Variable', sans-serif;
+
 	--radius: 0.5rem;
 
 	/* BRAND */
 	--brand: oklch(0.54 0.09244883852141651 194.7689479319638);
 
 	/* SHADCN/UI */
-	--background: oklch(0.95 0.0139 251.57);
-	--foreground: oklch(0.27 0.01295 229.4781);
+	--background: white; /* Aquí estamos asegurándonos que el fondo sea blanco en modo claro */
+	--foreground: oklch(0.27 0.01295 229.4781); /* Este sigue siendo el color de texto en claro */
+
 
 	--white: oklch(1 0 0);
 
@@ -104,46 +109,23 @@
 }
 
 .dark {
-	/* CORE */
-	--background: oklch(0.23 0.0238 256.85);
-	--foreground: oklch(0.96 0.0033 247.86);
+	/* Tema oscuro */
+	--background: black;
+	--foreground: white;
 
-	--muted: oklch(0.26 0.0288 256.85);
-	--muted-foreground: oklch(0.72 0.0247 248.17);
+	--muted: #1a1a1a;
+	--muted-foreground: #ccc;
 
-	--border: oklch(0.31 0.0306 256.84);
+	--border: #444;
 
-	/* ADJUST CORE BRAND COLORS */
-	--primary: oklch(0.61 0.122039 236.5594);
-	--primary-foreground: var(--white);
-	--secondary: oklch(0.53 0.0721 256.88);
-	--secondary-foreground: var(--white);
-	--accent: oklch(0.66 0.103 173.54);
-	--accent-foreground: var(--white);
+	--primary: white;
+	--primary-foreground: black;
 
-	/* SEMANTIC */
-	--success: oklch(0.68 0.1597 151.32);
-	--success-foreground: var(--primary-foreground);
+	--accent: #aaa;
+	--accent-foreground: black;
 
-	--warning: oklch(0.78 0.1417 71.7);
-	--warning-foreground: var(--primary-foreground);
-
-	--destructive: oklch(0.67 0.1668 22.7);
-	--destructive-foreground: var(--primary-foreground);
-
-	--info: oklch(0.72 0.1584 301.77);
-	--info-foreground: var(--primary-foreground);
-
-	/* BUTTON */
-	--button-input: oklch(0.31 0.0368 256.86);
-	--button-input-foreground: var(--foreground);
-	--button-input-hover: var(--accent);
-	--button-input-active: var(--primary);
-
-	/* OVERLAY */
-	--popover: var(--background);
-	--popover-foreground: var(--foreground);
-	--popover-border: var(--border);
+	--button-input: #1a1a1a;
+	--button-input-foreground: white;
 }
 
 @theme inline {
