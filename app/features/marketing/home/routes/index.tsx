@@ -8,7 +8,9 @@ import { remixI18Next } from '@/localization/i18n.server'
 // COMPONENTS
 import Hero from '../components/hero'
 import HeroDetailsSection from '../components/heroDetailsSection'
-import Footer from '../components/footer'
+import AboutMujerAutomotriz from '../components/aboutMujerAutomotriz'
+import CorporateSponsorships from '../components/corporateSponsorships'
+import SponsorsSection from '../components/sponsorsSection'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
 	const title = t('TEDI Stack | React Router, Bun, Hono, and much more')
@@ -20,11 +22,12 @@ export default function Index() {
 		<>
 			<Hero />
 			<HeroDetailsSection />
-			<Footer/>
+			<AboutMujerAutomotriz/>
+			<CorporateSponsorships/>
+			<SponsorsSection/>
 		</>
 	)
 }
-
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
 	return [{ title: data?.meta.title }]

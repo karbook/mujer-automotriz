@@ -24,7 +24,6 @@ export const logoVariants = cva('', {
 		},
 	},
 })
-
 export default function Logo({ redirect, className, variant, alt, colorScheme }: LogoProps) {
 	const preferredColorScheme = useColorScheme()
 	return (

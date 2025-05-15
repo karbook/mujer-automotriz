@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '@/components/ui/container'
+import { motion } from "framer-motion";
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -152,12 +153,21 @@ const Hero = () => {
         {/* Encabezado */}
         <header className=" top-0 z-10 bg-white dark:bg-black  py-4 w-full">
           <div className="text-center px-4">
-            {/* Título con degradado */}
-            <h1 className="text-4xl font-semibold leading-tight tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#2b8bf8] via-[#e14ecf] to-[#f57b4f] drop-shadow-md animate-fadeIn">
+            {/* Título con degradado mejorado y animación más fluida */}
+            <motion.h1
+              className="text-4xl md:text-6xl lg:text-6xl font-semibold leading-snug tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#1d76db] via-[#c33acb] to-[#ea5c35] opacity-90 drop-shadow-xl animate-fadeIn"
+              style={{ fontFamily: 'var(--font-inter), var(--font-poppins)' }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
               {t('Transforming the Automotive Industry in Mexico and Latin America towards greater diversity')}
-            </h1>
+            </motion.h1>
 
+            {/* Línea decorativa debajo del título */}
+            <div className="h-1 w-24 mx-auto bg-gradient-to-r from-[#2b8bf8] via-[#e14ecf] to-[#f57b4f] animate-pulse mt-2"></div>
           </div>
+
         </header>
 
         {/* Carrusel o Spinner */}
@@ -213,8 +223,6 @@ const Hero = () => {
                         >
                           {card.empresa}
                         </span>
-
-
                       </p>
                       <div className="w-full flex justify-end mt-3">
                         <p className="text-sm font-semibold text-gray-200 dark:text-gray-900" style={{ fontFamily: 'var(--font-poppins-light)' }}>

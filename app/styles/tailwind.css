@@ -17,6 +17,14 @@
 		}
 	}
 }
+@keyframes marquee-logos {
+	0% { transform: translateX(0%); }
+	100% { transform: translateX(-50%); } /* Desplaza el doble del ancho para la repetición */
+  }
+  
+  .animate-marquee-logos {
+	animation: marquee-logos 30s linear infinite; /* Ajusta la duración (30s) según la velocidad deseada */
+  }
 
 @plugin "tailwindcss-radix";
 
@@ -25,6 +33,7 @@
 	--font-poppins: 'Poppins-Light', sans-serif;
 	--font-poppins-bold: 'Poppins-Bold', sans-serif;
 	--font-inter: 'Inter-Variable', sans-serif;
+	--font-SF-Pro: 'SF-Pro', sans-serif;
 
 	--radius: 0.5rem;
 

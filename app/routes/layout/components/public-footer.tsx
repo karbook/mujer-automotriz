@@ -1,12 +1,12 @@
 import { Button } from '@/components/ui/button'
 
-const Footer = () => {
+export function Footer() {
   return (
     <div
       className="relative bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: 'url(./images/content/font.jpeg)' }}
     >
-      <footer className="relative bg-white/70 dark:bg-black/50 text-[#1d156c] dark:text-white py-20 px-6 mt-24 backdrop-blur-md overflow-hidden">
+      <footer className="relative bg-white/70 dark:bg-black/50 text-[#1d156c] dark:text-white py-20 px-6 backdrop-blur-md overflow-hidden">
         
         {/* Gradiente superior para desvanecido */}
         <div className="absolute top-0 left-0 w-full h-10 bg-gradient-to-b from-white dark:from-black to-transparent z-0" />
@@ -43,5 +43,3 @@ const Footer = () => {
     </div>
   )
 }
-
-export default Footer
