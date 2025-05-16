@@ -111,17 +111,12 @@ etc...
 	font-display: swap;
 	src: url("/fonts/poppins/Inter-Variable.ttf") format("truetype");
 }
-@font-face {
-	font-family: "JetBrains";
-	font-style: normal;
-	font-weight: light;
-	font-display: swap;
-	src: url("/fonts/jetbrains/JetBrainsMono-Regular.ttf") format("truetype");
-}
+
+
 @font-face {
 	font-family: "SF-Pro";
 	font-style: normal;
 	font-weight: light;
 	font-display: swap;
-	src: url("/fonts/jetbrains/SFProDisplay-Regular.ttf") format("truetype");
+	src: url("/fonts/sf-pro-display/SFProDisplay-Regular.ttf") format("truetype");
 }

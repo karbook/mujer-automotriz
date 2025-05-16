@@ -17,7 +17,7 @@ import { NavLink } from 'react-router-dom' // Asegúrate de importar NavLink
 const menuItems = [
   { path: '/', label: 'Home' },
   { path: '/events', label: 'Events' },
-  { path: '/Programs', label: 'Programs' },
+  { path: '/programs', label: 'Programs' },
   { path: '/Ambassadors', label: 'Ambassadors' },
   { path: '/Sponsors', label: 'Sponsors' },
 ] as const // 👈 esto literaliza las claves para que `t(label)` funcione
@@ -38,18 +38,18 @@ export function Header() {
             {menuItems.map((item, index) => (
               <NavigationMenuItem key={index}>
                 <NavigationMenuLink asChild>
-                <NavLink
-  to={item.path}
-  className={({ isActive }) =>
-    cn(
-      "text-lg font-semibold px-4 py-2 rounded-2xl transition-colors duration-300",
-      isActive ? "text-blue-600 dark:text-pink-500" : "text-gray-900 dark:text-gray-200"
-    )
-  }
-  onClick={(e) => (e.currentTarget as HTMLElement).blur()}
->
-  {t(item.label)}
-</NavLink>
+                  <NavLink
+                    to={item.path}
+                    className={({ isActive }) =>
+                      cn(
+                        "text-lg font-semibold px-4 py-2 rounded-2xl transition-colors duration-300",
+                        isActive ? "text-blue-600 dark:text-pink-500" : "text-gray-900 dark:text-gray-200"
+                      )
+                    }
+                    onClick={(e) => (e.currentTarget as HTMLElement).blur()}
+                  >
+                    {t(item.label)}
+                  </NavLink>
 
                 </NavigationMenuLink>
               </NavigationMenuItem>

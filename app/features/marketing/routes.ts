@@ -5,6 +5,7 @@ export const marketingRoutes = [
 	layout('routes/layout/layout-public.tsx', [
 		index('features/marketing/home/routes/index.tsx'),
 		route('events', 'features/marketing/events/routes/index.tsx'), // ✅ Ahora está dentro del layout
+		route('programs', 'features/marketing/programs/routes/index.tsx'), // ✅ Ahora está dentro del layout
 		// aquí puedes agregar más rutas como programs, ambassadors, sponsors, etc.
 	]),
 
