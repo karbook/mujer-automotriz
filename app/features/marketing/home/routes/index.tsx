@@ -6,7 +6,7 @@ import type { Route } from '@/rr/features/marketing/home/routes/+types/index'
 import { remixI18Next } from '@/localization/i18n.server'
 
 // COMPONENTS
-import Hero from '../components/hero'
+import {AmbassadorsIntroCarousel} from '../components/AmbassadorsIntroCarousel'
 import HeroDetailsSection from '../components/heroDetailsSection'
 import AboutMujerAutomotriz from '../components/aboutMujerAutomotriz'
 import CorporateSponsorships from '../components/corporateSponsorships'
@@ -20,7 +20,7 @@ export async function loader({ request }: Route.LoaderArgs) {
 export default function Index() {
 	return (
 		<>
-			<Hero />
+			<AmbassadorsIntroCarousel />
 			<HeroDetailsSection />
 			<AboutMujerAutomotriz/>
 			<CorporateSponsorships/>
