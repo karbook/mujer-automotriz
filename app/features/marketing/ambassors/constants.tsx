@@ -1,25 +1,4 @@
 
-export type Sponsors = {
-	title: string;
-	logo: string;
-
-}
-
-export const sponsors: Sponsors[] = [
-	{ title: "Clauz-sponsor", logo: "images/sponsors-corporate/clauz-sponsor.avif" },
-	{ title: "Autex-sponsor", logo: "images/sponsors-corporate/autex-sponsor.avif" },
-	{ title: "Arboledas-Sponsors", logo: "images/sponsors-corporate/arboledas-sponsor.avif" },
-	{ title: "Automotive-Sponsor", logo: "images/sponsors-corporate/automotive-sponsor.avif" },
-	{ title: "Earth", logo: "images/sponsors-corporate/earth-sponsor.avif" },
-	{ title: "Endeavor-Sponsor", logo: "images/sponsors-corporate/endeavor-sponsor.avif" },
-	{ title: "Rextie-Sponsor", logo: "images/sponsors-corporate/rextie-sponsor.avif" },
-	{ title: "Carlota-Sponsor", logo: "images/sponsors-corporate/carlota-sponsor.avif" },
-	{ title: "Upaep-Sponsor", logo: "images/sponsors-corporate/upaep-sponsor.avif" },
-	{ title: "Upam-Sponsor", logo: "images/sponsors-corporate/upam-sponsor.avif" },
-	{ title: "Amexme-Sponsor", logo: "images/sponsors-corporate/amexme-sponsor.avif" },
-	{ title: "Majo-Sponsor", logo: "images/sponsors-corporate/majo-sponsor.avif" },
-];
-
 export type Ambassadors = {
 	title: string;
 	description: string;
@@ -43,7 +22,7 @@ export const ambassadors: Ambassadors[] = [
 		nationality: 'México 🇲🇽',
 		legacy: [
 			`Majo Rodríguez es una joven piloto de 24 años, nacida en el Estado de Puebla, que ha triunfado en el mundo del automovilismo. Su pasión por las carreras comenzó cuando tenía 8 años, cuando decidió probar el kartismo como hobby. Pero pronto se dio cuenta que su verdadero destino era la pista, y a los 12 años debutó en carreras profesionales a nivel nacional, tanto en karts como en coches turismo. Esta determinación la llevó a dar un salto muy importante en su carrera en 2016 cuando debutó en NASCAR y comenzó a correr en el mundo de los tractocamiones.
-Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en subir al podio en la categoría Mercedes-Benz y Mikel's Trucks. Además, es la primera piloto poblana en traer a casa un campeonato nacional, triunfó cuatro veces en las exigentes 24 horas de México en la categoría TS, también compitió en la World Racing League en Virginia International Raceway donde logró una impresionante actuación en su primera carrera internacional y ha sido co-piloto del SAFETY CAR en la Fórmula E en las temporadas 2020, 2021 y 2022. Sin embargo, una de las mayores hazañas de Majo ha sido romper paradigmas dentro de una disciplina que durante mucho tiempo ha sido vista como "solo para hombres".`,
+             Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en subir al podio en la categoría Mercedes-Benz y Mikel's Trucks. Además, es la primera piloto poblana en traer a casa un campeonato nacional, triunfó cuatro veces en las exigentes 24 horas de México en la categoría TS, también compitió en la World Racing League en Virginia International Raceway donde logró una impresionante actuación en su primera carrera internacional y ha sido co-piloto del SAFETY CAR en la Fórmula E en las temporadas 2020, 2021 y 2022. Sin embargo, una de las mayores hazañas de Majo ha sido romper paradigmas dentro de una disciplina que durante mucho tiempo ha sido vista como "solo para hombres".`,
 			'CAMPEONATOS:',
 			'• Primera mujer en subirse al podio en la categoría de los Tractocamiones Freightliner (desde la Súper Copa Telcel 2015)',
 			'• Primera mujer en subirse al podio en la categoría de Mikel\'s Trucks',
@@ -385,8 +364,8 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 
 	},
 	{
-		title: 'Monica Guerreo',
-		slug: 'monica-guerreo',
+		title: 'Monica Guerrero',
+		slug: 'monica-guerrero',
 		description: 'Directora Regional de Marketing de México y Latinoamerica',
 		icon: '/images/sponsors-people/monica-guerrero.avif',
 		company: 'Denso',
@@ -399,24 +378,6 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 			'Con más de una década de experiencia, Mónica ha trabajado en empresas destacadas como SAS y Yokogawa, donde también se encargó de la coordinación de eventos y la implementación de campañas de marketing, demostrando su habilidad para conectar marcas con audiencias clave en la región.'
 		]
 
-	},
-	{
-		title: 'Denisse Tiznado ',
-		slug: 'denisse-tiznado',
-		description: 'Psicóloga Clinica Licenciada y Consultora DEI',
-		icon: '/images/sponsors-people/denisse-tiznado.avif',
-		company: 'University of Washington',
-		company_icon: '/images/sponsors-corporate/washington-sponsor.avif',
-		nationality: 'México 🇲🇽-USA 🇺🇸',
-		legacy: [
-			'Denisse Tiznado es una exitosa profesional en el campo de la psicología clínica.',
-			'Es Licenciada en Psicología Clínica y Consultora DEI en Washington, Estados Unidos.',
-			'En 2021, fue nombrada Profesora Asistente Interino - Clínico y Profesora II en la Facultad de Artes y Ciencias del Departamento de Psicología.',
-			'También se desempeña como Psicóloga de planta en el Sistema de Atención Médica de San Diego VA desde 2018.',
-			'',
-			'Con una amplia trayectoria en la prestación de terapia individual y grupal, Denisse ha trabajado en el Tratamiento de Adicciones Cronograma, brindando apoyo a veteranos con diversos diagnósticos, que incluyen trastornos por uso de sustancias, diagnóstico dual con Trastorno Depresivo Mayor, TEPT, TOC, Trastornos de Ansiedad, Adaptación Trastorno, Esquizofrenia, Trastorno Bipolar I y II, Trastornos de la Personalidad, entre otros.',
-			'Denisse obtuvo su Doctorado en Filosofía (Ph.D.) en Psicología Clínica de la Salud en la Universidad de Missouri-Kansas City en 2011.'
-		]
 	},
 	{
 		title: 'Paola Mendoza',
@@ -464,112 +425,5 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 		company_icon: '/images/sponsors-corporate/tba-sponsor.avif',
 		nationality: 'México 🇲🇽 - Canada 🇨🇦',
 		legacy: ['TBA']
-	},
-];
-
-export type Benefits = {
-	title: string,
-	icon: string,
-	description: string | string[],
-
-}
-
-export const benefits: Benefits[] = [
-	{
-		title: "Exposición de Innovación",
-		icon: "lightbulb", // Representa ideas innovadoras y creatividad
-		description: "Destaca los avances de vanguardia liderados por mujeres y tecnologías revolucionarias desarrolladas dentro de la organización. Ten impacto directamente en una comunidad comprometida.",
-	},
-	{
-		title: "Colaboración de la industria",
-		icon: "handshake", // Simboliza colaboración y asociaciones
-		description: "Encuentra y aprovecha oportunidades de colaboración con innovadores dentro de la industria para impulso de crecimiento y desarrollo mutuo. No es solo networking, se trata de forjar alianzas estratégicas y mejorar tu presencia en el mercado.",
-	},
-	{
-		title: "Programas de practicantes",
-		icon: "graduation-cap", // Representa educación y formación profesional
-		description: "Encuentra nuevo talento alojando a practicantes y recién egresados asegurando un flujo constante de profesionales capacitados. Tu patrocinio o participación no es solo visibilidad, es una declaración poderosa de tu compromiso con la excelencia inclusiva y la innovación.",
-	},
-	{
-		title: "Redefinamos el liderazgo en la industria",
-		icon: "compass", // Representa dirección y liderazgo
-		description: "Establezcamos la agenda para el futuro de la industria. Tu liderazgo impulsa conversaciones transformadoras, moldeando el nuevo panorama. Conviértete en un actor clave en la promoción de una industria más inclusiva e innovadora.",
-	},
-	{
-		title: "Empresa comprometida con la diversidad",
-		icon: "users", // Simboliza comunidad y diversidad
-		description: "Aprovecha esta plataforma para mostrar tu compromiso con la diversidad, conectar con talento de alto nivel y potenciar tus iniciativas de reclutamiento estratégico.",
-	},
-	{
-		title: "Reconocimiento y Premios",
-		icon: "award", // Representa premios y reconocimientos
-		description: "Colaboración para el programa de premios y reconocimientos para celebrar logros destacados y contribuciones significativas para ti y para la industria. Moldeemos un panorama automotriz más diverso y dinámico.",
-	},
-	{
-		title: "Fortalecimiento de Liderazgo",
-		icon: "shield-check", // Simboliza confianza y liderazgo seguro
-		description: "Destaca y apoya los logros y contribuciones de los líderes de tu organización en nuestra plataforma para inspirar, motivar y forjar nuevos líderes dentro y fuera de tu organización.",
-	},
-	{
-		title: "Eventos de Networking de alta gama",
-		icon: "network", // Representa conexión y redes de contactos
-		description: "Accede y forma parte de eventos de alto nivel, con a una red única de profesionales apasionados por el futuro de la industria automotriz. Encuentra tomadores de decisiones, directivos y altos ejecutivos para el intercambio de conocimientos y colaboración.",
-	},
-	{
-		title: "¿Para quién?",
-		icon: "factory", // Representa el sector automotriz
-		description: [
-			"Empresas de la industria automotriz OEMs",
-			"Cadena de suministros de las OEMs",
-			"Empresas del aftermarket automotriz",
-		],
-	},
-];
-
-export type Programs = {
-	id: number,
-	reversed: boolean,
-	imgSrc: string,
-	imgAlt: string,
-	title: string,
-	description: string,
-}
-
-export const programs: Programs[] = [
-	{
-		id: 1,
-		reversed: true,
-		imgSrc: "./images/events-photograph/who-is.avif",
-		imgAlt: "Comunidad Global",
-		title: "¿Qué es?",
-		description: "Mujer Automotriz, es una plataforma que expone y resalta el liderazgo femenino, la innovación y fomenta relaciones significativas y de valor en la industria automotriz. Creamos una comunidad de líderes conformada por directivos, ejecutivos de nivel C y tomadores de decisiones, interesados en fomentar una industria más diversa, con un liderazgo inclusivo y enfocados en el continuo desarrollo de los líderes a nivel personal y profesional.",
-
-	},
-	{
-		id: 2,
-		reversed: false,
-		imgSrc: "./images/events-photograph/profesional.avif",
-		imgAlt: "Desarrollo Profesional y Empoderamiento",
-		title: "Desarrollo Profesional y Empoderamiento",
-		description: "Eventos, cumbres regionales y globales. Talleres, paneles, clases magistrales y charlas con líderes destacadas del sector automotriz sobre innovación, diversidad, tecnología y liderazgo. Conoce las experiencias de los líderes de la industria, desafíos, caminos al éxito y habilidades interpersonales necesarias para el avance personal y profesional.",
-
-	},
-	{
-		id: 3,
-		reversed: true,
-		imgSrc: "./images/events-photograph/comunity.avif",
-		imgAlt: "Comunidad Global",
-		title: "Comunidad Global",
-		description: "Acceso a nuestra comunidad vibrante de profesionales y mujeres altamente exitosas. Conecta con una red global de personas con ideas afines, recibe mentoría y apoyo adaptado a las demandas cambiantes de la industria automotriz. Sé parte de los miembros que están liderando el camino hacia una industria más diversa e innovadora.",
-
-	},
-	{
-		id: 4,
-		reversed: false,
-		imgSrc: "./images/events-photograph/education.avif",
-		imgAlt: "Fomento a la Diversidad y Educación",
-		title: "Fomento a la Diversidad y Educación",
-		description: "Acceso exclusivo a recursos, expertís de la industria, noticias, últimas innovaciones y educación continua a través de eventos de empoderamiento. Conoce las estrategias y mejores prácticas de DEI (Diversidad, Equidad e Inclusión) que las empresas están implementando.",
-
 	},
 ];

@@ -10,7 +10,7 @@ import {AmbassadorsIntroCarousel} from '../components/AmbassadorsIntroCarousel'
 import {OrganizersSpotlight} from '../components/OrganizersSpotlight'
 import {AboutMujerAutomotriz} from '../components/AboutMujerAutomotriz'
 import {CorporateSponsorships} from '../components/CorporateSponsorships'
-import SponsorsSection from '../components/sponsorsSection'
+import {SponsorsPresentation} from '../components/SponsorsPresentation'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
 	const title = t('TEDI Stack | React Router, Bun, Hono, and much more')
@@ -24,7 +24,7 @@ export default function Index() {
 			<OrganizersSpotlight />
 			<AboutMujerAutomotriz/>
 			<CorporateSponsorships/>
-			<SponsorsSection/>
+			<SponsorsPresentation/>
 		</>
 	)
 }

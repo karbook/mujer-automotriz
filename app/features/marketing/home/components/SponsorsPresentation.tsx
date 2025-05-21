@@ -1,23 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const sponsors = [
-  { name: "Clauz-sponsor", logo: "images/sponsors/clauz-sponsor.avif" },
-  { name: "Autex-sponsor", logo: "images/sponsors/autex-sponsor.avif" },
-  { name: "Arboledas-Sponsors", logo: "images/sponsors/arboledas-sponsor.avif" },
-  { name: "Automotive-Sponsor", logo: "images/sponsors/automotive-sponsor.avif" },
-  { name: "Earth", logo: "images/sponsors/earth-sponsor.avif" },
-  { name: "Endeavor-Sponsor", logo: "images/sponsors/endeavor-sponsor.avif" },
-  { name: "Rextie-Sponsor", logo: "images/sponsors/rextie-sponsor.avif" },
-  { name: "Carlota-Sponsor", logo: "images/sponsors/carlota-sponsor.avif" },
-  { name: "Upaep-Sponsor", logo: "images/sponsors/upaep-sponsor.avif" },
-  { name: "Upam-Sponsor", logo: "images/sponsors/upam-sponsor.avif" },
-  { name: "Amexme-Sponsor", logo: "images/sponsors/amexme-sponsor.avif" },
-  { name: "Majo-Sponsor", logo: "images/sponsors/majo-sponsor.avif" },
-];
+import { sponsors } from "../constants";
+const glowColors = ["#0c8ef4"];
 
-const glowColors = ["#0c8ef4", "#f34a70", "#dd53d4", "#8c72fc", "#f5530b"]; // Eliminamos el negro
-
-const SponsorsSection = () => {
+export function SponsorsPresentation()  {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [activeDiv, setActiveDiv] = useState<number | null>(null);
 
@@ -48,17 +34,16 @@ const SponsorsSection = () => {
               key={index}
               className={`relative bg-white dark:bg-[#18181d] opacity-70 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 flex justify-center items-center border-2 transition-colors duration-500 ease-in-out overflow-hidden`}
               style={{
-                borderColor: activeDiv === index ? glowColors[index % glowColors.length] : "#8c72fc", // Color por defecto más suave
+                borderColor: activeDiv === index ? glowColors[index % glowColors.length] : "#0c8ef4", // Color por defecto más suave
               }}
               onMouseMove={(e) => handleMouseMove(e, index)}
               onMouseLeave={handleMouseLeave}
             >
-              {/* Efecto de resplandor con gradiente más vibrante y fluido */}
-              {activeDiv === index && (
+           {activeDiv === index && (
                 <div
                   className="absolute inset-0 pointer-events-none z-0"
                   style={{
-                    filter: "blur(30px)", // Difumina el glow para suavizar los bordes
+                    filter: "blur(30px)", 
                     background: `radial-gradient(circle at ${mousePos.x}px ${mousePos.y}px, 
                       ${glowColors[index % glowColors.length]} 10%, 
                       ${glowColors[(index + 1) % glowColors.length]} 30%, 
@@ -67,9 +52,7 @@ const SponsorsSection = () => {
                   }}
                 ></div>
               )}
-
-              {/* Imagen del patrocinador con tamaño ajustado */}
-              <img src={sponsor.logo} alt={sponsor.name} className="h-20 w-auto object-contain relative z-10" />
+              <img src={sponsor.logo} alt={sponsor.title} className="h-20 w-auto object-contain relative z-10" />
             </div>
           ))}
         </div>
@@ -77,6 +60,3 @@ const SponsorsSection = () => {
     </section>
   );
 };
-
-export default SponsorsSection;
-

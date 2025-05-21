@@ -1,15 +1,18 @@
 import { layout, route, index } from '@react-router/dev/routes'
 
 export const marketingRoutes = [
-	// RUTAS CON LAYOUT PÚBLICO (HEADER PERSISTENTE)
+	
 	layout('routes/layout/layout-public.tsx', [
 		index('features/marketing/home/routes/index.tsx'),
-		route('events', 'features/marketing/events/routes/index.tsx'), // ✅ Ahora está dentro del layout
-		route('programs', 'features/marketing/programs/routes/index.tsx'), // ✅ Ahora está dentro del layout
-		// aquí puedes agregar más rutas como programs, ambassadors, sponsors, etc.
+		route('events', 'features/marketing/events/routes/index.tsx'), 
+		route('programs', 'features/marketing/programs/routes/index.tsx'), 
+		route('sponsor', 'features/marketing/sponsor/routes/index.tsx'), 
+		route('ambassors', 'features/marketing/ambassors/routes/index.tsx'), 
+		route('information/:slug', 'features/marketing/home/routes/Information.$slug.tsx'),
+		route('ambassadors/:slug', 'features/marketing/ambassors/routes/Ambassadors.$slug.tsx'),
 	]),
 
-	// RUTAS SEO (SIN LAYOUT)
+	// SEO
 	route('robots.txt', 'features/marketing/seo/routes/robots.ts'),
 	route('sitemap.xml', 'features/marketing/seo/routes/sitemap.ts'),
 	route('sitemap/:lang.xml', 'features/marketing/seo/routes/sitemap-lang.ts'),
