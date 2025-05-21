@@ -120,7 +120,7 @@ export default function Hero() {
             Mujer Automotriz
           </h1>
           <h2 className="text-7xl font-extrabold mb-6 text-left drop-shadow-lg" style={{ fontFamily: 'var(--font-poppins)' }}>
-            Únete y sé parte de la red
+            Únete y sé parte de la redkajslkjalkjslk
           </h2>
 
           {/* Descripción */}
