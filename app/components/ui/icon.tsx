@@ -17,6 +17,7 @@ const sizeClassName = {
 	md: 'size-5',
 	lg: 'size-6',
 	xl: 'size-7',
+	xxl:'size-8'
 } as const
 
 type Size = keyof typeof sizeClassName

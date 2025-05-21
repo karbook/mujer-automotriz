@@ -7,9 +7,9 @@ import { remixI18Next } from '@/localization/i18n.server'
 
 // COMPONENTS
 import {AmbassadorsIntroCarousel} from '../components/AmbassadorsIntroCarousel'
-import HeroDetailsSection from '../components/heroDetailsSection'
-import AboutMujerAutomotriz from '../components/aboutMujerAutomotriz'
-import CorporateSponsorships from '../components/corporateSponsorships'
+import {OrganizersSpotlight} from '../components/OrganizersSpotlight'
+import {AboutMujerAutomotriz} from '../components/AboutMujerAutomotriz'
+import {CorporateSponsorships} from '../components/CorporateSponsorships'
 import SponsorsSection from '../components/sponsorsSection'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
@@ -21,7 +21,7 @@ export default function Index() {
 	return (
 		<>
 			<AmbassadorsIntroCarousel />
-			<HeroDetailsSection />
+			<OrganizersSpotlight />
 			<AboutMujerAutomotriz/>
 			<CorporateSponsorships/>
 			<SponsorsSection/>
