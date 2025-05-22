@@ -1,15 +1,15 @@
 import { useParams } from 'react-router';
 import { ambassadors } from '../constants';
-import { useNavigate } from 'react-router-dom'; // Importa useNavigate
+import { useNavigate } from 'react-router-dom';
 import { Icon } from '@/components/ui/icon';
+
 export default function AmbassadorInformation() {
   const { slug } = useParams();
   const ambassador = ambassadors.find(a => a.slug === slug);
-  const navigate = useNavigate(); // Inicializa useNavigate para poder navegar
+  const navigate = useNavigate();
 
-  // Función para manejar el clic del botón de retroceso
   const handleGoBack = () => {
-    navigate(-1); // Navega a la página anterior en el historial
+    navigate(-1);
   };
 
   if (!ambassador) {
@@ -23,15 +23,16 @@ export default function AmbassadorInformation() {
   }
 
   return (
-    <main className="relative min-h-screen flex flex-col lg:flex-row items-stretch gap-12 px-6 sm:px-12 lg:px-24 overflow-hidden bg-white dark:bg-black text-black dark:text-white">
+    // 'gap-0 lg:gap-12' para asegurar el espacio mínimo en móvil
+    <main className="relative min-h-screen flex flex-col lg:flex-row items-stretch gap-0 lg:gap-12 px-0 sm:px-12 lg:px-24 overflow-hidden bg-white dark:bg-black text-black dark:text-white">
 
       {/* BOTÓN DE RETROCESO */}
       <button
         onClick={handleGoBack}
         className="absolute top-4 left-4 sm:top-6 sm:left-6 lg:top-8 lg:left-8
                    z-50 p-2 rounded-full
-                   bg-gray-100 hover:bg-gray-300 text-black // Estilos para modo Light
-                   dark:bg-[#f28700] dark:hover:bg-orange-600 dark:text-white // Estilos para modo Dark
+                   bg-gray-100 hover:bg-gray-300 text-black
+                   dark:bg-[#f28700] dark:hover:bg-orange-600 dark:text-white
                    focus:outline-none focus:ring-2 focus:ring-[#ff6700] transition-all duration-300"
         aria-label="Volver atrás"
       >
@@ -39,10 +40,11 @@ export default function AmbassadorInformation() {
       </button>
 
       {/* CONTENEDOR IZQUIERDO */}
-      <div className="w-full lg:w-2/3 h-[250px] lg:min-h-screen flex flex-col items-center justify-center relative space-y-6">
+      {/* Reducimos pb-20 a pb-0 para móvil, y lo mantenemos en desktop */}
+      <div className="w-full lg:w-2/3 h-auto lg:min-h-screen flex flex-col items-center justify-start relative space-y-6 lg:space-y-0 pb-0 lg:pb-0">
 
-        {/* Imagen de fondo superior */}
-        <div className="relative w-full h-full overflow-hidden flex items-start justify-center">
+        {/* Imagen de fondo superior (visible en todas las vistas) */}
+        <div className="absolute top-0 left-0 w-full h-[300px] sm:h-[400px] lg:h-full overflow-hidden">
           <div
             className="w-full h-full bg-no-repeat dark:opacity-100 bg-cover lg:bg-contain"
             style={{
@@ -50,11 +52,10 @@ export default function AmbassadorInformation() {
               backgroundPosition: "top center",
             }}
           ></div>
-
         </div>
 
-        {/* Icono del embajador */}
-        <div className="absolute top-10 w-full flex justify-center">
+        {/* Icono del embajador - Z-index alto para que esté encima de las imágenes de fondo */}
+        <div className="z-10 mt-20 sm:mt-24 lg:mt-32 w-full flex justify-center">
           <img
             src={ambassador.icon}
             alt={`Foto de ${ambassador.title}`}
@@ -63,21 +64,26 @@ export default function AmbassadorInformation() {
           />
         </div>
 
-        {/* Imagen inferior - solo visible en pantallas grandes */}
-        <div className="hidden lg:absolute lg:bottom-0 lg:left-0 lg:w-full lg:flex lg:justify-start">
+        {/* Imagen inferior (SOLO visible en pantallas grandes - lg y superiores) */}
+        <div className="hidden lg:flex w-full justify-start mt-auto pt-20">
           <img
             src="/images/backgrounds-abstract/background-orange.png"
             alt="Imagen adicional"
             loading="lazy"
-            className="w-64 h-44 sm:w-[90%] sm:h-auto lg:w-full lg:h-auto max-w-full rounded-xl opacity-90"
+            className="w-full h-auto max-w-full rounded-xl opacity-90 object-cover"
           />
         </div>
       </div>
 
       {/* CONTENEDOR DERECHO */}
-      <div className="w-full lg:w-1/2 min-h-screen flex flex-col justify-center text-left animate-fadeIn space-y-6 mr-auto">
+      {/* Reducimos el mt del h1, o lo quitamos si queremos que el texto esté aún más cerca.
+          Puedes ajustar este 'mt-0' a 'mt-4' o 'mt-8' si necesitas un poco de espacio en móvil.
+          También mantén el px-6 para el padding horizontal del contenido en móvil.
+      */}
+      <div className="w-full lg:w-1/2 min-h-screen flex flex-col justify-center text-left animate-fadeIn space-y-6 mr-auto px-6 sm:px-0">
 
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider text-dark dark:text-white bg-clip-text leading-relaxed py-4 mt-6 mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
+        {/* CAMBIO AQUÍ: Reducimos 'mt-6' a 'mt-0' para móvil, y lo reintroducimos para desktop */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider text-dark dark:text-white bg-clip-text leading-relaxed py-4 mt-0 lg:mt-6 mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
           {ambassador.title}
         </h1>
 

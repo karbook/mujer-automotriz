@@ -1,9 +1,9 @@
 import { benefits } from "../constants";
 import { Icon } from "@/components/ui/icon";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { useState } from "react"; 
+import { useState } from "react";
 
-export  function  CorporateSponsorships(){
+export function CorporateSponsorships() {
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
@@ -38,11 +38,11 @@ export  function  CorporateSponsorships(){
                     </CarouselContent>
                     <div className="w-full flex flex-col items-center mt-6 gap-3">
                         <div className="flex gap-6">
-                            <CarouselPrevious className="bg-transparent text-white px-2 py-4 rounded-full border dark:border-gray-600 focus:border-white active:border-white" />
+                            <CarouselPrevious className="px-2 py-4 rounded-full border transition-all duration-300 text-gray-900 dark:text-white border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-transparent" />
                             <p className="text-sm font-bold text-gray-700 dark:text-white mt-2">
                                 {currentIndex + 1} / {benefits.length}
                             </p>
-                            <CarouselNext className="bg-transparent text-white px-2 py-4 border border-transparent dark:border-gray-600 rounded-full focus:border-white active:border-white" />
+                            <CarouselNext className="px-2 py-4 rounded-full border transition-all duration-300 text-gray-900 dark:text-white border-gray-400 dark:border-gray-600 bg-gray-200 dark:bg-transparent" />
                         </div>
                     </div>
                 </Carousel>

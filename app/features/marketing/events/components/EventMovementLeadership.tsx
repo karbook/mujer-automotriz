@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from '@/components/ui/button';
 
 const eventData = {
@@ -6,9 +5,8 @@ const eventData = {
   subtitle: "Gobierno de San Luís Potosí y Futuros Emprendedores",
   date: "Evento Virtual - 19 al 27 septiembre",
   buttonText: "Contactar",
-  image: "/images/images-events/fondo-blue-events.png",
+  image: "/images/backgrounds-colors/background-blue.png",
 };
-
 const sections = [
   {
     title: "Sobre el evento",
@@ -31,7 +29,7 @@ const sections = [
   },
 ];
 
-const EventSection = () => {
+export default function EventSection () {
   return (
     <>
       <section className="max-w-7xl mx-auto px-4 py-20 relative min-h-[500px] text-white">
@@ -67,12 +65,9 @@ const EventSection = () => {
               className="relative p-10 border-t border-blue-500 hover:bg-[#043b5f] group min-h-[300px]"
             >
               <div
-                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent via-${section.borderColors[0]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
-              ></div>
-              <div
-                className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent via-${section.borderColors[1]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
-              ></div>
-
+                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent ${section.borderColors[0] ? `via-${section.borderColors[0]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}/>
+              <div className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent ${section.borderColors[1] ? `via-${section.borderColors[1]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}/>
+              
               <h2 className="text-4xl font-bold mb-4 text-black dark:text-white group-hover:text-white transition-colors duration-300">
                 {section.title}
               </h2>
@@ -96,4 +91,3 @@ const EventSection = () => {
   );
 };
 
-export default EventSection;

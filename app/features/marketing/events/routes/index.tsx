@@ -6,12 +6,12 @@ import type { Route } from '@/rr/features/marketing/home/routes/+types/index'
 import { remixI18Next } from '@/localization/i18n.server'
 
 
-import EventsPage from '../components/event-page'
-import EventSection from '../components/event-page-past'
-import EventWoman from '../components/event-woman'
+import EventsPage from '../components/EventUpcomingList'
+import EventSection from '../components/EventMovementLeadership'
+import EventWoman from '../components/EventWomenSummit'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
-	const title = t('TEDI Stack | React Router, Bun, Hono, and much more')
+	const title = t('Women in Automotive | Empowering Women in the Automotive Industry - Free Training')
 	return { meta: { title } }
 }
 

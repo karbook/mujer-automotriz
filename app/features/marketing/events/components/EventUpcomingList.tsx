@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from '@/components/ui/button';
 
 const events = [
@@ -7,7 +6,7 @@ const events = [
     name: "Motor Ladies Night",
     location: "CDMX - 14 Noviembre 2024",
     buttonText: "Contactar",
-    image: "/images/images-events/fondo-orange-events.png",
+    image: "/images/backgrounds-colors/background-orange.png",
   },
 ];
 
@@ -35,55 +34,50 @@ const sections = [
   },
 ];
 
-export default function EventsPage() {
+export default function EventUpcomingList() {
   return (
     <>
-     <section
-                className="relative px-6 py-40 text-white"
-                style={{
-                    backgroundImage: 'url(/images/images-events/fondo-events.jpg)',
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                }}
+      <section
+        className="relative px-4 sm:px-6 py-20 sm:py-32 lg:py-40 text-white"
+        style={{
+          backgroundImage: 'url(/images/events-photograph/comunity.avif)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-full sm:max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-8">
+
+          {/* Contenedor de Texto */}
+          <div className="max-w-lg text-center sm:text-left">
+            <h1 className="text-4xl sm:text-5xl font-extrabold mb-4 sm:mb-6">Descubre, Conecta, Destaca</h1>
+            <p className="text-lg sm:text-xl">
+              Sé parte de la comunidad de Mujer Automotriz donde cada evento es más que una simple reunión, es un hito en tu trayectoria profesional.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-0">
+            <Button
+              variant="blackTransparent"
+              className="px-6 py-3 text-lg font-bold rounded-3xl text-white border-gray-400 border hover:text-white hover:border-gray-400 transition-colors duration-300"
             >
-                {/* Overlay oscuro */}
-                <div className="absolute inset-0 bg-black/20"></div>
-                
-                {/* Contenido */}
-                <div className="relative max-w-6xl mx-auto flex items-center justify-between gap-8">
-                    {/* Texto a la izquierda */}
-                    <div className="max-w-xl text-left">
-                        <h1 className="text-5xl font-extrabold mb-6">Descubre, Conecta, Destaca</h1>
-                        <p className="text-lg">
-                            Sé parte de la comunidad de Mujer Automotriz donde cada evento es más que una simple reunión, es un hito en tu trayectoria profesional.
-                        </p>
-                    </div>
+              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
+                Empezar
+              </span>
+            </Button>
 
-                    {/* Botones a la derecha */}
-                    <div className="flex gap-6">
-                        <Button
-                            variant="blackTransparent"
-                            className="px-6 py-3 font-bold rounded-3xl
-          text-white border-gray-400 border
-          hover:text-white hover:border-gray-400 transition-colors duration-300"
-                        >
-                            <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                                Empezar
-                            </span>
-                        </Button>
+            <Button
+              variant="blackTransparent"
+              className="px-6 py-3 text-lg font-bold rounded-3xl text-white border-gray-400 border hover:text-white hover:border-gray-400 transition-colors duration-300"
+            >
+              Leer más
+            </Button>
+          </div>
 
-                        <Button
-                            variant="blackTransparent"
-                            className="px-6 py-3 font-bold rounded-3xl
-          text-white border-gray-400 border
-          hover:text-white hover:border-gray-400 transition-colors duration-300"
-                        >
-                            Leer más
-                        </Button>
-                    </div>
-                </div>
-            </section>
+        </div>
+      </section>
+
 
       {events.map((event, index) => (
         <section key={index} className="max-w-7xl mx-auto px-4 py-20 relative min-h-[500px] text-white">
@@ -122,7 +116,7 @@ export default function EventsPage() {
               <div
                 className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent via-${section.borderColors[0]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
               ></div>
-              
+
               <div
                 className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent via-${section.borderColors[1]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
               ></div>
@@ -133,15 +127,14 @@ export default function EventsPage() {
               <p className="mb-6 text-lg max-w-4xl group-hover:text-white transition-colors duration-300">
                 {section.description}
               </p>
-
-                            {section.buttonText && (
-                              <Button
-                                variant="blackTransparent"
-                                className="absolute top-4 right-4 px-4 py-2 top-15 right-16 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300"
-                              >
-                                {section.buttonText}
-                              </Button>
-                            )}
+              {section.buttonText && (
+                <Button
+                  variant="blackTransparent"
+                  className="absolute top-4 right-4 px-4 py-2 top-15 right-16 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300"
+                >
+                  {section.buttonText}
+                </Button>
+              )}
 
               {section.ticketPrice && (
                 <p className="mt-4 text-lg font-bold text-pink-500 group-hover:text-white transition-colors duration-300">

@@ -10,11 +10,13 @@ export async function loader({ request }: Route.LoaderArgs) {
     const title = t('TEDI Stack | React Router, Bun, Hono, and much more')
     return { meta: { title } }
 }
-import Hero from '../components/hero'
+import {AmbassadorBenefits} from '../components/AmbassadorBenefits'
+import {ContributorBenefits} from '../components/ContributorBenefits'
 export default function Index() {
     return (
         <>
-        <Hero/>
+        <AmbassadorBenefits/>
+        <ContributorBenefits/>
          
         </>
     )

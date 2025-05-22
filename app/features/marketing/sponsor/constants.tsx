@@ -62,48 +62,48 @@ export const sponsorships: Sponsorships[] = [
     }
 ];
 
-export type BenefitsAligned={
+export type BenefitsAligneds={
     icon:string,
     title:string,
     description:string,
     bgColor:string
 
 }
-export const benefitsAligned:BenefitsAligned[] = [
+export const benefitsAligneds:BenefitsAligneds[] = [
     {
         icon: "lightbulb",
         title: "Exposición de Innovación",
         description: "Destaca los avances liderados por mujeres y tecnologías revolucionarias en tu organización.",
-        bgColor: "bg-blue-500 text-white",
+        bgColor: "text-black",
     },
     {
         icon: "handshake",
         title: "Colaboración de la Industria",
         description: "Encuentra oportunidades de colaboración con innovadores del sector para impulsar el crecimiento.",
-        bgColor: "bg-green-500 text-white",
+        bgColor: "text-black",
     },
     {
         icon: "briefcase",
         title: "Programas de Practicantes",
         description: "Conéctate con talento emergente y fortalece la inclusión en la industria.",
-        bgColor: "bg-purple-500 text-white",
+        bgColor: "text-black",
     },
     {
         icon: "users",
         title: "Redefinamos el Liderazgo",
         description: "Impulsa conversaciones transformadoras y ayuda a moldear el futuro de la industria.",
-        bgColor: "bg-yellow-500 text-black",
+        bgColor: "text-black",
     },
     {
         icon: "award",
         title: "Reconocimiento y Premios",
         description: "Colabora en programas de reconocimiento para destacar logros y contribuciones.",
-        bgColor: "bg-red-500 text-white",
+        bgColor: "text-white",
     },
     {
         icon: "network",
         title: "Networking de Alta Gama",
         description: "Forma parte de eventos exclusivos con tomadores de decisiones y directivos de la industria.",
-        bgColor: "bg-orange-500 text-black",
+        bgColor: "text-white",
     }
 ];

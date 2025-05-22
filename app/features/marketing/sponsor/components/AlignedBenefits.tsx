@@ -9,7 +9,8 @@ import {
     CarouselNext,
 } from "@/components/ui/carousel";
 import { Icon } from '@/components/ui/icon';
-import { benefitsAligned } from "../constants";
+import { benefitsAligneds } from "../constants";
+import { Button } from "@/components/ui/button";
 
 export function AlignedBenefits() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,12 +28,12 @@ export function AlignedBenefits() {
                 <div className="relative mt-12">
                     <Carousel className="w-full" onIndexChange={setCurrentIndex}>
                         <CarouselContent>
-                            {benefitsAligned.map((benefit, index) => (
+                            {benefitsAligneds.map((benefit, index) => (
                                 <CarouselItem
                                     key={index}
                                     className="basis-full md:basis-1/2 lg:basis-1/3 px-4 h-full"
                                 >
-                                    <div className="h-full flex flex-col justify-start p-6 rounded-3xl text-center shadow-md bg-white dark:bg-black text-black dark:text-white border dark:border-gray-800">
+                                    <div className="h-full flex flex-col justify-start p-6 rounded-3xl text-center shadow-md bg-white dark:bg-black text-black dark:text-white border dark:border-gray-500">
                                         <Icon name={benefit.icon} size="xxl" className="mx-auto mb-4" />
                                         <h3 className="text-2xl font-bold mb-2">{benefit.title}</h3>
                                         <p className="text-lg mt-auto">{benefit.description}</p>
@@ -41,19 +42,21 @@ export function AlignedBenefits() {
                             ))}
                         </CarouselContent>
                         <div className="flex items-center justify-center mt-6 gap-6">
-                        <CarouselPrevious className="px-4 py-6 rounded-full border border-gray-800 bg-white dark:bg-black dark:text-white dark:border border-gray-800 text-white text-black hover:bg-gray-300 dark:hover:bg-gray-900" />
-                        <p className="text-black dark:text-white text-lg font-bold">
-                                {currentIndex + 1} / {benefitsAligned.length}
+                            <CarouselPrevious className="px-4 py-6 rounded-full border border-gray-800 bg-white dark:bg-black dark:text-white dark:border border-gray-500 text-white text-black hover:bg-gray-300 dark:hover:bg-gray-900" />
+                            <p className="text-black dark:text-white text-lg font-bold">
+                                {currentIndex + 1} / {benefitsAligneds.length}
                             </p>
-                            <CarouselNext className="px-4 py-6 rounded-full border border-gray-800 bg-white dark:bg-black dark:text-white dark:border border-gray-800 text-white text-black hover:bg-gray-300 dark:hover:bg-gray-900" />
+                            <CarouselNext className="px-4 py-6 rounded-full border border-gray-800 bg-white dark:bg-black dark:text-white dark:border border-gray-500 text-white text-black hover:bg-gray-300 dark:hover:bg-gray-900" />
                         </div>
                     </Carousel>
                 </div>
-
                 <div className="mt-12 text-center">
-                    <button className="px-6 py-3 rounded-lg bg-black dark:bg-white text-white dark:text-black font-semibold hover:bg-gray-800 dark:hover:bg-gray-300 transition-all">
-                        Contáctanos
-                    </button>
+                    <Button
+                        variant="blackTransparent"
+                        className="px-14 py-8 text-lg font-bold rounded-4xl text-black hover:text-black hover:dark:text-black  border-gray-400 hover:bg-gray-200 border hover:border-gray-400 transition-colors duration-300"
+                    >
+                            Empezar
+                    </Button>
                 </div>
             </div>
         </section>

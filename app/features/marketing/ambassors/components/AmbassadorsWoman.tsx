@@ -14,10 +14,6 @@ export function AmbassadorsWoman() {
         }}
       >
         <div className="container mx-auto text-center">
-          {/* Logo en la parte superior izquierda */}
-
-
-          {/* Contenido */}
           <div className="flex flex-col items-center gap-6">
             <motion.h1
               className="text-4xl sm:text-8xl font-bold tracking-tight"
@@ -44,18 +40,14 @@ export function AmbassadorsWoman() {
           </div>
         </div>
       </section>
-
-      {/* Sección de tarjetas */}
       <section className="px-4 sm:px-6 lg:px-8 py-12">
         <div className="max-w-[1800px] mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-stretch">
             {ambassadors.map((ambassador, index) => (
-              <Link to={`/information/${ambassador.slug}`}>
+              <Link to={`/information/${ambassador.slug}`} key={ambassador.slug || index}>
                 <motion.div
-                  key={index}
                   className="bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-700 shadow-xl p-6 rounded-3xl flex flex-col items-center w-full max-w-[360px] min-h-[520px] h-full transition-transform hover:scale-[1.02]"
                 >
-
                   <div className="relative w-full mb-4 rounded-lg overflow-hidden">
                     <img
                       src={ambassador.icon}
@@ -71,13 +63,13 @@ export function AmbassadorsWoman() {
                     </div>
                   </div>
                   <h3
-                    className="text-lg sm:text-3xl font-bold text-left leading-snug mb-2"
+                    className="text-lg sm:text-3xl font-bold text-center leading-snug mb-2"
                     style={{ fontFamily: 'var(--font-poppins)' }}
                   >
                     {ambassador.title}
                   </h3>
                   <p
-                    className="text-sm sm:text-lg text-white dark:text-black text-left mb-2 line-clamp-3"
+                    className="text-sm sm:text-lg text-white dark:text-black text-center mb-2 line-clamp-3"
                     style={{ fontFamily: 'var(--font-inter)' }}
                   >
                     {ambassador.description}
@@ -102,7 +94,6 @@ export function AmbassadorsWoman() {
       </section>
 
       <section className="relative w-full min-h-[50vh] px-6 sm:px-8 lg:px-10 flex flex-col items-center justify-center text-center mt-12 mb-12">
-        {/* Imagen sin borde y con mejor integración en dark/light mode */}
         <div className="w-full max-w-3xl flex justify-center">
           <img
             src="/images/backgrounds-abstract/background-hands.png"
@@ -110,8 +101,6 @@ export function AmbassadorsWoman() {
             className="w-full h-auto rounded-lg shadow-xl dark:shadow-gray-800 filter brightness-100 dark:brightness-75"
           />
         </div>
-
-        {/* Contenido */}
         <div className="container mx-auto mt-6">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white" style={{ fontFamily: "var(--font-poppins)" }}>
             Impulsando el cambio y forjando líderes

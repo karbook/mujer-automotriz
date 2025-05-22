@@ -9,7 +9,6 @@ export const marketingRoutes = [
 		route('sponsor', 'features/marketing/sponsor/routes/index.tsx'), 
 		route('ambassors', 'features/marketing/ambassors/routes/index.tsx'), 
 		route('information/:slug', 'features/marketing/home/routes/Information.$slug.tsx'),
-		route('ambassadors/:slug', 'features/marketing/ambassors/routes/Ambassadors.$slug.tsx'),
 	]),
 
 	// SEO
