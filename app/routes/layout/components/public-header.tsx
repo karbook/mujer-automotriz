@@ -34,7 +34,7 @@ export function Header() {
         </div>
 
         {/* Logo centrado */}
-        <div className="flex-grow flex justify-center"> 
+        <div className="flex-grow flex justify-center">
           <Logo className="h-10 w-auto" variant="long" />
         </div>
         <div className="flex-shrink-0 flex items-center gap-4">
@@ -70,15 +70,18 @@ export function Header() {
           <ColorSchemeSwitch />
           <LanguageDropDown />
           <NavigationMenuLink asChild>
-            <Link
-              to="/login"
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className={cn(
                 'flex items-center justify-between rounded-full p-4 text-lg transition-all duration-200 [&_svg]:text-gray-700 [&_svg]:size-5',
                 buttonVariants({ variant: 'black' })
               )}
             >
               {t('Register')}
-            </Link>
+            </a>
+
           </NavigationMenuLink>
         </div>
       </NavigationMenu>

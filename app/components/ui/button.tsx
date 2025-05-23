@@ -37,17 +37,13 @@ const buttonVariants = cva(
                 ),
                 link: cn(
                     'text-primary underline-offset-4 hover:underline',
-                    // CUSTOM STYLES OVERRIDE
                     'text-button-primary'
                 ),
                 black: cn(
-                    // Estilo de fondo en modo claro (gris oscuro) y modo oscuro (blanco)
                     'bg-black text-white hover:bg-neutral-800',
-                    // Estilos para modo oscuro
                     'dark:bg-white dark:text-black dark:hover:bg-neutral-300 dark:hover:text-black',
                     'font-bold rounded-3xl'
                 ),
-                // CUSTOM VARIANTS
                 input: cn(
                     'bg-button-input text-button-input-foreground hover:bg-button-input-hover hover:text-accent-foreground border border-input-border justify-start text-left overflow-auto'
                 ),
@@ -55,20 +51,16 @@ const buttonVariants = cva(
                     'border-2 border-dashed bg-button-outline border-button-outline-border hover:bg-accent hover:text-accent-foreground'
                 ),
                 blackTransparent: cn(
-                    'bg-transparent text-black font-bold rounded-3xl border border-gray-900 transition-colors duration-300',
+                    'bg-transparent text-white px-14 py-5 font-bold rounded-3xl border border-gray-900 transition-colors duration-300',
                     'hover:bg-black/50 hover:text-white',
                     'dark:text-white dark:border-gray-800 dark:hover:bg-dark/50 dark:hover:text-white'
-                  )    ,              
-                 
-                  
+                  )    ,               
             },
             size: {
                 default: 'h-button p-button',
                 sm: 'h-button-sm rounded-md p-button-sm',
                 lg: 'h-button-lg rounded-md p-button-lg',
-                icon: 'h-button-icon p-button-icon', // CUSTOMIZED
-
-                // CUSTOM SIZES
+                icon: 'h-button-icon p-button-icon', 
                 wide: 'px-24 py-5',
                 pill: 'px-12 py-3 leading-3',
                 xs: 'h-button-xs rounded-md px-button-xs',

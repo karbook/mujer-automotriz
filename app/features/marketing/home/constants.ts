@@ -1,3 +1,4 @@
+import type { IconName } from "@/components/ui/icon";
 
 export type Sponsors = {
 	title: string;
@@ -469,7 +470,7 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 
 export type Benefits = {
 	title: string,
-	icon: string,
+	icon: IconName,
 	description: string | string[],
 
 }
@@ -533,6 +534,8 @@ export type Programs = {
 	imgAlt: string,
 	title: string,
 	description: string,
+	link: string,
+	buttonText?: string,
 }
 
 export const programs: Programs[] = [
@@ -543,7 +546,8 @@ export const programs: Programs[] = [
 		imgAlt: "Comunidad Global",
 		title: "¿Qué es?",
 		description: "Mujer Automotriz, es una plataforma que expone y resalta el liderazgo femenino, la innovación y fomenta relaciones significativas y de valor en la industria automotriz. Creamos una comunidad de líderes conformada por directivos, ejecutivos de nivel C y tomadores de decisiones, interesados en fomentar una industria más diversa, con un liderazgo inclusivo y enfocados en el continuo desarrollo de los líderes a nivel personal y profesional.",
-
+		link: './programs', 
+		buttonText: "Unete",
 	},
 	{
 		id: 2,
@@ -552,7 +556,8 @@ export const programs: Programs[] = [
 		imgAlt: "Desarrollo Profesional y Empoderamiento",
 		title: "Desarrollo Profesional y Empoderamiento",
 		description: "Eventos, cumbres regionales y globales. Talleres, paneles, clases magistrales y charlas con líderes destacadas del sector automotriz sobre innovación, diversidad, tecnología y liderazgo. Conoce las experiencias de los líderes de la industria, desafíos, caminos al éxito y habilidades interpersonales necesarias para el avance personal y profesional.",
-
+		link: "./events", 
+		buttonText: "Eventos", 
 	},
 	{
 		id: 3,
@@ -561,7 +566,8 @@ export const programs: Programs[] = [
 		imgAlt: "Comunidad Global",
 		title: "Comunidad Global",
 		description: "Acceso a nuestra comunidad vibrante de profesionales y mujeres altamente exitosas. Conecta con una red global de personas con ideas afines, recibe mentoría y apoyo adaptado a las demandas cambiantes de la industria automotriz. Sé parte de los miembros que están liderando el camino hacia una industria más diversa e innovadora.",
-
+		link: "./ambassors",
+		buttonText: "Comunidad", 
 	},
 	{
 		id: 4,
@@ -570,6 +576,7 @@ export const programs: Programs[] = [
 		imgAlt: "Fomento a la Diversidad y Educación",
 		title: "Fomento a la Diversidad y Educación",
 		description: "Acceso exclusivo a recursos, expertís de la industria, noticias, últimas innovaciones y educación continua a través de eventos de empoderamiento. Conoce las estrategias y mejores prácticas de DEI (Diversidad, Equidad e Inclusión) que las empresas están implementando.",
-
+		link: "/events#upcoming-events", 
+		buttonText: "Cumbre'23", 
 	},
 ];

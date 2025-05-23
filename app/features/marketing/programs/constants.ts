@@ -1,8 +1,10 @@
+import type { IconName } from "@/components/ui/icon";
+
 export type Roles = {
     title: string;
     description: string;
     bgColor: string;
-    icon: string;
+    icon: IconName;
 
 };
 export const roles: Roles[] = [
@@ -101,43 +103,43 @@ export const collaborators: Collaborators[] = [
         title: "Aprendizaje continuo",
         description: "Participar en talleres, charlas y actividades que impulsan tu crecimiento.",
         bgColor: "text-purple-500",
-        icon: "book-open", // Educación y formación constante
+        icon: "book-open", 
     },
     {
         title: "Perspectivas estratégicas",
         description: "Obtener consejos y estrategias para avanzar en tu carrera.",
         bgColor: "text-blue-500",
-        icon: "compass", // Dirección y toma de decisiones estratégicas
+        icon: "compass", 
     },
     {
         title: "Participación activa",
         description: "Contribuir con ideas y recibir retroalimentación constructiva.",
         bgColor: "text-orange-500",
-        icon: "message-circle", // Colaboración, discusión y retroalimentación
+        icon: "message-circle", 
     },
     {
         title: "Creación de objetivos claros",
         description: "Establecer metas profesionales concretas y alcanzables.",
         bgColor: "text-teal-500",
-        icon: "target", // Establecimiento de metas y objetivos estratégicos
+        icon: "target",
     },
     {
         title: "Crecimiento personal",
         description: "Desarrollar confianza y autoconocimiento en un entorno de apoyo.",
         bgColor: "text-red-500",
-        icon: "heart", // Autoconocimiento, crecimiento y bienestar
+        icon: "heart", 
     },
     {
         title: "Impacto en la industria",
         description: "Ser parte de un movimiento que promueve la diversidad e inclusión en el sector automotriz.",
         bgColor: "text-gray-500",
-        icon: "factory", // Representa el sector automotriz
+        icon: "factory", 
     },
     {
         title: "Acceso a mentoría personalizada",
         description: "Recibir orientación de una líder experimentada en la industria.",
         bgColor: "text-emerald-500",
-        icon: "user-check", // Mentoría y guía profesional
+        icon: "user-check",
     }
 ];
 

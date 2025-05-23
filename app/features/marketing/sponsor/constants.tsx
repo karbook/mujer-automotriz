@@ -1,5 +1,7 @@
+import type { IconName } from "@/components/ui/icon";
+
 export type Sponsorships ={
-    icon:string,
+    icon:IconName,
     title:string,
     description:string,
     bgColor:string,

@@ -10,7 +10,8 @@ import {
 } from "@/components/ui/carousel";
 import { collaborators } from "../constants";
 import { Icon } from '@/components/ui/icon';
-import { benefits } from "../constants"; 
+import { benefits } from "../constants";
+import { Button } from "@/components/ui/button";
 
 export function ContributorBenefits() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,6 +28,14 @@ export function ContributorBenefits() {
                         <p className="text-base md:text-xl max-w-xs md:max-w-md text-black dark:text-white">
                             La transformación de una industria es a base de continuo desarrollo y capacitación. Forma parte de la comunidad que impulsa esta transformación.
                         </p>
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform" target="_blank" rel="noopener noreferrer">
+                            <Button
+                                variant="blackTransparent"
+                                className="mt-10 ml-0 md:ml-5 text-black border dark:border-gray-500 text-xl py-6"
+                            >
+                                Registrate
+                            </Button>
+                        </a>
                     </div>
                     <div className="max-w-md md:max-w-lg p-4 md:p-6 rounded-2xl bg-gradient-to-b from-gray-100 to-gray-300 dark:from-black/30 dark:to-black/50 dark:border-white/20 transition-all dark:hover:bg-[#053b5e] border dark:hover:border-blue-600 duration-300 text-center relative z-10 shadow-lg max-h-[380px] md:max-h-[450px]">
                         <img src="/images/cartoon-people/collaborator.png" alt="Colaboradora" className="w-40 h-40 md:w-48 md:h-48 mx-auto rounded-full drop-shadow-xl object-cover" />
@@ -92,7 +101,7 @@ export function ContributorBenefits() {
 
                         <div className="w-full flex flex-col items-center mt-6 gap-3">
                             <div className="flex gap-6">
-                            <CarouselPrevious className="px-2 py-4 rounded-full border transition-all duration-300 text-gray-900 dark:text-white border-gray-400 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-500 bg-gray-200 dark:bg-transparent hover:bg-gray-300 dark:hover:bg-[#053b5e]" />
+                                <CarouselPrevious className="px-2 py-4 rounded-full border transition-all duration-300 text-gray-900 dark:text-white border-gray-400 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-500 bg-gray-200 dark:bg-transparent hover:bg-gray-300 dark:hover:bg-[#053b5e]" />
                                 <p className="text-sm font-bold text-gray-700 dark:text-white mt-2">
                                     {currentIndex + 1} / {benefits.length}
                                 </p>
@@ -108,8 +117,8 @@ export function ContributorBenefits() {
                                 <Icon name={benefit.icon} size="xxl" className={benefit.bgColor} />
                                 <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{benefit.title}</h3>
                                 <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{benefit.description}</p>
-                                </div>
-                            ))}
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
