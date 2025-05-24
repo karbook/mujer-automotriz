@@ -2,18 +2,23 @@ import { benefits } from "../constants";
 import { Icon } from "@/components/ui/icon";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import { useState } from "react";
-
+import { useTranslation } from "react-i18next";
 export function CorporateSponsorships() {
+  const safeTranslate = (key: string) => {
+        return t(key, { defaultValue: key });
+    };
+
+    const { t } = useTranslation()
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <div className="bg-white dark:bg-black py-20 px-6">
             <div className="max-w-6xl mx-auto text-left space-y-16">
-                <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white">
-                    Patrocinios Corporativos
+                <h2 className="text-5xl font-bold text-center text-gray-900 dark:text-white" style={{fontFamily:('var(--font-SF-Pro)')}}>
+                    {t("Corporate Sponsorships")}
                 </h2>
-                <p className="text-lg text-center text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                    Beneficios alineados a tus objetivos. Forjemos juntos el futuro de la industria Automotriz en México y América Latina.
+                <p className="text-xl text-center font-semibold text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" style={{ fontFamily: ('var(--font-SF-Pro)') }}>
+                    {t("Benefits aligned with your goals. Let's forge the future of the automotive industry in Mexico and Latin America together.")}
                 </p>
                 <Carousel className="block md:hidden relative" onIndexChange={setCurrentIndex}>
                     <CarouselContent>
@@ -21,7 +26,7 @@ export function CorporateSponsorships() {
                             <CarouselItem key={index} className="basis-full">
                                 <div className="bg-[#001e22] dark:bg-[#001e22] text-white rounded-xl p-6 shadow-md border border-[#011f22] hover:border-green-400 transition duration-300">
                                     <Icon name={benefit.icon} size="xxl" className="text-green-400" />
-                                    <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+                                    <h3 className="text-xl font-semibold mb-2">{safeTranslate(benefit.title)}</h3>
 
                                     {Array.isArray(benefit.description) ? (
                                         <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 mt-2 font-semibold">
@@ -30,7 +35,7 @@ export function CorporateSponsorships() {
                                             ))}
                                         </ul>
                                     ) : (
-                                        <p className="text-sm text-gray-300 font-semibold">{benefit.description}</p>
+                                        <p className="text-sm text-gray-300 font-semibold">{safeTranslate(benefit.description)}</p>
                                     )}
                                 </div>
                             </CarouselItem>

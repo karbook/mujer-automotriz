@@ -1,6 +1,5 @@
 "use client";
 
-import { useTranslation } from "react-i18next";
 import {
   Carousel,
   CarouselContent,
@@ -11,6 +10,7 @@ import { useRef } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export  function AmbassadorsIntroCarousel() {
   const { t } = useTranslation();

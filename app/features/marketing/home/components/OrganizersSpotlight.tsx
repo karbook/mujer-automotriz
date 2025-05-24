@@ -55,7 +55,7 @@ export function OrganizersSpotlight(){
             {t("in the creation of the first international network of women in the")}{" "}
             <span className="text-pink-500">{t("automotive industry")}</span>
           </h2>
-          <p className="text-sm sm:text-xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed" style={{ fontFamily: "var(--font-SF-Pro)" }}
+          <p className="text-sm sm:text-2xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed" style={{ fontFamily: "var(--font-SF-Pro)" }}
           >
             {t("We promote inclusive leadership and are the platform that drives innovation and highlights female leadership in Latin America.")}
           </p>

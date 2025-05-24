@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useTransition } from "react";
 
 import { sponsors } from "../constants";
+import { useTranslation } from "react-i18next";
 const glowColors = ["#0c8ef4"];
 
 export function SponsorsPresentation()  {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [activeDiv, setActiveDiv] = useState<number | null>(null);
+  const { t }=useTranslation(); 
 
   const handleMouseMove = (e: React.MouseEvent, index: number) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -23,9 +25,9 @@ export function SponsorsPresentation()  {
   return (
     <section className="bg-gradient-to-b from-gray-100 to-white dark:from-[#18181d] dark:to-black py-20 px-6">
       <div className="max-w-6xl mx-auto text-center space-y-12">
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">Patrocinadores</h2>
-        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-          Gracias a nuestros patrocinadores por impulsar la innovación en la industria automotriz.
+        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">{t("Sponsors")}</h2>
+        <p className="text-2xl font-semibold text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" style={{fontFamily:('var(--font-SF-Pro)')}}>
+          {t("Thanks to our sponsors for driving innovation in the automotive industry.")}
         </p>
 
         <div className="grid md:grid-cols-3 gap-10 items-center">
