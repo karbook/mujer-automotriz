@@ -21,7 +21,7 @@
 	"Welcome": "Bienvenido",
 	"Home": "Inicio",
 	"Events": "Eventos",
-	"Ambassadors": "Embajadores",
+	"Ambassadors": "Embajadoras",
 	"Programs": "Programas",
 	"Sponsors": "Patrocinadores",
 	"Register": "Registrate",
@@ -164,10 +164,26 @@
   "Personal Growth": "Crecimiento personal",
   "Develop confidence and self-awareness in a supportive environment.": "Desarrollar confianza y autoconocimiento en un entorno de apoyo.",
 
-  "Industry Impact": "Impacto en la industria",
   "Be part of a movement that promotes diversity and inclusion in the automotive sector.": "Ser parte de un movimiento que promueve la diversidad e inclusión en el sector automotriz.",
 
   "Access to Personalized Mentorship": "Acceso a mentoría personalizada",
-  "Receive guidance from an experienced leader in the industry.": "Recibir orientación de una líder experimentada en la industria."
+  "Receive guidance from an experienced leader in the industry.": "Recibir orientación de una líder experimentada en la industria.",
+  "Meet the leaders who are creating a more diverse industry":"Conoce a los líderes que están creado una industria más diversa",
+  "Be part of the network and/or apply as an Ambassador":"Ser parte de la red y/o postularme como Embajadora",
+  "Masterclasses": "Clases Magistrales",
+  "Ongoing access to classes on leadership, personal development, digitalization, and processes.": "Acceso continuo a clases sobre liderazgo, desarrollo personal, digitalización y procesos.",
+
+  "Professional Development": "Desarrollo Profesional",
+  "Free resources and an empowering community to strengthen your career.": "Recursos gratuitos y comunidad de empoderamiento mutuo para fortalecer tu carrera.",
+
+  "Supportive Community": "Comunidad de Apoyo",
+  "Network of Automotive Women and experts to share questions, experiences, and advice.": "Red de Mujeres Automotrices y expertos para compartir dudas, experiencias y consejos.",
+
+  "Scholarship Access": "Acceso a Becas",
+  "Discounts and opportunities in specialized products and services.": "Descuentos y oportunidades en productos y servicios especializados.",
+  "Benefits":"Beneficios",
+  "Be part of the community and access the following benefits":"Sé parte de la comunidad y accede a los siguientes beneficios",
+  "Collaborator":"Colaboradora",
+  "The transformation of an industry requires many key players, be part of the key players that will guide this transformation.":"La transformación de una industria necesita muchas actores clave, forma parte de los actores clave que guiarán esta transformación."
 
 }

@@ -20,7 +20,7 @@ type CarouselProps = {
   setApi?: (api: CarouselApi) => void;
   autoScroll?: boolean;
   autoScrollOptions?: AutoScrollOptionsType;
-  onIndexChange?: (index: number) => void; // Nuevo callback
+  onIndexChange?: (index: number) => void; 
 };
 
 type CarouselContextProps = {
@@ -30,7 +30,7 @@ type CarouselContextProps = {
   scrollNext: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
-  currentIndex: number; // Nuevo estado
+  currentIndex: number; 
 } & Omit<CarouselProps, 'onIndexChange'>;
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
@@ -58,7 +58,7 @@ const Carousel = React.forwardRef<
       autoScrollOptions,
       className,
       children,
-      onIndexChange, // Recibimos el callback
+      onIndexChange, 
       ...props
     },
     ref
@@ -75,7 +75,7 @@ const Carousel = React.forwardRef<
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
-    const [currentIndex, setCurrentIndex] = React.useState(0); // Estado para el índice
+    const [currentIndex, setCurrentIndex] = React.useState(0); 
 
     const onSelect = React.useCallback(
       (api: CarouselApi) => {
@@ -85,8 +85,8 @@ const Carousel = React.forwardRef<
 
         setCanScrollPrev(api.canScrollPrev());
         setCanScrollNext(api.canScrollNext());
-        setCurrentIndex(api.selectedScrollSnap()); // Actualizamos el índice
-        onIndexChange?.(api.selectedScrollSnap()); // Llamamos al callback si existe
+        setCurrentIndex(api.selectedScrollSnap()); 
+        onIndexChange?.(api.selectedScrollSnap()); 
       },
       [onIndexChange]
     );
@@ -146,7 +146,7 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
-          currentIndex, // Exponemos el índice
+          currentIndex, 
         }}
       >
         <div

@@ -55,9 +55,9 @@ export function MobileNavigation() {
       <SheetContent side="left" className="hide-scrollbar w-4/6 overflow-y-auto lg:hidden">
         <SheetHeader>
           <Logo className="h-8 w-32" variant="long" />
-          <SheetTitle className="sr-only">Menú de Navegación</SheetTitle>
+          <SheetTitle className="sr-only">Menú of Navigation</SheetTitle>
           <SheetDescription className="sr-only">
-            Navegación principal de la aplicación con enlaces a secciones clave y opciones de configuración.
+            Navigation
           </SheetDescription>
         </SheetHeader>
         

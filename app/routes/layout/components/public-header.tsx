@@ -26,14 +26,11 @@ export function Header() {
   const { t } = useTranslation();
 
   return (
-    <nav className="sticky top-0 w-full py-8 min-h-[80px] bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-md z-50
-                    flex items-center justify-center lg:justify-between px-4 2xl:px-20">
+    <nav className="sticky top-0 w-full py-8 min-h-[80px] bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-md z-50 flex items-center justify-center lg:justify-between px-4 2xl:px-20">
       <div className="flex items-center justify-between w-full lg:hidden">
         <div className="flex-shrink-0">
           <MobileNavigation />
         </div>
-
-        {/* Logo centrado */}
         <div className="flex-grow flex justify-center">
           <Logo className="h-10 w-auto" variant="long" />
         </div>
