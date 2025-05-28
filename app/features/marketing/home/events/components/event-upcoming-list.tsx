@@ -13,10 +13,9 @@ import { useTranslation } from 'react-i18next';
 import { eventDetails, featuredEvents } from '../constants';
 
 export function EventUpcomingList() {
-  const { t } = useTranslation();
-  const safeTranslate = (key: string) => {
-    return t(key, { defaultValue: key });
-  };
+
+  const {t} =useTranslation();
+
   return (
     <>
       <section
@@ -28,7 +27,7 @@ export function EventUpcomingList() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div> {/* Ajusta la opacidad del filtro aquí */}
+        <div className="absolute inset-0 bg-black/50"></div> 
         <div className="relative max-w-full sm:max-w-6xl flex flex-col sm:flex-row items-start justify-start gap-6 sm:gap-8 pl-6 sm:pl-12 lg:pl-20 mt-24 sm:mt-32 lg:mt-40">
           <div className="max-w-3xl text-left self-start">
             <h1 className="text-5xl sm:text-6xl font-bold shadow-lg mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
@@ -53,14 +52,14 @@ export function EventUpcomingList() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <h2 className="text-4xl font-bold mb-6">{safeTranslate(eventDetail.title)}</h2>
+            <h2 className="text-4xl font-bold mb-6">{t(eventDetail.title)}</h2>
             <div className="p-6">
-              <h3 className="text-2xl font-bold mb-2">{safeTranslate(eventDetail.name)}</h3>
-              <p className="text-lg mb-4">{safeTranslate(eventDetail.location)}</p>
+              <h3 className="text-2xl font-bold mb-2">{t(eventDetail.name)}</h3>
+              <p className="text-lg mb-4">{t(eventDetail.location)}</p>
               <div className="flex justify-left gap-4">
                 <Button variant="black" className="px-8 py-6 text-base group">
                   <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-purple-400 via-pink-500 to-red-500">
-                    {safeTranslate(eventDetail.buttonText)}
+                    {t(eventDetail.buttonText)}
                   </span>
                 </Button>
               </div>
@@ -85,23 +84,22 @@ export function EventUpcomingList() {
               ></div>
 
               <h2 className="text-4xl font-bold mb-4 text-black dark:text-white group-hover:text-white transition-colors duration-300">
-                {safeTranslate(featuredEvent.title)}
+                {t(featuredEvent.title)}
               </h2>
               <p className="mb-6 text-xl font-semibold max-w-4xl group-hover:text-white transition-colors duration-300"style={{fontFamily:('var(--font-SF-Pro)')}}>
-                {safeTranslate(featuredEvent.description)}
+                {t(featuredEvent.description)}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-0 sm:absolute sm:bottom-10 sm:right-10 w-full sm:w-auto items-start sm:items-center sm:justify-end">
-                {safeTranslate(featuredEvent.buttonText ?? "") && (
+                {t(featuredEvent.buttonText ?? "") && (
                   <Link to='/sponsor' className="w-full sm:w-auto">
                     <Button
                       variant="blackTransparent"
                       className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full"
                     >
-                      {safeTranslate(featuredEvent.buttonText ?? "")}
+                      {t(featuredEvent.buttonText ?? "")}
                     </Button>
                   </Link>
                 )}
-
                 {index === featuredEvents.length - 1 && (
                   <Drawer>
                     <DrawerTrigger asChild>
@@ -109,7 +107,7 @@ export function EventUpcomingList() {
                         variant="blackTransparent"
                         className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full sm:w-auto"
                       >
-                        {safeTranslate('Buy Tickets')}
+                        {t('Buy Tickets')}
                       </Button>
                     </DrawerTrigger>
 

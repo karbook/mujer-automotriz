@@ -13,7 +13,7 @@ import {
   SheetHeader,
   SheetTrigger,
   SheetTitle,
-  SheetDescription
+  SheetDescription,
 } from '@/components/ui/sheet';
 import { Icon } from '@/components/ui/icon';
 import LanguageDropDown from './language-dropdown';
@@ -34,7 +34,7 @@ export function MobileNavigation() {
 
   const COLOR_SCHEME_OPTIONS = [
     { value: 'light', name: t('Light'), bgColor: 'bg-white text-black', hoverColor: 'hover:bg-gray-200' },
-    { value: 'dark', name: t('Dark'), bgColor: 'bg-black text-white', hoverColor: 'hover:bg-gray-700' }, // Usé gray-700 para hover en dark, puedes ajustar
+    { value: 'dark', name: t('Dark'), bgColor: 'bg-black text-white', hoverColor: 'hover:bg-gray-700' }, 
   ];
 
   const mode = colorScheme;

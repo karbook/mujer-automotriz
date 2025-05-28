@@ -10,27 +10,28 @@ import {
 } from "@/components/ui/carousel";
 import { Icon } from "@/components/ui/icon";
 import { sponsorships } from "../constants";
-
+import { useTranslation } from "react-i18next";
 export function BecomeSponsor() {
+    const {t}=useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <section className="w-full px-4 sm:px-6 py-12 bg-white dark:bg-black">
             <div className="max-w-[90rem] mx-auto mb-8 text-left px-2 sm:px-4">
                 <h2 className="inline-block ml-[-18px] sm:ml-[-20px] px-4 py-1 rounded-full text-5xl font-semibold bg-gradient-to-r from-[#06c8b3] via-[#09dfaa] to-[#04c8cc] bg-clip-text text-transparent">
-                    Contáctanos
+                    {t('Contact us')}
                 </h2>
                 <h2 className="text-2xl sm:text-6xl font-bold text-dark leading-relaxed" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
-                    Únete a Mujer Automotriz y ayúdanos a construir una industria más inclusiva y diversa.
+                    {t('Join Mujer Automotriz and help us build a more inclusive and diverse industry.')}
                 </h2>
             </div>
             <div className="max-w-[90rem] mx-auto py-12 rounded-3xl bg-[#011e23] shadow-xl">
                 <div className="text-left mb-8 max-w-full sm:max-w-[70%] mx-auto sm:ml-24 px-2 sm:px-0">
                     <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#1abc9c] text-white mb-2">
-                        Estas intersado en
+                        {t('Are you interested in')}
                     </span>
                     <h2 className="text-2xl sm:text-4xl font-bold text-[#ECF0F7] mb-4 leading-relaxed" style={{ fontFamily: 'var(--font-poppins)' }}>
-                        Forjemos juntos el futuro de la industria Automotriz en México y América Latina
+                        {t("Let's forge the future of the automotive industry in Mexico and Latin America together.")}
                     </h2>
                 </div>
                 <div className="max-w-[90%] mx-auto overflow-hidden min-h-[320px]">
@@ -47,10 +48,10 @@ export function BecomeSponsor() {
                                                 <Icon name={sponsorship.icon} size="xxl" className={sponsorship.bgColor} />
                                             </div>
                                             <h3 className="text-2xl sm:text-3xl font-semibold mb-1">
-                                                {sponsorship.title}
+                                                {t(sponsorship.title)}
                                             </h3>
                                             <p className="text-lg sm:text-xl text-[#D1D5DB]" style={{ fontFamily: 'var(--font-Inter)' }}>
-                                                {sponsorship.description}
+                                                {t(sponsorship.description)}
                                             </p>
                                         </div>
                                     </CarouselItem>

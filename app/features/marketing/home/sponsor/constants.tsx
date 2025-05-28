@@ -1,111 +1,112 @@
 import type { IconName } from "@/components/ui/icon";
+import { t } from '@/localization/utils';
 
-export type Sponsorships ={
-    icon:IconName,
-    title:string,
-    description:string,
-    bgColor:string,
-
+export type Sponsorships = {
+    icon: IconName,
+    title: string,
+    description: string,
+    bgColor: string,
 }
+
 export const sponsorships: Sponsorships[] = [
     {
         icon: "megaphone",
-        title: "Visibilidad y Posicionamiento",
-        description: "Aumenta la presencia de tu marca en la industria automotriz.",
+        title: t("Visibility and Positioning"),
+        description: t("Increase your brand presence in the automotive industry."),
         bgColor: "text-green-400",
     },
     {
         icon: "users",
-        title: "Promoción de la Diversidad",
-        description: "Apoya activamente la inclusión y la equidad de género en el sector.",
+        title: t("Diversity Promotion"),
+        description: t("Actively support inclusion and gender equity in the sector."),
         bgColor: "text-green-400",
     },
     {
         icon: "briefcase",
-        title: "Acceso a Talento",
-        description: "Conéctate con líderes y profesionales emergentes del sector.",
+        title: t("Access to Talent"),
+        description: t("Connect with leaders and emerging professionals in the sector."),
         bgColor: "text-green-400",
     },
     {
         icon: "handshake",
-        title: "Networking Estratégico",
-        description: "Participa en eventos exclusivos y crea alianzas de alto impacto.",
+        title: t("Strategic Networking"),
+        description: t("Participate in exclusive events and create high-impact alliances."),
         bgColor: "text-green-400",
     },
     {
         icon: "lightbulb",
-        title: "Contribución al Cambio",
-        description: "Influye en la agenda de la industria hacia un futuro más inclusivo.",
+        title: t("Contribution to Change"),
+        description: t("Influence the industry's agenda towards a more inclusive future."),
         bgColor: "text-green-400",
     },
     {
         icon: "book-open",
-        title: "Acceso a Recursos Especializados",
-        description: "Benefíciate de información y conocimientos compartidos por expertos en DEI.",
+        title: t("Access to Specialized Resources"),
+        description: t("Benefit from shared insights and knowledge from DEI experts."),
         bgColor: "text-green-400",
     },
     {
         icon: "handshake",
-        title: "Oportunidades de Colaboración",
-        description: "Colabora en iniciativas que impulsan la innovación y el liderazgo inclusivo.",
+        title: t("Collaboration Opportunities"),
+        description: t("Collaborate on initiatives that drive innovation and inclusive leadership."),
         bgColor: "text-green-400",
     },
     {
         icon: "heart",
-        title: "Impacto en la Comunidad",
-        description: "Apoya el desarrollo profesional de mujeres líderes en la industria.",
+        title: t("Community Impact"),
+        description: t("Support the professional development of female leaders in the industry."),
         bgColor: "text-green-400",
     },
     {
         icon: "flag",
-        title: "Construcción de Legado",
-        description: "Deja una huella positiva y duradera en la evolución de la industria automotriz.",
+        title: t("Legacy Building"),
+        description: t("Leave a positive and lasting mark on the evolution of the automotive industry."),
         bgColor: "text-green-400",
     }
 ];
 
-export type BenefitsAligneds={
-    icon:string,
-    title:string,
-    description:string,
-    bgColor:string
-
+export type BenefitsAligneds = {
+    icon: string,
+    title: string,
+    description: string,
+    bgColor: string,
 }
-export const benefitsAligneds:BenefitsAligneds[] = [
+
+export const benefitsAligneds: BenefitsAligneds[] = [
     {
         icon: "lightbulb",
-        title: "Exposición de Innovación",
-        description: "Destaca los avances liderados por mujeres y tecnologías revolucionarias en tu organización.",
+        title: t("Innovation Exposure"),
+        description: t("Showcase advancements led by women and revolutionary technologies in your organization."),
         bgColor: "text-black",
     },
     {
         icon: "handshake",
-        title: "Colaboración de la Industria",
-        description: "Encuentra oportunidades de colaboración con innovadores del sector para impulsar el crecimiento.",
+        title: t("Industry Collaboration"),
+        description: t("Find collaboration opportunities with industry innovators to drive growth."),
         bgColor: "text-black",
     },
     {
         icon: "briefcase",
-        title: "Programas de Practicantes",
-        description: "Conéctate con talento emergente y fortalece la inclusión en la industria.",
+        title: t("Internship Programs"),
+        description: t("Connect with emerging talent and strengthen inclusion in the industry."),
         bgColor: "text-black",
     },
     {
         icon: "users",
-        title: "Redefinamos el Liderazgo",
-        description: "Impulsa conversaciones transformadoras y ayuda a moldear el futuro de la industria.",
+        title: t("Let's Redefine Leadership"),
+        description: t("Drive transformative conversations and help shape the future of the industry."),
         bgColor: "text-black",
     },
     {
         icon: "award",
-        title: "Reconocimiento y Premios",
-        description: "Colabora en programas de reconocimiento para destacar logros y contribuciones.",
+        title: t("Recognition and Awards"),
+        description: t("Collaborate on recognition programs to highlight achievements and contributions."),
         bgColor: "text-white",
     },
     {
         icon: "network",
-        title: "Networking de Alta Gama",
-        description: "Forma parte de eventos exclusivos con tomadores de decisiones y directivos de la industria.",
+        title: t("High-Level Networking"),
+        description: t("Be part of exclusive events with decision-makers and industry executives."),
         bgColor: "text-white",
     }
 ];

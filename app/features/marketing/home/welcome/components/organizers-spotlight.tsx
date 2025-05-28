@@ -10,8 +10,8 @@ import { useRef } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
 import { useTranslation } from "react-i18next";
-
 export function OrganizersSpotlight(){
+  const{t}=useTranslation();
   const emblaApi = useRef<CarouselApi | null>(null);
   const autoScrollOptions: Partial<AutoScrollOptionsType> = {
     speed: 1.2,
@@ -33,7 +33,6 @@ export function OrganizersSpotlight(){
   const numRepetitions = 6;
   const repeatedLogos = Array(numRepetitions).fill([...logos]).flat();
 
-  const { t } = useTranslation();
   return (
     <>
       <section

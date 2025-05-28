@@ -1,4 +1,4 @@
-import { useState, useTransition } from "react";
+import { useState } from "react";
 
 import { sponsors } from "../constants";
 import { useTranslation } from "react-i18next";

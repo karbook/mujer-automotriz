@@ -14,9 +14,7 @@ import { useTranslation } from "react-i18next";
 export function AmbassadorBenefits() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
-  const safeTranslate = (key: string) => {
-    return t(key, { defaultValue: key });
-  };
+ 
 
   return (
     <>
@@ -72,8 +70,8 @@ export function AmbassadorBenefits() {
                 <CarouselItem key={index} className="basis-full">
                   <div className="bg-white dark:bg-black/20 p-5 rounded-3xl text-left border border-gray-300 dark:border-white/20 hover:shadow-md hover:bg-gray-200 dark:hover:bg-[#590539] hover:border-pink-600 transition-all">
                     <Icon name={ambassador.icon} size="xl" className={ambassador.bgColor} />
-                    <h3 className="text-2xl font-bold mt-2 mb-1">{safeTranslate(ambassador.title)}</h3>
-                    <p className="text-md" style={{ fontFamily: ('var(--font-SF-Pro)') }}>{safeTranslate(ambassador.description)}</p>
+                    <h3 className="text-2xl font-bold mt-2 mb-1">{t(ambassador.title)}</h3>
+                    <p className="text-md" style={{ fontFamily: ('var(--font-SF-Pro)') }}>{t(ambassador.description)}</p>
                   </div>
                 </CarouselItem>
               ))}
@@ -94,8 +92,8 @@ export function AmbassadorBenefits() {
             {ambassadors.map((ambassador, index) => (
               <div key={index} className="bg-white dark:bg-black/20 p-6 rounded-3xl text-left border border-gray-300 dark:border-white/20 hover:shadow-md hover:bg-gray-200 dark:hover:bg-[#590539] hover:border-pink-600 transition-all">
                 <Icon name={ambassador.icon} size="xxl" className={ambassador.bgColor} />
-                <h3 className="text-3xl font-bold">{safeTranslate(ambassador.title)}</h3>
-                <p className="text-lg font-semibold" style={{ fontFamily: ('var(--font-SF-Pro)') }}>{safeTranslate(ambassador.description)}</p>
+                <h3 className="text-3xl font-bold">{t(ambassador.title)}</h3>
+                <p className="text-lg font-semibold" style={{ fontFamily: ('var(--font-SF-Pro)') }}>{t(ambassador.description)}</p>
               </div>
             ))}
           </div>

@@ -30,7 +30,7 @@ export const remixI18Next = new RemixI18Next({
 		...i18nConfig,
 		resources,
 		fallbackLng: {
-			default: ['en'],
+			default: ['es'],
 		},
 	},
 })

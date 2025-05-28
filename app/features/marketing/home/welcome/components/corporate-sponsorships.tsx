@@ -4,12 +4,9 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 export function CorporateSponsorships() {
-  const safeTranslate = (key: string) => {
-        return t(key, { defaultValue: key });
-    };
 
-    const { t } = useTranslation()
     const [currentIndex, setCurrentIndex] = useState(0);
+    const {t} = useTranslation();
 
     return (
         <div className="bg-white dark:bg-black py-20 px-6">
@@ -26,7 +23,7 @@ export function CorporateSponsorships() {
                             <CarouselItem key={index} className="basis-full">
                                 <div className="bg-[#001e22] dark:bg-[#001e22] text-white rounded-xl p-6 shadow-md border border-[#011f22] hover:border-green-400 transition duration-300">
                                     <Icon name={benefit.icon} size="xxl" className="text-green-400" />
-                                    <h3 className="text-xl font-semibold mb-2">{safeTranslate(benefit.title)}</h3>
+                                    <h3 className="text-xl font-semibold mb-2">{t(benefit.title)}</h3>
 
                                     {Array.isArray(benefit.description) ? (
                                         <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 mt-2 font-semibold">
@@ -35,7 +32,7 @@ export function CorporateSponsorships() {
                                             ))}
                                         </ul>
                                     ) : (
-                                        <p className="text-sm text-gray-300 font-semibold">{safeTranslate(benefit.description)}</p>
+                                        <p className="text-sm text-gray-300 font-semibold">{t(benefit.description)}</p>
                                     )}
                                 </div>
                             </CarouselItem>
@@ -58,7 +55,7 @@ export function CorporateSponsorships() {
                             className="bg-[#001e22] dark:bg-[#001e22] text-white rounded-xl p-6 shadow-md border border-[#011f22] hover:border-green-400 transition duration-300"
                         >
                             <Icon name={benefit.icon} size="xxl" className="text-green-400" />
-                            <h3 className="text-xl font-semibold mb-2">{safeTranslate(benefit.title)}</h3>
+                            <h3 className="text-xl font-semibold mb-2">{t(benefit.title)}</h3>
 
                             {Array.isArray(benefit.description) ? (
                                 <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 mt-2 font-semibold">
@@ -67,7 +64,7 @@ export function CorporateSponsorships() {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="text-sm text-gray-300 font-semibold">{safeTranslate(benefit.description)}</p>
+                                <p className="text-sm text-gray-300 font-semibold">{t(benefit.description)}</p>
                             )}
                         </div>
                     ))}

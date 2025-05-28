@@ -5,7 +5,6 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-  NavigationMenuLink,
 } from '@/components/ui/navigation-menu';
 import { Link, NavLink } from 'react-router-dom';
 import { buttonVariants } from '@/components/ui/button';
@@ -13,14 +12,15 @@ import { ColorSchemeSwitch } from '@/components/color-scheme-switch';
 import Logo from './logo';
 import LanguageDropDown from './language-dropdown';
 import { MobileNavigation } from './public-mobile-navigation';
-
+import {t} from "@/localization/utils"
 const menuItems = [
-  { path: '/', label: 'Home' },
-  { path: '/events', label: 'Events' },
-  { path: '/programs', label: 'Programs' },
-  { path: '/ambassors', label: 'Ambassadors' },
-  { path: '/sponsor', label: 'Sponsors' },
+  { path: '/', label: t('Home') },
+  { path: '/events', label: t('Events') },
+  { path: '/programs', label: t('Programs') },
+  { path: '/ambassors', label: t('Ambassadors') },
+  { path: '/sponsor', label: t('Sponsors') },
 ] as const;
+
 
 export function Header() {
   const { t } = useTranslation();
@@ -61,25 +61,21 @@ export function Header() {
               </NavigationMenuItem>
             ))}
           </NavigationMenuList>
-
         </div>
         <div className="flex gap-4 items-center justify-end">
           <ColorSchemeSwitch />
           <LanguageDropDown />
-          <NavigationMenuLink asChild>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(
-                'flex items-center justify-between rounded-full p-4 text-lg transition-all duration-200 [&_svg]:text-gray-700 [&_svg]:size-5',
+                'flex items-center text-black justify-between p-4 text-lg [&_svg]:text-gray-700 [&_svg]:size-5',
                 buttonVariants({ variant: 'black' })
               )}
             >
               {t('Register')}
             </a>
-
-          </NavigationMenuLink>
         </div>
       </NavigationMenu>
     </nav>

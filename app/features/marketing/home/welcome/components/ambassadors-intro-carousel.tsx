@@ -9,11 +9,11 @@ import { ambassadors } from "../constants";
 import { useRef } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
-import { Link } from "react-router-dom";
-import { useTranslation } from 'react-i18next';
+import { Link } from "react-router";
+import { useTranslation } from 'react-i18next'
 
 export  function AmbassadorsIntroCarousel() {
-  const { t } = useTranslation();
+  const {t} =useTranslation();
   const emblaApi = useRef<CarouselApi | null>(null);
   const autoScrollOptions: Partial<AutoScrollOptionsType> = {
     speed: 1.5,
@@ -55,7 +55,7 @@ export  function AmbassadorsIntroCarousel() {
                       <div className="relative w-full aspect-[3/4] overflow-hidden sm:aspect-[3/4]">
                         <img
                           src={ambassador.icon}
-                          alt={ambassador.title}
+                          alt={t(ambassador.title)}
                           className="w-full h-full rounded-lg object-cover mx-auto"
                         />
                         <div className="absolute bottom-2 right-2 bg-white rounded-full w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center overflow-hidden">
@@ -68,17 +68,17 @@ export  function AmbassadorsIntroCarousel() {
                       </div>
                       <div className="p-2 sm:p-4 flex flex-col gap-1 ">
                         <h3 className="text-sm sm:text-3xl font-bold leading-tight" style={{ fontFamily: 'var(--font-poppins)' }}>
-                          {ambassador.title}
+                          {t(ambassador.title)}
                         </h3>
                         <p className="text-xs sm:text-lg" style={{ fontFamily: 'var(--font-inter)' }}>
-                          {ambassador.description}
+                          {t(ambassador.description)}
                         </p>
                         <p className="text-xs sm:text-xl font-semibold" style={{ fontFamily: 'var(--font-poppins)' }}>
-                          {ambassador.company}
+                          {t(ambassador.company)}
                         </p>
                         <div className="flex-grow"></div>
                         <div className="flex justify-end text-xs sm:text-sm dark:text-black font-semibold text-white/80">
-                          {ambassador.nationality}
+                          {t(ambassador.nationality)}
                         </div>
                       </div>
                     </div>

@@ -3,15 +3,13 @@
 import { motion } from "framer-motion";
 import { ambassadors } from "../constants";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useTranslation } from "react-i18next";
-
 export function AmbassadorsWoman() {
-
-  const {t}= useTranslation();
+  const { t } = useTranslation();
   return (
     <>
-      <section 
+      <section
         className="relative w-full min-h-[50vh] px-6 sm:px-8 lg:px-10 text-white bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
         style={{
           backgroundImage: "url('/images/backgrounds-abstract/background-woman.png')",
@@ -35,7 +33,7 @@ export function AmbassadorsWoman() {
               variant="blackTransparent"
               className="px-6 py-3 font-bold rounded-3xl text-white border-gray-400 border sm:text-xl hover:text-white hover:border-gray-400 transition-colors duration-300"
             >
-             {t('Be part of the network and/or apply as an Ambassador')}
+              {t('Be part of the network and/or apply as an Ambassador')}
 
             </Button>
           </div>
@@ -104,17 +102,16 @@ export function AmbassadorsWoman() {
         </div>
         <div className="container mx-auto mt-6">
           <h2 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4 text-gray-900 dark:text-white" style={{ fontFamily: "var(--font-poppins)" }}>
-            Impulsando el cambio y forjando líderes
+            {t('Driving change and developing leaders')}
           </h2>
           <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-gray-700 dark:text-gray-300" style={{ fontFamily: "var(--font-inter)" }}>
-            Capacitar y empoderar a mujeres en la industria del mantenimiento y reparación de automóviles,
-            a través de capacitaciones en tecnología y digitalización.
+            {t('To train and empower women in the automotive maintenance and repair industry through technology and digitalization training.')}
           </p>
           <Button
             variant="blackTransparent"
             className="mt-4 px-6 py-3 font-bold rounded-3xl  text-gray-900 dark:text-white border-gray-300 dark:border-gray-400 sm:text-xl hover:bg-gray-100 hover:text-black dark:hover:bg-gray-700 hover:border-gray-400 transition-colors duration-300"
           >
-            Postularme como Embajadora
+            {t('Apply to be an Ambassador')}
           </Button>
 
         </div>

@@ -1,52 +1,48 @@
-//EventUpcomingList
-export type EventDetails={
-    title:string,
-    name:string,
-    location:string,
-    buttonText:string,
-    image:string,
+import { t } from '@/localization/utils';
+
+export type EventDetails = {
+    title: string,
+    name: string,
+    location: string,
+    buttonText: string,
+    image: string,
 }
-export const eventDetails:EventDetails[] = [
-  {
-    title: "Upcoming events",
-    name: "Motor Ladies Night",
-    location: "CDMX - 14 November 2024",
-    buttonText: "Contact",
-    image: "/images/backgrounds-colors/background-orange.png",
-  },
+export const eventDetails: EventDetails[] = [
+    {
+        title: t("Upcoming events"),
+        name: t("Motor Ladies Night"),
+        location: t("CDMX - 14 November 2024"),
+        buttonText: t("Contact"),
+        image: "/images/backgrounds-colors/background-orange.png",
+    },
 ];
 
-export type FeaturedEvents={
-    title:string,
-    description:string,
-    borderColors:[string,string],
-    buttonText?:string,
-    link?:string,
+export type FeaturedEvents = {
+    title: string,
+    description: string,
+    borderColors: [string, string],
+    buttonText?: string,
+    link?: string,
 }
-export const featuredEvents:FeaturedEvents[] = [
-  {
-    title: "About the event",
-    description:
-      "Motor Ladies Night is an exclusive evening for leading women in the automotive industry. Beyond networking, you'll enjoy an intimate and sophisticated experience. Enjoy cocktails, snacks, and three short presentations with powerful ideas to drive change.",
-    borderColors: ["pink-500", "pink-500"],
-  },
-  {
-    title: "Mujer Automotriz: Community of Leaders",
-    description:
-      "Drive conversations that transform the industry. Join the launch of the first network focused on inclusive leadership and automotive diversity. Automotive Woman connects, inspires, and empowers leading women in the industry.",
-    borderColors: ["pink-500", "pink-500"],
-  },
-  {
-    title: "Your pass includes",
-    description:
-      "Gourmet cuisine, select beverages, and an atmosphere designed to connect. All for $92 USD per ticket.",
-    borderColors: ["pink-500", "pink-500"],
-    buttonText: "Be a Sponsor",
-  },
+export const featuredEvents: FeaturedEvents[] = [
+    {
+        title: t("About the event"),
+        description: t("Motor Ladies Night is an exclusive evening for leading women in the automotive industry. Beyond networking, you'll enjoy an intimate and sophisticated experience. Enjoy cocktails, snacks, and three short presentations with powerful ideas to drive change."),
+        borderColors: ["pink-500", "pink-500"],
+    },
+    {
+        title: t("Mujer Automotriz: Community of Leaders"),
+        description: t("Drive conversations that transform the industry. Join the launch of the first network focused on inclusive leadership and automotive diversity. Automotive Woman connects, inspires, and empowers leading women in the industry."),
+        borderColors: ["pink-500", "pink-500"],
+    },
+    {
+        title: t("Your pass includes"),
+        description: t("Gourmet cuisine, select beverages, and an atmosphere designed to connect. All for $92 USD per ticket."),
+        borderColors: ["pink-500", "pink-500"],
+        buttonText: t("Be a Sponsor"),
+    },
 ];
 
-
-//EventMovementLeadership
 export type Eventmovements = {
     title: string,
     subtitle: string,
@@ -55,306 +51,297 @@ export type Eventmovements = {
     image: string,
 }
 export const eventmovements: Eventmovements = {
-    title: "Leadership in Motion",
-    subtitle: "Government of San Luis Potosí and Future Entrepreneurs",
-    date: "Virtual Event - September 19-27",
-    buttonText: "Contact",
+    title: t("Leadership in Motion"),
+    subtitle: t("Government of San Luis Potosí and Future Entrepreneurs"),
+    date: t("Virtual Event - September 19-27"),
+    buttonText: t("Contact"),
     image: "/images/backgrounds-colors/background-blue.png",
 };
 
 export type ProgramHighlights = {
     title: string,
     description: string,
-    borderColors: [string, string];
-    buttonText?: string;
-
+    borderColors: [string, string],
+    buttonText?: string,
 }
 export const programHighlights: ProgramHighlights[] = [
     {
-        title: "About the event",
-        description:
-        "Mujer Automotriz, in collaboration with the Government of San Luis Potosí and Futuros Emprendedores, brought together international and national leaders and experts to discuss how to improve gender equality in this sector. Through interactive sessions and panel discussions, participants will explore challenges and opportunities for women in different roles within the industry.",
+        title: t("About the event"),
+        description: t("Mujer Automotriz, in collaboration with the Government of San Luis Potosí and Futuros Emprendedores, brought together international and national leaders and experts to discuss how to improve gender equality in this sector. Through interactive sessions and panel discussions, participants will explore challenges and opportunities for women in different roles within the industry."),
         borderColors: ["blue-500", "blue-500"],
     },
     {
-        title: "Stories that inspire",
-        description:
-        "Leading women spoke about their successes in the automotive industry, sharing their experiences and advice on overcoming obstacles and advancing their careers.",
+        title: t("Stories that inspire"),
+        description: t("Leading women spoke about their successes in the automotive industry, sharing their experiences and advice on overcoming obstacles and advancing their careers."),
         borderColors: ["blue-500", "blue-500"],
     },
     {
-        title: "Driving change",
-        description:
-        "With a focus on collaboration and the exchange of ideas, the summit's goal was to inspire and support women of all ages and backgrounds to pursue and achieve their career goals in the automotive industry.",
+        title: t("Driving change"),
+        description: t("With a focus on collaboration and the exchange of ideas, the summit's goal was to inspire and support women of all ages and backgrounds to pursue and achieve their career goals in the automotive industry."),
         borderColors: ["blue-500", "blue-500"],
-        buttonText: "See presentations",
+        buttonText: t("See presentations"),
     },
 ];
-//EventWomanSummit Constants
 
-export type HighlightedEvents={
-    title:string,
-    subtitle:string,
-    date:string,
-    buttonText:string,
-    image:string,
+export type HighlightedEvents = {
+    title: string,
+    subtitle: string,
+    date: string,
+    buttonText: string,
+    image: string,
 }
-export const highlightedEvents:HighlightedEvents[]= [
+export const highlightedEvents: HighlightedEvents[] = [
     {
-        title: "Summit Mujer Automotriz",
-        subtitle: "Diversity, Empowerment and Leadership",
-        date: "Virtual - May 6, 2024",
-        buttonText: "Contact",
+        title: t("Summit Mujer Automotriz"),
+        subtitle: t("Diversity, Empowerment and Leadership"),
+        date: t("Virtual - May 6, 2024"),
+        buttonText: t("Contact"),
         image: "/images/backgrounds-colors/background-yellow.png",
     },
 ];
 
-export type EventSections={
-    title:string,
-    description:string,
-    borderColors:[string,string],
-    buttonText?:string,
+export type EventSections = {
+    title: string,
+    description: string,
+    borderColors: [string, string],
+    buttonText?: string,
 }
-export const eventSections:EventSections[] = [
+export const eventSections: EventSections[] = [
     {
-        title: "About the event",
-        description:
-        "We brought together international and national leaders and experts to discuss how to improve gender equality in this sector. Through interactive sessions and panel discussions, participants will explore challenges and opportunities for women in different roles within the industry.",
+        title: t("About the event"),
+        description: t("We brought together international and national leaders and experts to discuss how to improve gender equality in this sector. Through interactive sessions and panel discussions, participants will explore challenges and opportunities for women in different roles within the industry."),
         borderColors: ["yellow-500", "yellow-500"],
     },
     {
-        title: "Voices of female leadership",
-        description:
-        "Leading women spoke about their successes in the automotive industry, sharing their experiences and advice on overcoming obstacles and advancing their careers.",
+        title: t("Voices of female leadership"),
+        description: t("Leading women spoke about their successes in the automotive industry, sharing their experiences and advice on overcoming obstacles and advancing their careers."),
         borderColors: ["yellow-500", "yellow-500"],
     },
     {
-        title: "Inspiración y apoyo colectivo",
-        description:
-        "With a focus on collaboration and the exchange of ideas, the summit's goal was to inspire and support women of all ages and backgrounds to pursue and achieve their career goals in the automotive industry.",
+        title: t("Inspiración y apoyo colectivo"),
+        description: t("With a focus on collaboration and the exchange of ideas, the summit's goal was to inspire and support women of all ages and backgrounds to pursue and achieve their career goals in the automotive industry."),
         borderColors: ["yellow-500", "yellow-500"],
-        buttonText: "See presentations",
+        buttonText: t("See presentations"),
     },
 ];
-
 export type ScheduleItem = {
   time: string;
   title: string;
   description?: string;
   speaker?: string;
   location?: string;
-  image?: string; 
+  image?: string;
 };
 
 export type DaySchedule = {
   date: string;
   day: string;
-  borderColor: string; 
+  borderColor: string;
   items: ScheduleItem[];
 };
 
 export const allSchedules: DaySchedule[] = [
   {
-    date: "24 de Mayo 2025",
-    day: "Día 1",
-    borderColor: "border-orange-500", 
-    
+    date: t("May 24, 2025"), // Translated date
+    day: t("Day 1"), // Translated day
+    borderColor: "border-orange-500",
+
     items: [
       {
         time: "09:00 - 09:15 AM",
-        title: "Bienvenida y Apertura del Programa",
+        title: t("Welcome and Program Opening"),
         speaker: "Adriana Carmona",
         location: "TBA",
-        image: "/images/sponsors-people/adriana-carmona.avif", 
+        image: "/images/sponsors-people/adriana-carmona.avif",
       },
       {
         time: "09:15 - 09:45 AM",
-        title: "Embajada de UE en México - Bienvenida con Naomi C. Fellows",
+        title: t("EU Embassy in Mexico - Welcome with Naomi C. Fellows"),
         speaker: "Naomi Fellows",
         location: "TBA",
-        image: "/images/sponsors-people/naomi-fellows.avif", 
+        image: "/images/sponsors-people/naomi-fellows.avif",
       },
       {
         time: "09:45 - 10:00 AM",
-        title: "Lineamientos del Programa y Agenda",
+        title: t("Program Guidelines and Agenda"),
         speaker: "Aaron Koivunen",
         location: "TBA",
-        image: "/images/sponsors-people/aaron-koivunen.avif", 
+        image: "/images/sponsors-people/aaron-koivunen.avif",
       },
       {
         time: "10:00 - 11:00 AM",
-        title: "Conversatorio | Una Gladiadora en un mundo de Gladiadores: El Camino hacia la Cima",
-        description: "En su ponencia Claudia Marquez compartirá su experiencia como una de las mujeres más influyentes en la industria automotriz. A través de su camino hacia la cima, demostrará cómo la perseverancia y la excelencia son la clave para superar los desafíos y convertirse en líderes exitosos en cualquier campo. Este conversatorio será una oportunidad única para escuchar de primera mano los consejos y estrategias que ha utilizado para lograr su éxito en un mundo altamente competitivo.",
+        title: t("Panel Discussion | A Gladiator in a World of Gladiators: The Path to the Top"),
+        description: t("In her presentation, Claudia Marquez will share her experience as one of the most influential women in the automotive industry. Through her journey to the top, she will demonstrate how perseverance and excellence are key to overcoming challenges and becoming successful leaders in any field. This discussion will be a unique opportunity to hear firsthand the advice and strategies she has used to achieve her success in a highly competitive world."),
         speaker: "Claudia Marquez",
         location: "TBA",
-        image: "/images/sponsors-people/claudia-marquez.avif", 
+        image: "/images/sponsors-people/claudia-marquez.avif",
       },
       {
         time: "11:00 - 12:00 AM",
-        title: "Detrás Del Casco No Existe Género",
-        description: "Majo Rodríguez, con tan solo 24 años de edad, es una destacada piloto profesional de autos de carreras y tractocamiones. En su ponencia comparte su trayectoria en el deporte y el estudio, hablando de los obstáculos que ha enfrentado en el camino y compartiendo tips en contra y a favor. Majo es un ejemplo inspirador de cómo se puede romper paradigmas y dejar huella en una industria dominada por hombres, y su lema 'detrás del casco no existe género' es un llamado a la igualdad de género en el mundo del deporte y en la sociedad en general.",
+        title: t("Behind the Helmet There Is No Gender"),
+        description: t("Majo Rodríguez, at just 24 years old, is a prominent professional race car and truck driver. In her presentation, she shares her journey in sports and academics, discussing the obstacles she has faced along the way and sharing tips for and against them. Majo is an inspiring example of how one can break paradigms and make a mark in a male-dominated industry, and her motto 'behind the helmet there is no gender' is a call for gender equality in the world of sports and society in general."),
         speaker: "Majo Rodríguez",
         location: "TBA",
         image: "/images/sponsors-people/majo-rodriguez.avif",
       },
       {
         time: "12:00 - 1:00 PM",
-        title: "Rompiendo el Cascaron y Desafiando Estereotipos",
-        description: "El camino hacia el éxito de una mujer en un mundo de hombres. Esta ponencia se enfoca en la importancia de la diversidad y la inclusión en la industria automotriz. A través de su presentación, Adriana demuestra cómo estas cualidades son clave para fomentar la innovación y el éxito en la industria, desafiando estereotipos y rompiendo barreras. Esta charla inspiradora es una llamada a la acción para que las empresas adopten políticas inclusivas y diversifiquen sus equipos para lograr un mejor rendimiento y una mayor creatividad.",
+        title: t("Breaking the Shell and Challenging Stereotypes"),
+        description: t("The path to success for a woman in a man's world. This presentation focuses on the importance of diversity and inclusion in the automotive industry. Through her presentation, Adriana demonstrates how these qualities are key to fostering innovation and success in the industry, challenging stereotypes and breaking barriers. This inspiring talk is a call to action for companies to adopt inclusive policies and diversify their teams to achieve better performance and greater creativity."),
         speaker: "Adriana Carmona",
         location: "TBA",
-        image: "/images/sponsors-people/adriana-carmona.avif", 
+        image: "/images/sponsors-people/adriana-carmona.avif",
       },
       {
         time: "1:00 - 2:00 PM",
-        title: "3 Herramientas para mi Auto-Empoderamiento como Mujer",
-        description: "En su ponencia Daniela comparte su experiencia y conocimientos sobre cómo las mujeres pueden fortalecerse y tomar el control de sus propias vidas. Con su enfoque práctico y empático, Daniela ofrece consejos y estrategias concretas para ayudar a las mujeres a superar barreras y alcanzar sus objetivos. Como defensora de la igualdad de género y la justicia social, Daniela es un ejemplo inspirador de cómo las mujeres pueden empoderarse y liderar el cambio en sus comunidades y en todo el mundo.",
+        title: t("3 Tools for My Self-Empowerment as a Woman"),
+        description: t("In her presentation, Daniela shares her experience and knowledge on how women can empower themselves and take control of their own lives. With her practical and empathetic approach, Daniela offers concrete advice and strategies to help women overcome barriers and achieve their goals. As an advocate for gender equality and social justice, Daniela is an inspiring example of how women can empower themselves and lead change in their communities and around the world."),
         speaker: "Daniela Hernández Álvarez",
         location: "TBA",
-        image: "/images/sponsors-people/daniela-hernandez.avif", 
+        image: "/images/sponsors-people/daniela-hernandez.avif",
       },
       {
         time: "2:00 - 2:45 PM",
-        title: "Construyendo la Comunidad “Mujer Automotriz”",
-        description:'En esta sesión invitamos a las embajadoras de "Mujer Automotriz" a conocerse y dar el primer paso a forjar una comunidad fuerte y inclusiva.',
+        title: t("Building the “Automotive Woman” Community"),
+        description: t("In this session, we invite the ambassadors of 'Automotive Woman' to meet and take the first step in forging a strong and inclusive community."),
         location: "TBA",
-        image:"./images/sponsors-people/sponsor-people.avif"
+        image: "./images/sponsors-people/sponsor-people.avif"
       },
       {
         time: "2:45 - 3:00 PM",
-        title: "Cierre del Día 1",
+        title: t("Day 1 Closing"),
         location: "TBA",
       },
     ],
   },
   {
-    date: "25 de Mayo 2025",
-    day: "Día 2",
+    date: t("May 25, 2025"), // Translated date
+    day: t("Day 2"), // Translated day
     borderColor: "border-pink-500",
     items: [
       {
         time: "09:00 - 09:30 AM",
-        title: "Bienvenida y Resumen",
+        title: t("Welcome and Summary"),
         speaker: "Adriana Carmona",
         location: "TBA",
-        image: "/images/sponsors-people/adriana-carmona.avif", 
+        image: "/images/sponsors-people/adriana-carmona.avif",
       },
       {
         time: "09:30 - 10:30 AM",
-        title: "¡El Límite lo Pones Tú! Superando Desafíos y Derribando Barreras",
-        description: "En su ponencia Paola comparte valiosas herramientas y estrategias para superar desafíos y derribar barreras, inspirando a su audiencia a alcanzar sus objetivos. Su experiencia y conocimientos la convierten en una excelente guía para aquellos que buscan empoderarse y liderar sus vidas con éxito.",
+        title: t("You Set the Limit! Overcoming Challenges and Breaking Down Barriers"),
+        description: t("In her presentation, Paola shares valuable tools and strategies to overcome challenges and break down barriers, inspiring her audience to achieve their goals. Her experience and knowledge make her an excellent guide for those seeking to empower themselves and lead their lives successfully."),
         speaker: "Paola Mendoza",
         location: "TBA",
-        image: "/images/sponsors-people/paola-mendoza.avif", 
+        image: "/images/sponsors-people/paola-mendoza.avif",
       },
       {
         time: "10:30 - 11:30 AM",
-        title: "El Potencial de la Inteligencia Artificial: Cómo empoderar tu vida laboral y personal",
-        description: "Exploraremos cómo la inteligencia artificial (IA) puede empoderarte tanto en tu vida laboral como personal. Te enseñaré cómo puedes utilizar la IA para personalizar tus objetivos y alcanzarlos de manera más eficiente, tomando decisiones más informadas y planificando mejor tus tareas y metas. Además, discutiremos cómo la IA puede ayudarte a mejorar tus habilidades y desempeño en el trabajo, incluyendo cómo puede ayudarte a identificar tus fortalezas y debilidades, y cómo puede proporcionarte información sobre oportunidades de mejora. Exploraremos diferentes herramientas como ChatGPT, MidJourney, y más. En resumen, esta ponencia virtual te proporcionará herramientas y estrategias prácticas para comenzar a utilizar la IA en tu propio beneficio.",
+        title: t("The Potential of Artificial Intelligence: How to Empower Your Work and Personal Life"),
+        description: t("We will explore how artificial intelligence (AI) can empower you in both your work and personal life. I will teach you how you can use AI to personalize your goals and achieve them more efficiently, making more informed decisions and better planning your tasks and goals. In addition, we will discuss how AI can help you improve your skills and performance at work, including how it can help you identify your strengths and weaknesses, and how it can provide you with information about opportunities for improvement. We will explore different tools like ChatGPT, MidJourney, and more. In summary, this virtual presentation will provide you with practical tools and strategies to start using AI for your own benefit."),
         speaker: "Aaron Koivunen",
         location: "TBA",
-        image: "/images/sponsors-people/aaron-koivunen.avif", 
+        image: "/images/sponsors-people/aaron-koivunen.avif",
       },
       {
         time: "11:30 - 12:30 PM",
-        title: "Ganadores vs Perdedores: La estrategia Legal Infalible para Incrementar tu Cobranza hasta un 80%",
-        description: "En este webinar daré consejos para lograr una mayor rentabilidad a través de la formalización de acuerdos comerciales. Muchas empresas usan de manera indistinta órdenes de compra, facturas y contratos para sus procesos de venta, pero cuando llega la cobranza, el uso indistinto de estos instrumentos crea verdaderos dolores de cabeza. Si quieres saber cómo y cuando usar de manera correcta las facturas, órdenes de compra y contratos en tu empresa, no te pierdas esta ponencia.",
+        title: t("Winners vs. Losers: The Infallible Legal Strategy to Increase Your Collection by up to 80%"),
+        description: t("In this webinar, I will give advice to achieve greater profitability through the formalization of commercial agreements. Many companies use purchase orders, invoices, and contracts interchangeably for their sales processes, but when collection arrives, the indiscriminate use of these instruments creates real headaches. If you want to know how and when to correctly use invoices, purchase orders, and contracts in your company, don't miss this presentation."),
         speaker: "Edgar Espejel",
         location: "TBA",
-        image: "/images/sponsors-people/edgar-espejel.avif", 
+        image: "/images/sponsors-people/edgar-espejel.avif",
       },
       {
         time: "12:30 - 1:30 PM",
-        title: "Panel de Discusión | Deconstruyendo el Machismo en la Industria Automotriz",
-        description: "Un debate enriquecedor sobre la deconstrucción del machismo en la industria automotriz, en el que la moderadora Adriana y el panel compuesto por Esteban, Aaron, Brenda, Ana y Kathia, ofrecen perspectivas tanto femeninas como masculinas en relación a este tema. A través de su experiencia en el sector, discuten cómo romper estereotipos de género y avanzar hacia una industria más inclusiva y equitativa.",
+        title: t("Panel Discussion | Deconstructing Machismo in the Automotive Industry"),
+        description: t("An enriching debate on the deconstruction of machismo in the automotive industry, in which moderator Adriana and the panel composed of Esteban, Aaron, Brenda, Ana, and Kathia, offer both female and male perspectives on this topic. Through their experience in the sector, they discuss how to break gender stereotypes and move towards a more inclusive and equitable industry."),
         speaker: "Adriana Carmona, Esteban Carmona, Brenda Garcia, Ana Arias y Kathia Rodriguez",
         location: "TBA",
-        image: "/images/sponsors-people/sponsor-people.avif", 
+        image: "/images/sponsors-people/sponsor-people.avif",
       },
       {
         time: "1:30 - 2:30 PM",
-        title: "La Mujer Empresaria Actual, Desafiando Barreras: Cuando Desistir no es una Opción",
-        description: "Lilia, miembro destacado de la Asociación Mexicana de Mujeres Empresarias (AMEXME), compartirá su experiencia personal como mujer empresaria en la actualidad, discutiendo los obstáculos y barreras a los que se enfrenta en el camino del éxito, y cómo ha logrado superarlos con perseverancia y determinación. Una charla inspiradora sobre la importancia de no rendirse y desafiar los límites para alcanzar los objetivos profesionales y personales.",
+        title: t("The Current Businesswoman, Challenging Barriers: When Giving Up is Not an Option"),
+        description: t("Lilia, a prominent member of the Mexican Association of Businesswomen (AMEXME), will share her personal experience as a businesswoman today, discussing the obstacles and barriers she faces on the path to success, and how she has managed to overcome them with perseverance and determination. An inspiring talk on the importance of not giving up and challenging limits to achieve professional and personal goals."),
         speaker: "Lilia Carmina Acosta Quintero",
         location: "TBA",
-        image: "/images/sponsors-people/lilia-acosta.avif", 
+        image: "/images/sponsors-people/lilia-acosta.avif",
       },
       {
         time: "2:30 - 2:50 PM",
-        title: "Networking Comunidad “Mujer Automotriz\"",
-        description: "En esta sesión invitamos a las embajadoras de 'Mujer Automotriz' a conocerse y forjar una comunidad fuerte e inclusiva.",
+        title: t("Networking “Automotive Woman” Community"),
+        description: t("In this session, we invite the ambassadors of 'Automotive Woman' to meet and forge a strong and inclusive community."),
         location: "TBA",
       },
       {
         time: "2:50 - 3:00 PM",
-        title: "Cierre del Día 2",
+        title: t("Day 2 Closing"),
         location: "TBA",
       },
     ],
   },
   {
-    date: "26 de Mayo 2025",
-    day: "Día 3",
+    date: t("May 26, 2025"), // Translated date
+    day: t("Day 3"), // Translated day
     borderColor: "border-red-500",
     items: [
       {
         time: "09:00 - 09:30 AM",
-        title: "Bienvenida y Reflexión",
+        title: t("Welcome and Reflection"),
         speaker: "Adriana Carmona",
         location: "TBA",
-        image: "/images/sponsors-people/adriana-carmona.avif", 
+        image: "/images/sponsors-people/adriana-carmona.avif",
       },
       {
         time: "09:30 - 10:30 AM",
-        title: "Prevención e Identificación del Acoso Sexual en el Trabajo",
-        description: "Únete a la experta en género Denisse Tiznado en un taller que invita a la reflexión sobre la prevención del acoso sexual en el lugar de trabajo. A través de una serie de ejercicios, los participantes explorarán los problemas y oportunidades de las mujeres, incluyendo la superación de la discriminación de género y la promoción del liderazgo inclusivo. Este taller proporcionará un espacio seguro para que los asistentes compartan sus diversas perspectivas y experiencias, y trabajen juntos para construir modelos empresariales que protejan y avancen a las mujeres. No te pierdas esta experiencia formativa con Denisse, una líder en defensa de género y una defensora de los derechos de las mujeres.",
+        title: t("Prevention and Identification of Sexual Harassment at Work"),
+        description: t("Join gender expert Denisse Tiznado in a workshop that encourages reflection on the prevention of sexual harassment in the workplace. Through a series of exercises, participants will explore the problems and opportunities for women, including overcoming gender discrimination and promoting inclusive leadership. This workshop will provide a safe space for attendees to share their diverse perspectives and experiences, and work together to build business models that protect and advance women. Don't miss this formative experience with Denisse, a leader in gender advocacy and an advocate for women's rights."),
         speaker: "Denisse Tiznado",
         location: "TBA",
-        image: "/images/sponsors-people/denisse-tiznado.avif", 
+        image: "/images/sponsors-people/denisse-tiznado.avif",
       },
       {
         time: "10:30 - 11:30 AM",
-        title: "Receta de Fracaso - Lecciones de Mujeres Exitosas",
-        description: "Paola es una mujer exitosa en la industria de tecnología y transporte como parte del equipo de Lyft. En su ponencia, compartirá las lecciones valiosas que ha aprendido a lo largo de su carrera, enfocándose en cómo el fracaso es una parte integral del éxito y cómo aprender de tus errores es fundamental para alcanzar tus metas. Como mujer en un ambiente de trabajo predominantemente masculino, Paola ha enfrentado desafíos y ha encontrado formas de superarlos, lo que la convierte en una inspiración para aquellos que buscan crecer en su carrera profesional.",
+        title: t("Recipe for Failure - Lessons from Successful Women"),
+        description: t("Paola is a successful woman in the technology and transportation industry as part of the Lyft team. In her presentation, she will share the valuable lessons she has learned throughout her career, focusing on how failure is an integral part of success and how learning from your mistakes is fundamental to achieving your goals. As a woman in a predominantly male work environment, Paola has faced challenges and found ways to overcome them, which makes her an inspiration for those looking to grow in their professional careers."),
         speaker: "Paola Rodriguez",
         location: "TBA",
-        image: "/images/sponsors-people/paola-rodriguez.avif", 
+        image: "/images/sponsors-people/paola-rodriguez.avif",
       },
       {
         time: "11:30 - 12:30 PM",
-        title: "Boost Your Talent: Rompiendo la Rutina",
-        description: "Mariana, de Mercado Libre, presenta 'Boost Your Talent: Rompiendo la Rutina', una ponencia que tiene como objetivo inspirar y motivar a los asistentes a encontrar nuevas formas de desarrollar sus habilidades y conocimientos. Con más de 10 años de experiencia en Recursos Humanos y Gestión de Talentos, Mariana comparte su visión de cómo el cambio y la innovación son claves para alcanzar el éxito profesional y personal.",
+        title: t("Boost Your Talent: Breaking the Routine"),
+        description: t("Mariana, from Mercado Libre, presents 'Boost Your Talent: Breaking the Routine,' a presentation that aims to inspire and motivate attendees to find new ways to develop their skills and knowledge. With more than 10 years of experience in Human Resources and Talent Management, Mariana shares her vision of how change and innovation are key to achieving professional and personal success."),
         speaker: "Mariana Carmona",
         location: "TBA",
-        image: "/images/sponsors-people/mariana-carmona.avif", 
+        image: "/images/sponsors-people/mariana-carmona.avif",
       },
       {
         time: "12:30 - 1:30 PM",
-        title: "Nadando Contra Corriente",
-        description: "Claudia es una emprendedora que ha nadado contra corriente para lograr el éxito en su negocio. En su ponencia, compartirá su historia personal y profesional, incluyendo los desafíos que ha enfrentado como mujer en el mundo empresarial y cómo ha logrado superarlos. Sus experiencias inspiradoras y sus consejos prácticos serán de gran valor para aquellos que buscan perseguir sus sueños a pesar de las dificultades.",
+        title: t("Swimming Against the Current"),
+        description: t("Claudia is an entrepreneur who has swum against the current to achieve success in her business. In her presentation, she will share her personal and professional story, including the challenges she has faced as a woman in the business world and how she has managed to overcome them. Her inspiring experiences and practical advice will be of great value to those looking to pursue their dreams despite difficulties."),
         speaker: "Claudia Quintanilla",
         location: "TBA",
-        image: "/images/sponsors-people/claudia-quintanilla.avif", 
+        image: "/images/sponsors-people/claudia-quintanilla.avif",
       },
       {
         time: "1:30 - 2:30 PM",
-        title: "Panel de Discusión | El liderazgo como catalizador para el empoderamiento de tu entorno: Alcanzando tu Máximo Potencial Profesional y Familiar",
-        description: "En esta mesa redonda, expertas en liderazgo y empoderamiento compartirán su experiencia en la búsqueda del equilibrio entre la vida profesional y familiar, y cómo el liderazgo puede catalizar el empoderamiento en ambos ámbitos. Con Inna, Gimena, Maria de la Luz e Isabel en el panel, se discutirán estrategias y herramientas para alcanzar el máximo potencial y lograr el éxito en todas las áreas de la vida.",
+        title: t("Panel Discussion | Leadership as a Catalyst for Empowering Your Environment: Reaching Your Maximum Professional and Family Potential"),
+        description: t("In this roundtable, leadership and empowerment experts will share their experience in seeking balance between professional and family life, and how leadership can catalyze empowerment in both areas. With Inna, Gimena, Maria de la Luz, and Isabel on the panel, strategies and tools will be discussed to reach maximum potential and achieve success in all areas of life."),
         speaker: "Adriana Carmona, Inna Makhniboroda, Gimena Sánchez, Isabel Osorio, Maria de la Luz",
         location: "TBA",
-        image: "/images/sponsors-people/sponsor-woman.avif", 
+        image: "/images/sponsors-people/sponsor-woman.avif",
       },
       {
         time: "2:30 - 3:30 PM",
-        title: "Marcas con ADN & Huella Digital",
-        description: "La ponencia de Hazel aborda la importancia de fortalecer la imagen e identidad de una marca a través de pensamientos positivos, entrenamiento, lectura, ejercicio, nutrición y reflexión personal. En su presentación, destaca los diez elementos necesarios para construir una marca sólida, incluyendo el nombre, logo, colores, propósito, tono de comunicación, personalidad, eslogan, sentido del producto, audiobranding y experiencia. Hazel proporciona valiosas herramientas y consejos para ayudar a las empresas a crear una marca fuerte y auténtica en el mundo digital actual.",
+        title: t("Brands with DNA & Digital Footprint"),
+        description: t("Hazel's presentation addresses the importance of strengthening a brand's image and identity through positive thoughts, training, reading, exercise, nutrition, and personal reflection. In her presentation, she highlights the ten necessary elements to build a strong brand, including name, logo, colors, purpose, communication tone, personality, slogan, product sense, audio branding, and experience. Hazel provides valuable tools and advice to help companies create a strong and authentic brand in today's digital world."),
         speaker: "Hazel Guerrero Hurtado",
         location: "TBA",
-        image: "/images/sponsors-people/hazel-guerrero.avif", 
+        image: "/images/sponsors-people/hazel-guerrero.avif",
       },
       {
         time: "3:30 - 3:45 PM",
-        title: "Cierre del Día",
+        title: t("Day Closing"),
         location: "TBA",
       },
     ],

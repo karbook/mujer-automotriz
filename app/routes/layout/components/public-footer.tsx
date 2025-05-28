@@ -1,7 +1,8 @@
-import { Button } from '@/components/ui/button'
-import { useTranslation } from 'react-i18next'
-export function Footer() {
+import { Link } from 'react-router';
+import { Button } from '@/components/ui/button';
+import { useTranslation } from 'react-i18next';
 
+export function Footer() {
   const { t } = useTranslation();
   return (
     <footer
@@ -22,11 +23,13 @@ export function Footer() {
             {t("Write to us")}
           </p>
           <div>
-            <Button variant="black" className="px-8 py-6 text-base group">
-              <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:via-pink-500 group-hover:to-red-500">
-                {t("Contact")}
-              </span>
-            </Button>
+            <Link to="/form-mujer-automotriz" className="inline-block"> 
+              <Button variant="black" className="px-8 py-6 text-base group">
+                <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:via-pink-500 group-hover:to-red-500">
+                  {t("Contact")}
+                </span>
+              </Button>
+            </Link>
           </div>
         </div>
         <div className="text-sm text-white dark:text-white flex flex-col items-center md:items-end">
@@ -37,5 +40,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

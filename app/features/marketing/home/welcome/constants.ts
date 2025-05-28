@@ -1,4 +1,5 @@
 import type { IconName } from "@/components/ui/icon";
+import { t } from '@/localization/utils'
 
 export type Sponsors = {
 	title: string;
@@ -37,9 +38,9 @@ export const ambassadors: Ambassadors[] = [
 	{
 		title: 'Majo Rodríguez',
 		slug: 'majo-rodriguez',
-		description: 'Piloto profesional mexicana.',
+		description: 'Piloto profesional.',
 		icon: '/images/sponsors-people/majo-rodriguez.avif',
-		company: 'NASCAR México / Fórmula E',
+		company: 'Majo Rodriguez',
 		company_icon: '/images/sponsors-corporate/majo.png',
 		nationality: 'México 🇲🇽',
 		legacy: [
@@ -310,7 +311,7 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 	{
 		title: 'Aaron Koivunen',
 		slug: 'aaron-koivunen',
-		description: 'CEO & Co-Funder.',
+		description: 'CTO & Co-Funder.',
 		icon: '/images/sponsors-people/aaron-koivunen.avif',
 		company: 'TEDI / Karbook',
 		company_icon: '/images/sponsors-corporate/karbook.png',
@@ -442,7 +443,7 @@ Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en
 	}, {
 		title: 'Alessandra Cagnin Caballero',
 		slug: 'alessandra-cagnin',
-		description: 'Engineering Manager',
+		description: 'Founder',
 		icon: '/images/sponsors-people/alessandra-cagnin.avif',
 		company: 'TBA',
 		company_icon: '/images/sponsors-corporate/tba-sponsor.avif',
@@ -459,52 +460,52 @@ export type Benefits = {
 }
 export const benefits: Benefits[] = [
     {
-        title: "Innovation Exposure",
+        title: t('Innovation Exposure'),
         icon: "lightbulb",
-        description: "Showcase cutting-edge advancements led by women and revolutionary technologies developed within the organization. Have a direct impact in a committed community.",
+        description: t('Showcase cutting-edge advancements led by women and revolutionary technologies developed within the organization. Have a direct impact in a committed community.'),
     },
     {
-        title: "Industry Collaboration",
-        icon: "handshake", 
-        description: "Find and leverage collaboration opportunities with innovators in the industry to drive mutual growth and development. It’s not just networking; it’s about forging strategic alliances and enhancing your market presence.",
+        title: t("Industry Collaboration"),
+        icon: "handshake",
+        description: t("Find and leverage collaboration opportunities with innovators in the industry to drive mutual growth and development. It’s not just networking; it’s about forging strategic alliances and enhancing your market presence."),
     },
     {
-        title: "Internship Programs",
-        icon: "graduation-cap", 
-        description: "Discover new talent by hosting interns and recent graduates, ensuring a steady flow of skilled professionals. Your sponsorship or participation is not just visibility—it’s a powerful statement of your commitment to inclusive excellence and innovation.",
+        title: t("Internship Programs"),
+        icon: "graduation-cap",
+        description: t("Discover new talent by hosting interns and recent graduates, ensuring a steady flow of skilled professionals. Your sponsorship or participation is not just visibility—it’s a powerful statement of your commitment to inclusive excellence and innovation."),
     },
     {
-        title: "Let's Redefine Leadership in the Industry",
-        icon: "compass", 
-        description: "Let’s set the agenda for the future of the industry. Your leadership drives transformative conversations, shaping the new landscape. Become a key player in promoting a more inclusive and innovative industry.",
+        title: t("Let's Redefine Leadership in the Industry"),
+        icon: "compass",
+        description: t("Let’s set the agenda for the future of the industry. Your leadership drives transformative conversations, shaping the new landscape. Become a key player in promoting a more inclusive and innovative industry."),
     },
     {
-        title: "Company Committed to Diversity",
-        icon: "users", 
-        description: "Leverage this platform to showcase your commitment to diversity, connect with top talent, and strengthen your strategic recruitment initiatives.",
+        title: t("Company Committed to Diversity"),
+        icon: "users",
+        description: t("Leverage this platform to showcase your commitment to diversity, connect with top talent, and strengthen your strategic recruitment initiatives."),
     },
     {
-        title: "Recognition and Awards",
-        icon: "award", 
-        description: "Collaborate on the awards and recognition program to celebrate outstanding achievements and significant contributions for yourself and the industry. Let’s shape a more diverse and dynamic automotive landscape.",
+        title: t("Recognition and Awards"),
+        icon: "award",
+        description: t("Collaborate on the awards and recognition program to celebrate outstanding achievements and significant contributions for yourself and the industry. Let’s shape a more diverse and dynamic automotive landscape."),
     },
     {
-        title: "Leadership Strengthening",
-        icon: "shield-check", 
-        description: "Highlight and support the achievements and contributions of your organization's leaders on our platform to inspire, motivate, and forge new leaders within and beyond your organization.",
+        title: t("Leadership Strengthening"),
+        icon: "shield-check",
+        description: t("Highlight and support the achievements and contributions of your organization's leaders on our platform to inspire, motivate, and forge new leaders within and beyond your organization."),
     },
     {
-        title: "High-Level Networking Events",
-        icon: "network", 
-        description: "Access and be part of high-level events with a unique network of professionals passionate about the future of the automotive industry. Meet decision-makers, executives, and senior leaders for knowledge exchange and collaboration.",
+        title: t("High-Level Networking Events"),
+        icon: "network",
+        description: t("Access and be part of high-level events with a unique network of professionals passionate about the future of the automotive industry. Meet decision-makers, executives, and senior leaders for knowledge exchange and collaboration."),
     },
     {
-        title: "Who is it for?",
-        icon: "factory", 
+        title: t("Who is it for?"),
+        icon: "factory",
         description: [
-            "OEM Automotive Industry Companies",
-            "OEM Supply Chain Companies",
-            "Automotive Aftermarket Companies",
+            t("OEM Automotive Industry Companies"),
+            t("OEM Supply Chain Companies"),
+            t("Automotive Aftermarket Companies"),
         ],
     },
 ];
@@ -520,46 +521,45 @@ export type Programs = {
 	link: string,
 	buttonText: string,
 }
-
 export const programs: Programs[] = [
-	{
-		id: 1,
-		reversed: true,
-		imgSrc: "./images/events-photograph/who-is.avif",
-		imgAlt: "Comunidad Global",
-		title: "What is it?",
-		description: "Mujer Automotriz is a platform that highlights female leadership, innovation, and fosters meaningful, high-value relationships in the automotive industry. We create a community of leaders made up of managers, C-level executives, and decision-makers interested in fostering a more diverse industry with inclusive leadership and focused on the continued development of leaders at both personal and professional levels.",
-		link: './programs',
-		buttonText: "Join",
-	},
-	{
-		id: 2,
-		reversed: false,
-		imgSrc: "./images/events-photograph/profesional.avif",
-		imgAlt: "Professional Development and Empowerment",
-		title: "Professional Development and Empowerment",
-		description: "Events, regional and global summits. Workshops, panels, masterclasses, and talks with outstanding leaders from the automotive sector on innovation, diversity, technology, and leadership. Learn from their experiences, challenges, success paths, and interpersonal skills needed for personal and professional growth.",
-		link: "./events",
-		buttonText: "Events",
-	},
-	{
-		id: 3,
-		reversed: true,
-		imgSrc: "./images/events-photograph/comunity.avif",
-		imgAlt: "Global Community",
-		title: "Global Community",
-		description: "Access to our vibrant community of highly successful professionals and women. Connect with a global network of like-minded individuals, receive mentorship and support tailored to the changing demands of the automotive industry. Be part of the members leading the way toward a more diverse and innovative industry.",
-		link: "./ambassors",
-		buttonText: "Community",
-	},
-	{
-		id: 4,
-		reversed: false,
-		imgSrc: "./images/events-photograph/education.avif",
-		imgAlt:"Promoting Diversity and Education",
-		title: "Promoting Diversity and Education",
-		description: "Exclusive access to resources, industry expertise, news, the latest innovations, and continuous education through empowerment events. Learn about DEI (Diversity, Equity, and Inclusion) strategies and best practices companies are implementing.",
-		link: "/events#upcoming-events",
-		buttonText: "Summit '23",
-	},
+    {
+        id: 1,
+        reversed: true,
+        imgSrc: "./images/events-photograph/who-is.avif",
+        imgAlt: t("Global Community"),
+        title: t("What is it?"),
+        description: t("Mujer Automotriz is a platform that highlights female leadership, innovation, and fosters meaningful, high-value relationships in the automotive industry. We create a community of leaders made up of managers, C-level executives, and decision-makers interested in fostering a more diverse industry with inclusive leadership and focused on the continued development of leaders at both personal and professional levels."),
+        link: './programs',
+        buttonText: t("Join"),
+    },
+    {
+        id: 2,
+        reversed: false,
+        imgSrc: "./images/events-photograph/profesional.avif",
+        imgAlt: t("Professional Development and Empowerment"),
+        title: t("Professional Development and Empowerment"),
+        description: t("Events, regional and global summits. Workshops, panels, masterclasses, and talks with outstanding leaders from the automotive sector on innovation, diversity, technology, and leadership. Learn from their experiences, challenges, success paths, and interpersonal skills needed for personal and professional growth."),
+        link: "./events",
+        buttonText: t("Events"),
+    },
+    {
+        id: 3,
+        reversed: true,
+        imgSrc: "./images/events-photograph/comunity.avif",
+        imgAlt: t("Global Community"),
+        title: t("Global Community"),
+        description: t("Access to our vibrant community of highly successful professionals and women. Connect with a global network of like-minded individuals, receive mentorship and support tailored to the changing demands of the automotive industry. Be part of the members leading the way toward a more diverse and innovative industry."),
+        link: "./ambassors",
+        buttonText: t("Community"),
+    },
+    {
+        id: 4,
+        reversed: false,
+        imgSrc: "./images/events-photograph/education.avif",
+        imgAlt: t("Promoting Diversity and Education"),
+        title: t("Promoting Diversity and Education"),
+        description: t("Exclusive access to resources, industry expertise, news, the latest innovations, and continuous education through empowerment events. Learn about DEI (Diversity, Equity, and Inclusion) strategies and best practices companies are implementing."),
+        link: "/events#upcoming-events",
+        buttonText: t("Summit '23"),
+    },
 ];

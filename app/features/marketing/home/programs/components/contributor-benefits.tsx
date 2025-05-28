@@ -16,9 +16,6 @@ import { useTranslation } from "react-i18next";
 export function ContributorBenefits() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const { t } = useTranslation();
-    const safeTranslate = (key: string) => {
-        return t(key, { defaultValue: key });
-    };
 
     return (
         <>
@@ -53,8 +50,8 @@ export function ContributorBenefits() {
                                 <CarouselItem key={index} className="basis-full">
                                     <div className="bg-white dark:bg-black/20 p-6 rounded-3xl text-left border border-gray-300 dark:border-white/20 hover:shadow-md transition-all duration-300 hover:bg-gray-200 dark:hover:bg-[#053b5e] hover:border-purple-300 dark:hover:border-blue-600">
                                         <Icon name={collaborator.icon} size="xxl" className={collaborator.bgColor} />
-                                        <h3 className="text-3xl font-bold mt-2 mb-1">{safeTranslate(collaborator.title)}</h3>
-                                        <p className="text-md">{safeTranslate(collaborator.description)}</p>
+                                        <h3 className="text-3xl font-bold mt-2 mb-1">{t(collaborator.title)}</h3>
+                                        <p className="text-md">{t(collaborator.description)}</p>
                                     </div>
                                 </CarouselItem>
                             ))}
@@ -73,8 +70,8 @@ export function ContributorBenefits() {
                         {collaborators.map((collaborator, index) => (
                             <div key={index} className="bg-white dark:bg-black/20 p-6 rounded-3xl text-left border border-gray-300 dark:border-white/20 hover:shadow-md transition-all duration-300 hover:bg-gray-200 dark:hover:bg-[#053b5e] hover:border-blue-300 dark:hover:border-blue-600">
                                 <Icon name={collaborator.icon} size="xxl" className={collaborator.bgColor} />
-                                <h3 className="text-3xl font-bold">{safeTranslate(collaborator.title)}</h3>
-                                <p className="text-lg">{safeTranslate(collaborator.description)}</p>
+                                <h3 className="text-3xl font-bold">{t(collaborator.title)}</h3>
+                                <p className="text-lg">{t(collaborator.description)}</p>
                             </div>
                         ))}
                     </div>
@@ -96,8 +93,8 @@ export function ContributorBenefits() {
                                 <CarouselItem key={index} className="basis-full">
                                     <div className="p-6 rounded-3xl border border-gray-300 dark:border-white/20 hover:shadow-lg hover:border-blue-500 transition-all duration-300 bg-white dark:bg-black/20 text-center">
                                         <Icon name={benefit.icon} size="xxl" className={`${benefit.bgColor}`} />
-                                        <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{safeTranslate(benefit.title)}</h3>
-                                        <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{safeTranslate(benefit.description)}</p>
+                                        <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{t(benefit.title)}</h3>
+                                        <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{t(benefit.description)}</p>
                                     </div>
                                 </CarouselItem>
                             ))}
@@ -117,8 +114,8 @@ export function ContributorBenefits() {
                         {benefits.map((benefit, index) => (
                             <div key={index} className="p-6 rounded-3xl border border-gray-300 dark:border-white/20 hover:shadow-lg hover:border-blue-500 transition-all duration-300 bg-white dark:bg-black/20 text-center">
                                 <Icon name={benefit.icon} size="xxl" className={benefit.bgColor} />
-                                <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{safeTranslate(benefit.title)}</h3>
-                                <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{safeTranslate(benefit.description)}</p>
+                                <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{t(benefit.title)}</h3>
+                                <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{t(benefit.description)}</p>
                             </div>
                         ))}
                     </div>
