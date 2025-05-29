@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { eventmovements, programHighlights } from '../constants';
 import { useTranslation } from 'react-i18next';
-
+import { Link } from 'react-router';
 export function EventMovementLeadership() {
   const { t } = useTranslation();
 
@@ -46,7 +46,7 @@ export function EventMovementLeadership() {
               <h2 className="text-4xl font-bold mb-4 text-black dark:text-white group-hover:text-white transition-colors duration-300">
                 {t(programHighlight.title)}
               </h2>
-              <p className="mb-6 text-xl font-semibold max-w-4xl group-hover:text-white transition-colors duration-300" style={{fontFamily:('var(--font-SF-Pro)')}}>
+              <p className="mb-6 text-xl font-semibold max-w-4xl group-hover:text-white transition-colors duration-300" style={{ fontFamily: ('var(--font-SF-Pro)') }}>
                 {t(programHighlight.description)}
               </p>
               {index === programHighlights.length - 1 && (
@@ -61,12 +61,14 @@ export function EventMovementLeadership() {
                       </Button>
                     </a>
                   )}
-                  <Button
-                    variant="blackTransparent"
-                    className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full sm:w-auto"
-                  >
-                    {t('Learn More')}
-                  </Button>
+                  <Link to={`/leadership-in-motion`}>
+                    <Button
+                      variant="blackTransparent"
+                      className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full sm:w-auto"
+                    >
+                      {t('Learn More')}
+                    </Button>
+                  </Link>
                 </div>
               )}
             </div>

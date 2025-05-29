@@ -61,7 +61,7 @@ export function EventWomanSummit() {
                                                 variant="blackTransparent"
                                                 className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full sm:w-auto"
                                             >
-                                                {t(eventSection.buttonText ?? "")}
+                                                {t(eventSection.buttonText)}
                                             </Button>
                                         )}
                                     </a>

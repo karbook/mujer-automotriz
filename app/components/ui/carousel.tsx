@@ -1,3 +1,4 @@
+
 "use client";
 
 import * as React from "react";
@@ -9,10 +10,13 @@ import { cn } from "@/utils/misc";
 import { Button } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
 
+import { WheelGesturesPlugin } from 'embla-carousel-wheel-gestures';
+
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
 type CarouselOptions = UseCarouselParameters[0];
-type CarouselPlugin = UseCarouselParameters[1];
+type CarouselPlugin = UseEmblaCarouselType[1]
+
 
 type CarouselProps = {
   opts?: CarouselOptions;
@@ -20,7 +24,8 @@ type CarouselProps = {
   setApi?: (api: CarouselApi) => void;
   autoScroll?: boolean;
   autoScrollOptions?: AutoScrollOptionsType;
-  onIndexChange?: (index: number) => void; 
+  onIndexChange?: (index: number) => void;
+  mousewheel?: boolean;
 };
 
 type CarouselContextProps = {
@@ -30,8 +35,8 @@ type CarouselContextProps = {
   scrollNext: () => void;
   canScrollPrev: boolean;
   canScrollNext: boolean;
-  currentIndex: number; 
-} & Omit<CarouselProps, 'onIndexChange'>;
+  currentIndex: number;
+} & Omit<CarouselProps, 'onIndexChange' | 'mousewheel'>; 
 
 const CarouselContext = React.createContext<CarouselContextProps | null>(null);
 
@@ -58,24 +63,39 @@ const Carousel = React.forwardRef<
       autoScrollOptions,
       className,
       children,
-      onIndexChange, 
+      onIndexChange,
+      mousewheel = false, 
       ...props
     },
     ref
   ) => {
+   
+    const plugins = React.useMemo(() => {
+      const activePlugins = [];
+
+      if (autoScroll) {
+        activePlugins.push(AutoScroll(autoScrollOptions ?? { speed: 2, startDelay: 0, stopOnInteraction: true }));
+      }
+
+      if (mousewheel) {
+        activePlugins.push(WheelGesturesPlugin());
+      }
+
+      return activePlugins;
+    }, [autoScroll, autoScrollOptions, mousewheel]); 
+
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...opts,
         axis: orientation === "horizontal" ? "x" : "y",
-        loop: true,
+        loop: opts?.loop ?? false, 
       },
-      autoScroll
-        ? [AutoScroll(autoScrollOptions ?? { speed: 2, startDelay: 0, stopOnInteraction: true })]
-        : []
+      plugins
     );
+
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
-    const [currentIndex, setCurrentIndex] = React.useState(0); 
+    const [currentIndex, setCurrentIndex] = React.useState(0);
 
     const onSelect = React.useCallback(
       (api: CarouselApi) => {
@@ -85,8 +105,8 @@ const Carousel = React.forwardRef<
 
         setCanScrollPrev(api.canScrollPrev());
         setCanScrollNext(api.canScrollNext());
-        setCurrentIndex(api.selectedScrollSnap()); 
-        onIndexChange?.(api.selectedScrollSnap()); 
+        setCurrentIndex(api.selectedScrollSnap());
+        onIndexChange?.(api.selectedScrollSnap());
       },
       [onIndexChange]
     );
@@ -146,7 +166,7 @@ const Carousel = React.forwardRef<
           scrollNext,
           canScrollPrev,
           canScrollNext,
-          currentIndex, 
+          currentIndex,
         }}
       >
         <div
@@ -177,7 +197,7 @@ const CarouselContent = React.forwardRef<
         ref={ref}
         className={cn(
           "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
+          orientation === "horizontal" ? "" : "flex-col", 
           className
         )}
         {...props}

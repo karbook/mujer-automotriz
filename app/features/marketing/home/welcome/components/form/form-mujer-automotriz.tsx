@@ -41,19 +41,11 @@ export default function ContactForm() {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white p-6 md:p-8">
       <div className="relative grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl xl:max-w-screen-xl bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-
-        {/* Lado Izquierdo - Imagen con superposición */}
-        {/* En pantallas pequeñas, puedes ocultar la imagen o reducir su padding si lo deseas. */}
-        {/* Aquí la mantengo visible, pero el md:grid-cols-2 hará que se muestre en una columna separada en pantallas grandes. */}
         <div className="relative flex items-center justify-center p-8 md:p-16 lg:p-24 bg-cover bg-center min-h-[200px] md:min-h-full"
              style={{ backgroundImage: "url('/images/backgrounds-abstract/background-hands.png')" }}>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
         </div>
-
-        {/* Lado Derecho - Formulario */}
-        {/* Reducimos el padding general del formulario en móvil */}
         <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-center space-y-6 md:space-y-8">
-          {/* Tamaños de texto responsivos para títulos */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight" style={{ fontFamily: ('var(--font-SF-Pro)') }}>Colaboremos</h1>
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold" style={{ fontFamily: ('var(--font-SF-Pro)') }}>Hablemos de tus líderes, objetivos y cómo los podemos resaltar</h2>
 

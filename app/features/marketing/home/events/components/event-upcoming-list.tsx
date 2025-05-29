@@ -27,7 +27,7 @@ export function EventUpcomingList() {
           backgroundRepeat: 'no-repeat',
         }}
       >
-        <div className="absolute inset-0 bg-black/50"></div> 
+        <div className="absolute inset-0 bg-black/50"/>
         <div className="relative max-w-full sm:max-w-6xl flex flex-col sm:flex-row items-start justify-start gap-6 sm:gap-8 pl-6 sm:pl-12 lg:pl-20 mt-24 sm:mt-32 lg:mt-40">
           <div className="max-w-3xl text-left self-start">
             <h1 className="text-5xl sm:text-6xl font-bold shadow-lg mb-4 sm:mb-6" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
@@ -90,13 +90,13 @@ export function EventUpcomingList() {
                 {t(featuredEvent.description)}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-0 sm:absolute sm:bottom-10 sm:right-10 w-full sm:w-auto items-start sm:items-center sm:justify-end">
-                {t(featuredEvent.buttonText ?? "") && (
+                {t(featuredEvent.buttonText) && (
                   <Link to='/sponsor' className="w-full sm:w-auto">
                     <Button
                       variant="blackTransparent"
                       className="px-4 py-2 font-bold rounded-3xl text-black border-black group-hover:text-white group-hover:border-gray-400 transition-colors duration-300 w-full"
                     >
-                      {t(featuredEvent.buttonText ?? "")}
+                      {t(featuredEvent.buttonText)}
                     </Button>
                   </Link>
                 )}
@@ -139,7 +139,6 @@ export function EventUpcomingList() {
           ))}
         </div>
       </section>
-
     </>
   );
 }

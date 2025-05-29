@@ -1,6 +1,6 @@
 // CORE
 import type { MetaFunction } from 'react-router'
-import type { Route } from '@/rr/features/marketing/home/welcome/routes/+types/index'
+import type { Route } from '@/rr/features/marketing/home/welcome/routes/+types/welcome-page'
 
 // UTILS
 import { remixI18Next } from '@/localization/i18n.server'

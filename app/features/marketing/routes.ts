@@ -11,7 +11,8 @@ export const marketingRoutes = [
         route('ambassors', 'features/marketing/home/ambassors/routes/ambassor-page.tsx'),
         route('information/:slug', 'features/marketing/home/welcome/routes/information.tsx'),
         route("virtual-summit", "features/marketing/home/events/components/virtual-summit/virtual-summit.tsx"), 
-        route('form-mujer-automotriz', "features/marketing/home/welcome/components/form/form-mujer-automotriz.tsx" )
+        route('form-mujer-automotriz', "features/marketing/home/welcome/components/form/form-mujer-automotriz.tsx" ),
+        route('leadership-in-motion', "features/marketing/home/events/components/leadership-in-motion/leadership-in-motion.tsx")
     ]),
 
     // SEO
