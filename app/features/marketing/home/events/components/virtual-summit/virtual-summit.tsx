@@ -128,11 +128,13 @@ export default function VirtualSummit() {
           <p className="text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed text-gray-700 dark:text-gray-300" style={{ fontFamily: "var(--font-inter)" }}>
             {t('To train and empower women in the automotive maintenance and repair industry through technology and digitalization training.')}
           </p>
-          <Button
-            variant="blackTransparent"
-            className="mt-4 px-6 py-3 font-bold rounded-3xl  text-gray-900 dark:text-white border-gray-300 dark:border-gray-400 sm:text-xl hover:bg-gray-100 hover:text-black dark:hover:bg-gray-700 hover:border-gray-400 transition-colors duration-300">
-            {t('Apply to be an Ambassador')}
-          </Button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer">
+            <Button
+              variant="blackTransparent"
+              className="mt-4 px-6 py-3 font-bold rounded-3xl  text-gray-900 dark:text-white border-gray-300 dark:border-gray-400 sm:text-xl hover:bg-gray-100 hover:text-black dark:hover:bg-gray-700 hover:border-gray-400 transition-colors duration-300">
+              {t('Apply to be an Ambassador')}
+            </Button>
+          </a>
         </div>
       </section>
     </>

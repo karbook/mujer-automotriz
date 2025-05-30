@@ -347,9 +347,8 @@ export const allSchedules: DaySchedule[] = [
     ],
   },
 ];
-export type CarouselData = {
-  title: string;
-  subtitle: string;
+export type Sessions = {
+  name: string;
   fullText: string;
   imageUrl?: string;
   itemBgImage?: string; 
@@ -361,93 +360,87 @@ export type CarouselData = {
   position: string; 
   youtubeLink?: string; 
 };
-
-export const carouselData: CarouselData[] = [
+export const sessions: Sessions[] = [
   {
-    title: 'Mónica Doger',
-    subtitle: 'Directora General de CLAUZ. Explorando el estado actual, tecnología, desafíos y posibilidades en la industria Automotriz.',
-    fullText: 'En esta charla, nos sumergimos en temas esenciales a través del diálogo con una líder y experta de la industria como el estado actual, la tecnología, los desafíos y las posibilidades en el ámbito Automotriz. Nos acompañará, Mónica Doger, una líder prominente en el sector automotriz y el crecimiento de negocios en México, quien funge como Directora General del Clúster Automotriz de Puebla y Tlaxcala, con el propósito de fomentar la innovación, la expansión de la industria y la interacción entre los protagonistas fundamentales de la industria automotriz. ¡No te lo pierdas!',
+    name: 'Mónica Doger',
+    fullText: t('In this talk, we dive into essential topics through a dialogue with an industry leader and expert, such as the current state, technology, challenges, and possibilities in the automotive field. Joining us is Mónica Doger, a prominent leader in the automotive sector and business growth in Mexico, who serves as General Director of the Automotive Cluster of Puebla and Tlaxcala, fostering innovation, industry expansion, and interaction among key players in the automotive sector. Don’t miss it!'),
     imageUrl: '/images/leadership/doger.avif',
     itemBgImage: '/images/conferents-people/monica-doger.png',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-small.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-small.png',
     backgroundColor: 'bg-gray-200',
     textColor: 'text-black',
     contentPosition: 'top',
     numberSession: 1,
-    position: 'Directora General de CLAUZ',
-    youtubeLink: 'https://www.youtube.com/live/np3vOjCqUOg', 
+    position: t('General Director of CLAUZ'),
+    youtubeLink: 'https://www.youtube.com/live/np3vOjCqUOg',
   },
   {
-    title: 'Katria Oviedo',
-    subtitle: 'Co-fundadora de Jetz. Compartirá su camino hacia el éxito, cómo las mujeres están dejando su huella y liderando en la industria.',
-    fullText: 'Acompáñanos en esta inspiradora sesión con Katria Oviedo, una destacada emprendedora y líder en los sectores tecnológico y automotriz. Como cofundadora de Jetz App, Katria ha revolucionado la cadena de suministro de autopartes en América Latina mediante soluciones digitales disruptivas. Durante esta ponencia, compartirá su camino hacia el éxito, los obstáculos que ha superado, y cómo las mujeres están dejando su huella y liderando con pasión en una industria tradicionalmente dominada por hombres.',
+    name: 'Katria Oviedo',
+    fullText: t('Join us in this inspiring session with Katria Oviedo, an outstanding entrepreneur and leader in the tech and automotive sectors. As co-founder of Jetz App, Katria has revolutionized the auto parts supply chain in Latin America through disruptive digital solutions. During this talk, she will share her path to success, the challenges she has overcome, and how women are making their mark and leading with passion in an industry traditionally dominated by men.'),
     imageUrl: '/images/leadership/katria.avif',
     itemBgImage: '/images/conferents-people/katria-oviedo.png',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-pink-form.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-pink-form.png',
     backgroundColor: 'bg-black',
     textColor: 'text-white',
     contentPosition: 'top',
     numberSession: 2,
-    position: 'Co-fundadora de Jetz',
-    youtubeLink: 'https://www.youtube.com/live/11Xf7zX6gyM', 
+    position: t('Co-founder of Jetz'),
+    youtubeLink: 'https://www.youtube.com/live/11Xf7zX6gyM',
   },
   {
-    title: 'Paola Rodríguez',
-    subtitle: 'Directora de TI, Microsoft. Su inspirador recorrido, el liderazgo femenino en tecnología y estrategias para emprender.',
-    fullText: 'En esta emocionante sesión, Paola Rodríguez, una líder en la industria tecnológica, compartirá su inspirador recorrido profesional. Desde su incursión en el mundo de la tecnología y el sector automotriz, hasta su éxito en ocupar puestos de liderazgo en empresas internacionales, Paola revelará cómo las mujeres están transformando industrias tradicionalmente dominadas por hombres.',
+    name: 'Paola Rodríguez',
+    fullText: t('In this exciting session, Paola Rodríguez, a leader in the tech industry, will share her inspiring professional journey. From her entry into the world of technology and the automotive sector to her success in holding leadership positions at international companies, Paola will reveal how women are transforming industries traditionally dominated by men.'),
     imageUrl: '/images/leadership/paola.avif',
     itemBgImage: '/images/conferents-people/paola-rodriguez.png',
     backgroundColor: 'bg-gray-200',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-pink-form.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-pink.png',
     textColor: 'text-black',
     contentPosition: 'top',
     numberSession: 3,
-    position: 'Directora de TI, Microsoft',
-    youtubeLink: 'https://www.youtube.com/live/RJAUg5Z62lY', 
+    position: t('IT Director, Microsoft'),
+    youtubeLink: 'https://www.youtube.com/live/RJAUg5Z62lY',
   },
   {
-    title: 'Aaron Koivunen',
-    subtitle: 'Co-fundador de TI, Karbook. Herramientas de Vanguardia: Impulsando la Innovación en la industria Automotriz, incluyendo IA.',
-    fullText: 'En esta sesión interactiva, exploraremos tecnologías y recursos clave para la innovación en la industria automotriz. Aaron compartirá estrategias fundamentales para el crecimiento empresarial y la digitalización, incluyendo el uso de inteligencia artificial y herramientas avanzadas para optimizar procesos y tomar decisiones estratégicas.',
+    name: 'Aaron Koivunen',
+    fullText: t('In this interactive session, we will explore key technologies and resources for innovation in the automotive industry. Aaron will share fundamental strategies for business growth and digitization, including the use of artificial intelligence and advanced tools to optimize processes and make strategic decisions.'),
     imageUrl: '/images/leadership/aaron.avif',
     itemBgImage: '/images/conferents-people/aaron-koivunen.png',
     backgroundColor: 'bg-black',
     textColor: 'text-white',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-small.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-small.png',
     contentPosition: 'top',
     numberSession: 4,
-    position: 'Co-fundador de TI, Karbook',
-    youtubeLink: 'https://www.youtube.com/live/FeHAyk2mGOs', 
+    position: t('Co-founder of IT, Karbook'),
+    youtubeLink: 'https://www.youtube.com/live/FeHAyk2mGOs',
   },
   {
-    title: 'Mónica Guerrero',
-    subtitle: 'Directora de Mkt, Denso. Su notable carrera en Marketing, persistencia en un área dominada por hombres y estrategias de conquista internacional.',
-    fullText: 'En esta discusión, nos introduciremos a Mónica Guerrero, su carrera notable en Marketing. Compartirá su vivencia y cómo ha persistido en esta área mayormente controlada por hombres, aparte de estrategias que ha implementado en Denso para la conquista del comercio internacional, enfocándose en el mercado Latinoamericano.',
+    name: 'Mónica Guerrero',
+    fullText: t('In this discussion, we will introduce Mónica Guerrero and her remarkable career in marketing. She will share her experience and how she has persisted in this field, which is largely controlled by men, as well as strategies she has implemented at Denso for international market expansion, focusing on the Latin American sector.'),
     imageUrl: '/images/leadership/monica.avif',
     itemBgImage: '/images/conferents-people/monica-guerrero.png',
     backgroundColor: 'bg-gray-200',
     textColor: 'text-black',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-pink.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-pink.png',
     contentPosition: 'top',
     numberSession: 5,
-    position: 'Directora de Mkt, Denso',
-    youtubeLink: 'https://www.youtube.com/live/gvkFWTJ_Z3k?si=Ma_mQpgrnw7Oiv3E', 
+    position: t('Marketing Director, Denso'),
+    youtubeLink: 'https://www.youtube.com/live/gvkFWTJ_Z3k?si=Ma_mQpgrnw7Oiv3E',
   },
   {
-    title: 'Lizeth Correa',
-    subtitle: 'Directora de Ventas CNW. Conexión y Empoderamiento: Claves para una Comunicación Efectiva en el ámbito automotriz y tecnológico.',
-    fullText: 'En esta sesión titulada “Conexión y Empoderamiento: Claves para una Comunicación Efectiva”, Lizeth Correa compartirá técnicas y habilidades de comunicación clave en el sector automotriz y tecnológico. Con su experiencia en Courier Network, nos enseñará cómo la persuasión, el liderazgo y la claridad son esenciales en negociaciones y gestión de clientes.',
+    name: 'Lizeth Correa',
+    fullText: t('In this session titled “Connection and Empowerment: Keys to Effective Communication,” Lizeth Correa will share key communication techniques and skills in the automotive and tech sector. With her experience at Courier Network, she will teach us how persuasion, leadership, and clarity are essential in negotiations and client management.'),
     imageUrl: '/images/leadership/lizeth.avif',
     itemBgImage: '/images/conferents-people/lizeth-correa.png',
     backgroundColor: 'bg-black',
-    imageBackground:'/images/backgrounds-abstract/form-abstract-pink-form.png',
+    imageBackground: '/images/backgrounds-abstract/form-abstract-pink-form.png',
     textColor: 'text-white',
     contentPosition: 'top',
     numberSession: 6,
-    position: 'Directora de Ventas CNW',
-    youtubeLink: 'https://www.youtube.com/watch?v=Tc5ATq0kNTI', 
+    position: t('Sales Director, CNW'),
+    youtubeLink: 'https://www.youtube.com/watch?v=Tc5ATq0kNTI',
   },
 ];
+
 export type Logos = string[];
 
 export const logos: Logos = [

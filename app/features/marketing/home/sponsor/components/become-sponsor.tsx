@@ -18,7 +18,7 @@ export function BecomeSponsor() {
     return (
         <section className="w-full px-4 sm:px-6 py-12 bg-white dark:bg-black">
             <div className="max-w-[90rem] mx-auto mb-8 text-left px-2 sm:px-4">
-                <h2 className="inline-block ml-[-18px] sm:ml-[-20px] px-4 py-1 rounded-full text-5xl font-semibold bg-gradient-to-r from-[#06c8b3] via-[#09dfaa] to-[#04c8cc] bg-clip-text text-transparent">
+                <h2 className="inline-block ml-[-18px] sm:ml-[-20px] px-4 py-1 rounded-full text-5xl font-semibold bg-gradient-to-r from-[#06c8b3] via-[#09dfaa] to-[#04c8cc] bg-clip-text text-transparent"style={{ fontFamily: 'var(--font-SF-Pro)'}}>
                     {t('Contact us')}
                 </h2>
                 <h2 className="text-2xl sm:text-6xl font-bold text-dark leading-relaxed" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
@@ -27,10 +27,10 @@ export function BecomeSponsor() {
             </div>
             <div className="max-w-[90rem] mx-auto py-12 rounded-3xl bg-[#011e23] shadow-xl">
                 <div className="text-left mb-8 max-w-full sm:max-w-[70%] mx-auto sm:ml-24 px-2 sm:px-0">
-                    <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-[#1abc9c] text-white mb-2">
+                    <span className="inline-block px-3 py-1 rounded-full text-md font-semibold bg-[#1abc9c] text-white mb-2">
                         {t('Are you interested in')}
                     </span>
-                    <h2 className="text-2xl sm:text-4xl font-bold text-[#ECF0F7] mb-4 leading-relaxed" style={{ fontFamily: 'var(--font-poppins)' }}>
+                    <h2 className="text-2xl sm:text-5xl font-bold text-[#ECF0F7] mb-4 leading-relaxed" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
                         {t("Let's forge the future of the automotive industry in Mexico and Latin America together.")}
                     </h2>
                 </div>

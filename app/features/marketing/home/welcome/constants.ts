@@ -33,425 +33,421 @@ export type Ambassadors = {
 	legacy: string | string[];
 
 };
+export const ambassadors = [
+    {
+        title: 'Majo Rodríguez',
+        slug: 'majo-rodriguez',
+        description: t('Professional Driver.'),
+        icon: '/images/sponsors-people/majo-rodriguez.avif',
+        company: 'Majo Rodriguez',
+        company_icon: '/images/sponsors-corporate/majo.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t(`Majo Rodríguez is a 24-year-old racing driver, born in the State of Puebla, who has achieved success in the world of motorsports. Her passion for racing began when she was 8 years old, when she decided to try karting as a hobby. But she soon realized that her true destiny was the track, and at 12 years old she debuted in professional national races, both in karts and touring cars. This determination led her to make a very important leap in her career in 2016 when she debuted in NASCAR and began racing in the world of tractor-trailers.
+            Majo has stood out for her impressive achievements, such as being the first woman to reach the podium in the Mercedes-Benz and Mikel's Trucks category. In addition, she is the first driver from Puebla to bring home a national championship, she triumphed four times in the demanding 24 Hours of Mexico in the TS category, she also competed in the World Racing League at Virginia International Raceway where she achieved an impressive performance in her first international race and has been co-driver of the SAFETY CAR in Formula E in the 2020, 2021 and 2022 seasons. However, one of Majo's greatest feats has been breaking paradigms within a discipline that has long been seen as "men only."`),
+            t('CHAMPIONSHIPS:'),
+            t('• First woman to get on the podium in the Freightliner Tractor-trailer category (since the Super Copa Telcel 2015)'),
+            t('• First woman to get on the podium in the Mikel\'s Trucks category'),
+            t('• First woman from Puebla to win a National Championship'),
+            t('• Three-time champion of the 24 Hours of Mexico in the T5 Category'),
+            t('• First woman to win first place in the Mexican Super Touring Championship'),
+            t('• First woman to race SuperTrucks V4 and V8 in the PROSPORTS championship'),
+            t('• First woman to get on the podium in 1st place at the Hermanos Rodríguez Racetrack (remodeled)'),
+            t('• Champion of the Endurance 24 in the E5 Category'),
+            '',
+            t('Website - majorodriguez.com'),
+            t('Instagram - @majorodriguezoficial')
+        ]
+    },
+    {
+        title: 'Naomi Fellows',
+        slug: 'naomi-fellows',
+        description: t('Labor Counselor and Head of the Labor and Competitiveness Unit.'),
+        icon: '/images/sponsors-people/naomi-fellows.avif',
+        company: 'Embassy of the United States in Mexico',
+        company_icon: '/images/sponsors-corporate/usa-departament.png',
+        nationality: t('Venezuela 🇻🇪 - USA 🇺🇸'),
+        legacy: [
+            t('Naomi Fellows is a career senior member of the United States Foreign Service economic officer.'),
+            t('Currently, Naomi serves as Labor Counselor and Head of the Labor and Competitiveness Unit in the Economic Section of the U.S. Embassy in Mexico City.'),
+            t('Previously, Naomi served as Deputy Economic Counselor in Brasilia, Brazil.'),
+            '',
+            t('Her most recent position in Washington was as Deputy Director of the Office of Public Affairs and Diplomacy in Africa.'),
+            t('Naomi has served in diplomatic positions at U.S. embassies in Conakry, Guinea; Bogota, Colombia; Yaoundé, Cameroon; Managua, Nicaragua; and Moscow, Russia.'),
+            t('Naomi was born in Caracas, Venezuela and resided in various Latin American countries until the age of 14.'),
+            '',
+            t('She holds a bachelor\'s degree from Pomona College in Los Angeles, California, and a master\'s degree in Latin American Politics and Economics from Georgetown University in Washington, DC.'),
+            t('Naomi speaks English, Spanish, Portuguese, French, and Russian.')
+        ]
 
-export const ambassadors: Ambassadors[] = [
-	{
-		title: 'Majo Rodríguez',
-		slug: 'majo-rodriguez',
-		description: 'Piloto profesional.',
-		icon: '/images/sponsors-people/majo-rodriguez.avif',
-		company: 'Majo Rodriguez',
-		company_icon: '/images/sponsors-corporate/majo.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			`Majo Rodríguez es una joven piloto de 24 años, nacida en el Estado de Puebla, que ha triunfado en el mundo del automovilismo. Su pasión por las carreras comenzó cuando tenía 8 años, cuando decidió probar el kartismo como hobby. Pero pronto se dio cuenta que su verdadero destino era la pista, y a los 12 años debutó en carreras profesionales a nivel nacional, tanto en karts como en coches turismo. Esta determinación la llevó a dar un salto muy importante en su carrera en 2016 cuando debutó en NASCAR y comenzó a correr en el mundo de los tractocamiones.
-Majo se ha destacado por sus logros impresionantes, como ser la primera mujer en subir al podio en la categoría Mercedes-Benz y Mikel's Trucks. Además, es la primera piloto poblana en traer a casa un campeonato nacional, triunfó cuatro veces en las exigentes 24 horas de México en la categoría TS, también compitió en la World Racing League en Virginia International Raceway donde logró una impresionante actuación en su primera carrera internacional y ha sido co-piloto del SAFETY CAR en la Fórmula E en las temporadas 2020, 2021 y 2022. Sin embargo, una de las mayores hazañas de Majo ha sido romper paradigmas dentro de una disciplina que durante mucho tiempo ha sido vista como "solo para hombres".`,
-			'CAMPEONATOS:',
-			'• Primera mujer en subirse al podio en la categoría de los Tractocamiones Freightliner (desde la Súper Copa Telcel 2015)',
-			'• Primera mujer en subirse al podio en la categoría de Mikel\'s Trucks',
-			'• Primera mujer poblana en ganar un Campeonato Nacional',
-			'• TriCampeona de las 24 hrs de México en la categoría T5',
-			'• Primera mujer en ganar el primer lugar en el Campeonato Mexicano de Súper Turismos',
-			'• Primera mujer en correr SuperTrucks V4 y V8 en el campeonato PROSPORTS',
-			'• Primera mujer en subirse al podio en el 1er lugar en el Autódromo Hermanos Rodríguez (remodelado)',
-			'• Campeona de la Endurance 24 en la Categoría E5',
-			'',
-			'Página - majorodriguez.com',
-			'Instagram - @majorodriguezoficial'
-		]
-	},
-	{
-		title: 'Naomi Fellows',
-		slug: 'naomi-fellows',
-		description: 'Consejera Laboral y Titular de la Unidad Trabajo y Competitividad.',
-		icon: '/images/sponsors-people/naomi-fellows.avif',
-		company: 'Embajada de los Estados Unidos en México',
-		company_icon: '/images/sponsors-corporate/usa-departament.png',
-		nationality: 'Venezuela 🇻🇪 - USA 🇺🇸',
-		legacy: [
-			'Naomi Fellows es una oficial económica miembro senior de carrera del Servicio Exterior de los Estados Unidos.',
-			'Actualmente, Naomi funge como Consejera Laboral y Titular de la Unidad de Trabajo y Competitividad en la Sección Económica de la Embajada de los Estados Unidos en la Cd. De México.',
-			'Anteriormente, Naomi fungió como Consejera Económica Adjunta en Brasilia, Brasil.',
-			'',
-			'Su más reciente cargo en Washington fue como Directora Adjunta de la Oficina de Relaciones Públicas y Diplomacia en Africa.',
-			'Naomi ha servido en posiciones diplomáticas en las embajadas de los EEUU en Conakry, Guinea; Bogotá, Colombia; Yaoundé, Camerún; Managua, Nicaragua; y en Moscú, Rusia.',
-			'Naomi nació en Caracas, Venezuela y residió en varios países de Latinoamérica hasta la edad de 14 años.',
-			'',
-			'Tiene una licenciatura de Pomona College en Los Ángeles, California y una maestría en Política y Economía de Latinoamérica de la Universidad de Georgetown en Washington, DC.',
-			'Naomi habla inglés, español, portugués, francés y ruso.'
-		]
+    },
+    {
+        title: 'Lizeth Correa',
+        slug: 'lizeth-correa',
+        description: t('Director of Sales and Corporate Accounts'),
+        icon: '/images/sponsors-people/lizeth-correa.avif',
+        company: 'CNW | Courier Network',
+        company_icon: '/images/sponsors-corporate/courier.png',
+        nationality: t('Mexico 🇲🇽 - USA 🇺🇸'),
+        legacy: [
+            t('Lizeth Correa is a recognized leader in the business world, standing out for her excellence in commercial operations and sales strategy development.'),
+            t('With a clear focus on customer satisfaction and a deep understanding of the Latin American and North American markets, she has managed multimillion-dollar accounts and forged strategic alliances that have led to supply chain optimization.'),
+            t('She has worked in key sectors such as semiconductors, automotive, telecommunications, and industrial automation.'),
+            '',
+            t('Currently, Lizeth serves as Director of Sales and Account Management for the North American Automotive Division at Courier Network, where she leads with power and vision, critical time solution initiatives for global clients.'),
+            t('Throughout her career, she has demonstrated skills in creating strategic alliances and acquiring key accounts for her organization.'),
+            t('Her ability to build influential relationships and her commitment to excellence have positioned her as a key figure in the industry, where she continues to leave an indelible mark on every project she undertakes.'),
+            '',
+            t('She is an enthusiastic and genuine leader with the mission to help transform the automotive industry in Mexico and Latin America to forge a more diverse and inclusive industry, which is why she co-founded the Mujer Automotriz leaders community, a 100% social initiative with the mission to promote female leadership in the automotive industry.')
+        ]
 
-	},
-	{
-		title: 'Lizeth Correa',
-		slug: 'lizeth-correa',
-		description: 'Directora de Ventas y de Cuentas Corporativas',
-		icon: '/images/sponsors-people/lizeth-correa.avif',
-		company: 'CNW | Courier Network',
-		company_icon: '/images/sponsors-corporate/courier.png',
-		nationality: 'México 🇲🇽 - USA 🇺🇸',
-		legacy: [
-			'Lizeth Correa es una líder reconocida en el ámbito empresarial, destacándose por su excelencia en operaciones comerciales, y desarrollo de estrategias de ventas.',
-			'Con un enfoque claro en la satisfacción del cliente y un profundo entendimiento de los mercados de América Latina y América del Norte, ha gestionado cuentas multimillonarias y forjado alianzas estratégicas que la han llevado a la optimización de la cadena de suministro.',
-			'Trabajado en sectores clave como semiconductores, automotriz, telecomunicaciones y automatización industrial.',
-			'',
-			'Actualmente, Lizeth se desempeña como Directora de Ventas y Gestión de Cuentas para la División Automotriz de Norteamérica en Courier Network, donde lidera con poder y visión, iniciativas de soluciones críticas de tiempo para clientes globales.',
-			'A lo largo de su carrera, ha demostrado habilidades en la creación de alianzas estratégicas y adquisición de cuentas clave para su organización.',
-			'Su capacidad para construir relaciones influyentes y su compromiso con la excelencia la han posicionado como una figura clave en la industria, donde continúa dejando una marca imborrable en cada proyecto que emprende.',
-			'',
-			'Es una líder entusiasta y genuina con la misión de ayudar a transformar la industria automotriz en México y America Latina para forjar una industria más diversa e inclusiva, por tal motivo se unió a co-fundador la comunidad de líderes Mujer Automotriz, una iniciativa 100% social con la misión de impulsar el liderazgo femenino en la industria automotriz.'
-		]
+    },
+    {
+        title: 'Monica Doger',
+        slug: 'monica-doger',
+        description: t('Director of the Puebla and Tlaxcala Automotive Cluster at Cluster Automotriz Zona Centro.'),
+        icon: '/images/sponsors-people/monica-doger.avif',
+        company: 'CLAUZ',
+        company_icon: '/images/sponsors-corporate/clauz-icon.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Mónica Doger is a prominent leader in the automotive industry and business development in Mexico.'),
+            t('She is currently the General Director of the Puebla and Tlaxcala Automotive Cluster, where she promotes innovation, industry growth, and collaboration among key players in the automotive sector.'),
+            t('With a solid career in strategic leadership and a Master\'s degree in International Economics and Politics, she has led multiple projects focused on organizational improvement and regional economic development.'),
+            '',
+            t('In addition to her role in the cluster, Mónica is the General Director of Legatum Coaching in Financial Security, where she promotes financial empowerment through the recruitment and training of financial product and insurance advisors.'),
+            t('Her career includes experience at the National Council of Science and Technology (Conacyt), BUAP University, and the Government of the State of Puebla, standing out for her focus on innovation, inclusive leadership, and the development of new generations of business leaders.'),
+            '',
+            t('Mónica has demonstrated a unique ability to create strategic alliances and promote growth in key sectors such as automotive and finance.')
+        ]
 
-	},
-	{
-		title: 'Monica Doger',
-		slug: 'monica-doger',
-		description: 'Directora Clúster Automotriz Puebla y Tlaxcala en Cluster Automotriz Zona Centro.',
-		icon: '/images/sponsors-people/monica-doger.avif',
-		company: 'CLAUZ',
-		company_icon: '/images/sponsors-corporate/clauz-icon.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Mónica Doger es una destacada líder en la industria automotriz y el desarrollo empresarial en México.',
-			'Actualmente es Directora General del Clúster Automotriz de Puebla y Tlaxcala, donde impulsa la innovación, el crecimiento de la industria y la colaboración entre actores clave del sector automotriz.',
-			'Con una carrera sólida en liderazgo estratégico y una Maestría en Economía y Política Internacional, ha liderado múltiples proyectos centrados en la mejora organizacional y el desarrollo económico regional.',
-			'',
-			'Además de su rol en el clúster, Mónica es Directora General de Legatum Coaching en Seguridad Financiera, donde fomenta el empoderamiento financiero a través del reclutamiento y la formación de asesores en productos financieros y seguros.',
-			'Su trayectoria incluye experiencia en el Consejo Nacional de Ciencia y Tecnología (Conacyt), la Universidad BUAP, y el Gobierno del Estado de Puebla, destacándose por su enfoque en innovación, liderazgo inclusivo y el desarrollo de nuevas generaciones de líderes empresariales.',
-			'',
-			'Mónica ha demostrado una capacidad única para crear alianzas estratégicas y promover el crecimiento en sectores claves como la automotriz y el financiero.'
-		]
+    },
+    {
+        title: 'Ana Arias',
+        slug: 'ana-arias',
+        description: t('Director of Marketing and Corporate Communications.'),
+        icon: '/images/sponsors-people/ana-arias.avif',
+        company: 'Grupo Apymsa',
+        company_icon: '/images/sponsors-corporate/apymsa-icon.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Ana is a bilingual executive with over 25 years of experience in the retail, industrial, health, consumer, and technology sectors, contributing to the positioning and profitability of leading brands in the market through the development of marketing, commercial, and communication strategies, including 360 Communications plans (Offline / Digital).'),
+            t('She specializes in designing differentiating elements and forging strategic routes to position products, services, and brands based on specific customer needs (B2B and B2C), maximizing sales and profits, optimizing time and resources, and supporting corporate and brand reputation.'),
+            '',
+            t('In addition, Ana has extensive experience in managing high-performance teams and in creating an organizational culture focused on excellence and innovation.')
+        ]
 
-	},
-	{
-		title: 'Ana Arias',
-		slug: 'ana-arias',
-		description: 'Directora de Marketing y Comunicaciones Corporativas.',
-		icon: '/images/sponsors-people/ana-arias.avif',
-		company: 'Grupo Apymsa',
-		company_icon: '/images/sponsors-corporate/apymsa-icon.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Ana es una ejecutiva bilingüe con más de 25 años de carrera en los sectores minorista, industrial, de salud, consumo y tecnología, contribuyendo al posicionamiento y rentabilidad de marcas líderes en el mercado a través del desarrollo de estrategias de marketing, comerciales y de comunicación, incluyendo planes de 360 Comunicaciones (Offline / Digital).',
-			'Es especialista en diseñar elementos diferenciadores y forjar rutas estratégicas para posicionar productos, servicios y marcas basadas en las necesidades específicas del cliente (B2B y B2C), maximizando ventas y ganancias, optimizando tiempo y recursos y apoyando la reputación corporativa y de marca.',
-			'',
-			'Además, Ana cuenta con una vasta experiencia en la gestión de equipos de alto rendimiento y en la creación de una cultura organizacional centrada en la excelencia y la innovación.'
-		]
+    },
+    {
+        title: 'Claudia Marquez',
+        slug: 'claudia-marquez',
+        description: t('COO.'),
+        icon: '/images/sponsors-people/claudia-marquez.avif',
+        company: 'Genesis Motor North America',
+        company_icon: '/images/sponsors-corporate/genesis-motor.png',
+        nationality: t('Mexico 🇲🇽 - USA 🇺🇸'),
+        legacy: [
+            t('Claudia Marquez, COO of Genesis Motor North America, is one of the most recognized women in the automotive industry with over 25 years of experience.'),
+            t('Despite the challenges posed by the pandemic in 2020, she successfully launched two new car models while maintaining consumer prices and providing transportation for healthcare personnel.'),
+            t('She is an enthusiastic and genuine leader who builds effective teams and is persistent in her pursuit of excellence, consistency, and strength.'),
+            t('Her inclusion in Bloomberg Línea\'s "The 500 of Latin America 2022" list is a testament to her influence in Latin American business, economy, and finance.'),
+            '',
+            t('Additionally, Claudia has demonstrated a solid and successful career as a global executive, with a track record of outstanding results in the automotive industry.'),
+            t('In her career, she has learned to overcome great challenges and surround herself with leaders who motivate her to grow both personally and professionally.'),
+            t('With her experience and leadership, the Genesis Motor North America board faces the challenge of increasing the brand\'s market share at a time when semiconductor shortages are delaying manufacturers\' plans.')
+        ]
 
-	},
-	{
-		title: 'Claudia Marquez',
-		slug: 'claudia-marquez',
-		description: 'COO.',
-		icon: '/images/sponsors-people/claudia-marquez.avif',
-		company: 'Genesis Motor North America',
-		company_icon: '/images/sponsors-corporate/genesis-motor.png',
-		nationality: 'México 🇲🇽 - USA 🇺🇸',
-		legacy: [
-			'Claudia Marquez, COO de Genesis Motor North America, es una de las mujeres más reconocidas en la industria automotriz con más de 25 años de experiencia.',
-			'A pesar de los desafíos planteados por la pandemia en 2020, ella lanzó con éxito dos nuevos modelos de automóviles mientras mantenía los precios para el consumidor y proporcionaba transporte para el personal de salud.',
-			'Es una líder entusiasta y genuina que crea equipos efectivos y es persistente en su búsqueda de excelencia, consistencia y fortaleza.',
-			'Su inclusión en la lista "Los 500 de América Latina 2022" de Bloomberg Línea es un testimonio de su influencia en los negocios, la economía y las finanzas de América Latina.',
-			'',
-			'Además, Claudia ha demostrado una trayectoria sólida y exitosa como ejecutiva global, con un historial de resultados sobresalientes en la industria automotriz.',
-			'En su carrera, ha aprendido a superar grandes desafíos y rodearse de líderes que la motivan a crecer tanto personal como profesionalmente.',
-			'Con su experiencia y liderazgo, la junta directiva de Genesis Motor North America se enfrenta al desafío de aumentar la participación de la marca en el mercado en un momento en que la escasez de semiconductores está retrasando los planes de los fabricantes.'
-		]
+    },
+    {
+        title: 'Katria Oviedo',
+        slug: 'katria-oviedo',
+        description: t('CEO.'),
+        icon: '/images/sponsors-people/katria-oviedo.avif',
+        company: 'Jetz',
+        company_icon: '/images/sponsors-corporate/jetz.jpeg',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Outstanding entrepreneur and leader in the technology and innovation industry, co-founder and COO of Jetz App, where she has transformed the auto parts supply chain in Latin America through disruptive digital solutions.'),
+            t('With vast experience in business negotiations, public relations, and venture capital funds, Katria has consolidated herself as an influential figure in the entrepreneurial ecosystem.'),
+            '',
+            t('Her visionary leadership has been fundamental for the creation of market strategies and startup growth, demonstrating her ability to lead companies to success in highly competitive markets.'),
+            t('In addition, she has dedicated more than 4,500 hours to mentoring over 160 entrepreneurs, strengthening the entrepreneurial community through workshops and incubation programs.'),
+            t('Her commitment to excellence and innovation positions her as a benchmark in the business field, highlighting her ability to form strategic alliances and guide new generations of business leaders.'),
+            '',
+            t('As a professor at the Center for Design, Cinema and Television, and with her trajectory in organizations such as Vetta and Rubik Ventures, Katria has demonstrated her ability to boost the growth of high-impact companies and projects.'),
+            t('Her role in the industry is not limited to creating successful companies, but also to training and developing future leaders, reflecting her passion for entrepreneurship and her desire to contribute to economic and social progress.')
+        ]
 
-	},
-	{
-		title: 'Katria Oviedo',
-		slug: 'katria-oviedo',
-		description: 'CEO.',
-		icon: '/images/sponsors-people/katria-oviedo.avif',
-		company: 'Jetz',
-		company_icon: '/images/sponsors-corporate/jetz.jpeg',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Destacada emprendedora y líder en la industria tecnológica y de innovación, cofundadora y COO de Jetz App, donde ha transformado la cadena de suministro de autopartes en América Latina mediante soluciones digitales disruptivas.',
-			'Con una vasta experiencia en negociaciones empresariales, relaciones públicas, y fondos de capital de riesgo, Katria se ha consolidado como una figura influyente en el ecosistema emprendedor.',
-			'',
-			'Su liderazgo visionario ha sido fundamental para la creación de estrategias de mercado y crecimiento de startups, demostrando su capacidad para dirigir empresas hacia el éxito en mercados altamente competitivos.',
-			'Además, ha dedicado más de 4,500 horas a la mentoría de más de 160 emprendedores, fortaleciendo la comunidad emprendedora a través de talleres y programas de incubación.',
-			'Su compromiso con la excelencia y la innovación la posiciona como una referente en el ámbito empresarial, destacando su habilidad para formar alianzas estratégicas y guiar a las nuevas generaciones de líderes empresariales.',
-			'',
-			'Como profesora en el Centro de Diseño, Cine y Televisión, y con su trayectoria en organizaciones como Vetta y Rubik Ventures, Katria ha demostrado su capacidad para impulsar el crecimiento de empresas y proyectos de alto impacto.',
-			'Su rol en la industria no solo se limita a la creación de empresas exitosas, sino también a la formación y desarrollo de futuros líderes, reflejando su pasión por el emprendimiento y su deseo de contribuir al progreso económico y social.'
-		]
+    },
+    {
+        title: 'Claudia Quintanilla',
+        slug: 'claudia-quintanilla',
+        description: t('CEO & Co-Funder.'),
+        icon: '/images/sponsors-people/claudia-quintanilla.avif',
+        company: 'Rextie',
+        company_icon: '/images/sponsors-corporate/rextie.png',
+        nationality: t('Peru 🇵🇪'),
+        legacy: [
+            t('Claudia Quintanilla is a recognized co-founder and COO at Rextie Peru, a digital exchange platform where you can exchange soles and dollars with a super exchange rate.'),
+            t('Claudia is a computer and systems engineer with studies in eBusiness, Information Technologies, and project management.'),
+            t('She has experience in information management and operational risk.'),
+            t('She was COO & Co-Founder at Rextie since February 2016 and Vice President of Allies and Guilds at the PERU FINTECH ASSOCIATION since December 2020.'),
+            '',
+            t('Successful results through leadership, innovation, motivation, and results orientation.'),
+            t('Ability for analysis, decision-making, multidisciplinary team management, and easy adaptation to change.')
+        ]
 
-	},
-	{
-		title: 'Claudia Quintanilla',
-		slug: 'claudia-quintanilla',
-		description: 'CEO & Co-Funder.',
-		icon: '/images/sponsors-people/claudia-quintanilla.avif',
-		company: 'Rextie',
-		company_icon: '/images/sponsors-corporate/rextie.png',
-		nationality: 'Peru 🇵🇪',
-		legacy: [
-			'Claudia Quintanilla es reconocida cofundadora y COO en Rextie Perú, plataforma de casa digital donde puedes cambiar monedas de soles y dólares con un super tipo de cambio.',
-			'Claudia es ingeniera en computación y sistemas con estudios en eBusiness, Tecnologías de la información y gestión de proyectos.',
-			'Tiene experiencia en gestión de información y riesgo operacional.',
-			'Fue COO & Co-Founder en Rextie desde febrero de 2016 y Vicepresidente de Aliados y Gremios en la ASOCIACIÓN PERÚ FINTECH desde diciembre de 2020.',
-			'',
-			'Resultados exitosos a través del liderazgo, la innovación, la motivación y la orientación a resultados.',
-			'Habilidad para el análisis, toma de decisiones, manejo de equipos multidisciplinarios y fácil adaptación al cambio.'
-		]
+    },
+    {
+        title: 'Lilia Acosta',
+        slug: 'lilia-acosta',
+        description: t('Founder and Entrepreneur.'),
+        icon: '/images/sponsors-people/lilia-acosta.avif',
+        company: 'AMEXME Cápitulo Cholula',
+        company_icon: '/images/sponsors-corporate/amexme.jpeg',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Lilia Acosta has been the Director of Solak since 2013, a vehicle and truck leasing company.'),
+            t('In 2022, she was elected President of the Cholula Chapter of the Mexican Association of Businesswomen (AMEXME), which offers resources and expertise to help women entrepreneurs reach the next level of success.'),
+            '',
+            t('Lilia holds a Bachelor\'s degree in Clinical Psychology from the Autonomous University of Sinaloa and a Master\'s degree in Family Sciences from the Popular Autonomous University of the State of Puebla (UPAEP).'),
+            t('Previously, she worked at the Public Education Secretariat and the General Hospital of Culiacán in psychological care and evaluation.')
+        ]
 
-	},
-	{
-		title: 'Lilia Acosta',
-		slug: 'lilia-acosta',
-		description: 'Fundadora y empresaria.',
-		icon: '/images/sponsors-people/lilia-acosta.avif',
-		company: 'AMEXME Cápitulo Cholula',
-		company_icon: '/images/sponsors-corporate/amexme.jpeg',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Lilia Acosta es la Directora de Solak desde 2013, una empresa de arrendamiento de vehículos y camionetas.',
-			'En 2022, fue elegida como Presidenta del Capítulo Cholula de la Asociación Mexicana de Mujeres Empresarias (AMEXME), que ofrece recursos y experiencia para impulsar a las mujeres empresarias al siguiente nivel de éxito.',
-			'',
-			'Lilia es Licenciada en Psicología Clínica por la Universidad Autónoma de Sinaloa y tiene una Maestría en Ciencias para la Familia por la Universidad Popular Autónoma del Estado de Puebla (UPAEP).',
-			'Anteriormente, trabajó en la Secretaría de Educación Pública y en el Hospital General de Culiacán en la atención y evaluación psicológica.'
-		]
+    },
+    {
+        title: 'Inna Makhniboroda',
+        slug: 'inna-makhniboroda',
+        description: t('Founder and Partner.'),
+        icon: '/images/sponsors-people/inna-makhniboroda.avif',
+        company: 'Sigue Derecho / E&M Business Lawyers',
+        company_icon: '/images/sponsors-corporate/lawyer.png',
+        nationality: t('Russia 🇷🇺'),
+        legacy: [
+            t('Inna is a results-oriented international lawyer with extensive legal practice in internal legal advisory, external legal consulting, and academic research on modern international law issues and the legal regulation of new technologies. She has served as a legal advisor/counsel for the board of directors of various companies in the process of organizing cross-border operations, international business expansion, and foreign investment protection. With her experience and skills, Inna can help companies navigate complex international legal landscapes and ensure success in their global operations.'),
+            '',
+            t('In addition to her business activities, Inna and her partner Edgar founded the "Sigue Derecho" program to support exceptional female lawyers who have gone unnoticed in the legal industry due to their gender, origin, place of study, age, among others. The program offers 360° professional support scholarships covering housing, sustenance, and security to allow talented female lawyers from different parts of Mexico to move to Mexico City and improve their professional capabilities in law.')
+        ]
+    },
+    {
+        title: 'Daniela Hernández Alvarez',
+        slug: 'daniela-hernandez-alvarez',
+        description: t('CEO - Co-Founder'),
+        icon: '/images/sponsors-people/daniela-hernandez.avif',
+        company: 'Earth & Life UNiversity',
+        company_icon: '/images/sponsors-corporate/earth.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Daniela Hernández is a renowned entrepreneur and leader in sustainability, environment, and human development.'),
+            t('Daniela has stood out as Co-Founder and General Director of Earth & Life University, a university specializing in training leaders and agents of change at undergraduate and postgraduate levels.'),
+            '',
+            t('With over 7 years of experience in public and private projects, Daniela has implemented strategies in eco-technologies, circular economy, sustainable tourism, creative industries, and learning methodologies.'),
+            '',
+            t('In addition to her work at Earth & Life University, Daniela founded Maya Bacab, a beekeeping company dedicated to revaluing Mayan culture.'),
+            t('For her social and business leadership, the U.S. Embassy selected her as one of the 250 social leaders in Latin America.')
+        ]
 
-	},
-	{
-		title: 'Inna Makhniboroda',
-		slug: 'inna-makhniboroda',
-		description: 'Fundadora y Partner.',
-		icon: '/images/sponsors-people/inna-makhniboroda.avif',
-		company: 'Sigue Derecho / E&M Business Lawyers',
-		company_icon: '/images/sponsors-corporate/lawyer.png',
-		nationality: 'Rusia 🇷🇺',
-		legacy: [
-			'Inna es una abogada internacional orientada a resultados con una amplia práctica legal en el campo de asesoría legal interna, consultoría legal externa e investigación académica de problemas modernos del derecho internacional y la regulación legal de nuevas tecnologías. Ha servido como asesora/counsel legal para la junta directiva de diferentes empresas en el proceso de organización de operaciones transfronterizas, expansión internacional de negocios y protección de inversiones extranjeras. Con su experiencia y habilidades, Inna puede ayudar a las empresas a navegar por los complejos terrenos legales internacionales y garantizar el éxito en sus operaciones globales.',
-			'',
-			'Además de sus actividades empresariales, Inna y su socio Edgar fundaron el programa "Sigue Derecho" para apoyar a abogadas excepcionales que han pasado desapercibidas en la industria legal debido a su género, origen, lugar de estudio, edad, entre otros. El programa ofrece becas de apoyo profesional de 360° que cubren vivienda, sustento y seguridad para permitir que abogadas talentosas de diferentes partes de México se muden a la Ciudad de México y mejoren sus capacidades profesionales en el derecho.'
-		]
+    },
+    {
+        title: 'Edgar Espejel',
+        slug: 'edgar-espejel',
+        description: t('Founding Partner.'),
+        icon: '/images/sponsors-people/edgar-espejel.avif',
+        company: 'E&M Business Lawyer',
+        company_icon: '/images/sponsors-corporate/lawyer.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Edgar Espejel is a lawyer specializing in business law, graduated with an LLM from the University of Cambridge.'),
+            t('As a founding partner of the firm E&M Business Lawyers since 2014, he is responsible for providing a comprehensive legal department service by incorporating various areas of expertise, such as corporate law (M&A) and tax law, among others.'),
+            '',
+            t('With 17 years of experience in both the private and social sectors, Edgar understands the need to meet business objectives as both an in-house and external lawyer.'),
+            t('His mission is to provide legal advice to his clients that combines the best of both worlds to achieve commercial results.'),
+            t('With an impressive track record in the world of business law, Edgar is an expert in his field and is dedicated to providing high-quality legal services to his clients.'),
+            t('With his experience and skills, he can help any company achieve its business objectives and succeed.')
+        ]
 
-	},
-	{
-		title: 'Daniela Hernández Alvarez',
-		slug: 'daniela-hernandez-alvarez',
-		description: 'CEO - Co-Founder',
-		icon: '/images/sponsors-people/daniela-hernandez.avif',
-		company: 'Earth & Life UNiversity',
-		company_icon: '/images/sponsors-corporate/earth.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Daniela Hernández es una reconocida emprendedora y líder en temas de sostenibilidad, medio ambiente y desarrollo humano.',
-			'Daniela se ha destacado por ser Co-Fundadora y Directora General de la Earth & Life University, es una universidad especializada en la formación de líderes y agentes de cambio, a nivel superior y posgrado.',
-			'',
-			'Con más de 7 años de experiencia en proyectos públicos y privados, Daniela ha implementado estrategias de ecotecnologías, economía circular, turismo sostenible, industrias creativas y metodologías de aprendizaje.',
-			'',
-			'Además de su trabajo en la Earth & Life University, Daniela ha fundado Maya Bacab, una empresa apícola dedicada a la revalorización de la cultura maya.',
-			'Por su liderazgo social y empresarial, la Embajada de Estados Unidos la seleccionó como una de las 250 líderes sociales en América Latina.'
-		]
+    },
+    {
+        title: 'Adriana Carmona',
+        slug: 'adriana-carmona',
+        description: t('CEO & Co-Founder.'),
+        icon: '/images/sponsors-people/adriana-carmona.avif',
+        company: 'TEDI / Karbook',
+        company_icon: '/images/sponsors-corporate/karbook.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Adriana Carmona is an innovative entrepreneur with over 8 years of experience building technology companies in Mexico and Europe. Her specialty is in business and the automotive industry.'),
+            '',
+            t('With a social focus in her companies, she is co-founder of Karbook, a company committed to democratizing access to technology in the Automotive Aftermarket industry, which includes auto parts stores, automotive workshops, and fleets.'),
+            t('She is also the founder of the Mujer Automotriz leaders community, a 100% social initiative with the mission of promoting female leadership in the automotive industry.'),
+            t('In addition, she is an advisor at the United States Center for Advanced Manufacturing and the Karmona Automotive Club, which is dedicated to classic car restoration, automotive maintenance, and services for high-performance cars.'),
+            '',
+            t('Her focus on the creation and commercialization of innovative products has led her to various recognitions, including the Female Entrepreneurship award by Accenture in the Netherlands, and being selected in 2022 as one of the 250 high-impact entrepreneurs in Latin America by the Young Leaders of the Americas Initiative program.'),
+            '',
+            t('Adriana is a natural leader and mentor passionate about education and inclusivity, boosting her colleagues\' skills to achieve goals quickly and efficiently.'),
+            t('She has lived in six countries, speaks three languages, and has experience working in the private and public sectors.')
+        ]
 
-	},
-	{
-		title: 'Edgar Espejel',
-		slug: 'edgar-espejel',
-		description: 'Socio Fundador.',
-		icon: '/images/sponsors-people/edgar-espejel.avif',
-		company: 'E&M Business Lawyer',
-		company_icon: '/images/sponsors-corporate/lawyer.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Edgar Espejel es un abogado especialista en derecho de los negocios (business law), graduado con un LLM de la Universidad de Cambridge.',
-			'Como socio fundador de la firma E&M Business Lawyers desde 2014, se encarga de brindar un servicio integral de un departamento jurídico mediante la incorporación de diversas áreas de especialidad, como derecho corporativo (M&A) y derecho fiscal, entre otros.',
-			'',
-			'Con 17 años de experiencia tanto en el sector privado como en el sector social, Edgar conoce la necesidad de cumplir objetivos comerciales tanto como abogado in-house como externo.',
-			'Su misión es proporcionar asesoría legal a sus clientes que combine lo mejor de ambos mundos para lograr resultados comerciales.',
-			'Con una trayectoria impresionante en el mundo del derecho empresarial, Edgar es un experto en su campo y se dedica a brindar servicios legales de alta calidad a sus clientes.',
-			'Con su experiencia y habilidades, puede ayudar a cualquier empresa a alcanzar sus objetivos comerciales y lograr el éxito.'
-		]
+    },
+    {
+        title: 'Gimena Sanchez',
+        slug: 'gimena-sanchez',
+        description: t('Entrepreneurship Director.'),
+        icon: '/images/sponsors-people/gimena-sanchez.avif',
+        company: 'Endeavor México',
+        company_icon: '/images/sponsors-corporate/endeavor.jpeg',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Gimena is an experienced leader in promoting the entrepreneurial, social, and cultural environment through high-impact ventures in Mexico.'),
+            t('As Entrepreneurship Director at Endeavor Mexico, she has demonstrated her ability to identify and support the country\'s most promising startups, with a focus on driving innovation and change.'),
+            '',
+            t('Her previous experience in finance and project management has been invaluable in her current work at Endeavor, where she helps companies navigate market challenges and reach their full growth potential.'),
+            t('Gimena is a passionate advocate for entrepreneurship as a transformative force for Mexico, and has been key to the success of numerous emerging companies in the country.')
+        ]
+    },
+    {
+        title: 'Aaron Koivunen',
+        slug: 'aaron-koivunen',
+        description: t('CTO & Co-Funder.'),
+        icon: '/images/sponsors-people/aaron-koivunen.avif',
+        company: 'TEDI / Karbook',
+        company_icon: '/images/sponsors-corporate/karbook.png',
+        nationality: t('Germany 🇩🇪 - Finland 🇫🇮'),
+        legacy: [
+            t('Aaron Koivunen is an entrepreneur and leader in the technology field, co-founder of Karbook, a company that seeks to democratize access to technology in the automotive repair industry.'),
+            t('His mission is to facilitate digital transformation in workshops, auto parts stores, and fleets, with the aim of generating positive change in the industry and improving the operational efficiency of small and medium-sized enterprises (SMEs) in this sector.'),
+            '',
+            t('Recognized for his leadership and collaboration skills, Aaron has demonstrated his ability to overcome challenges in various contexts, always identifying and leveraging the strengths of his team.'),
+            t('In 2024, he was selected as one of the 50 high-impact entrepreneurs in Europe through the Young Transatlantic Innovation Leaders Initiative (YTILI) program, in recognition of his ability to drive technological innovation and social change.'),
+            '',
+            t('With over eight years of experience building technology companies in Mexico and Europe, Aaron has focused on promoting technological and social inclusion through his projects.'),
+            t('The Mexican government recognized his work with Karbook by granting him a high-impact project, highlighting his contribution to the development of the automotive industry and his commitment to digital transformation.'),
+            '',
+            t('Aaron is a passionate advocate for empowering new generations, actively participating in programs such as "Jóvenes Construyendo el Futuro" (Youth Building the Future), where he opens the doors of his organization to teach software development skills to young people in vulnerable situations.'),
+            t('Likewise, his experience as a consultant for over five years has allowed him to advise companies on digitalization and growth strategies, being a benchmark in the implementation of disruptive technologies such as artificial intelligence (AI).'),
+            '',
+            t('In addition to his role at Karbook, Aaron is an advisor at the United States Center for Advanced Manufacturing and a member of the Karmona Automotive Club, focused on classic car restoration and high-performance services.'),
+            t('With a social focus and a clear vision of innovation, Aaron continues to drive technological transformation and inclusive leadership in various industries.')
+        ]
 
-	},
-	{
-		title: 'Adriana Carmona',
-		slug: 'adriana-carmona',
-		description: 'CEO & Co-Founder.',
-		icon: '/images/sponsors-people/adriana-carmona.avif',
-		company: 'TEDI / Karbook',
-		company_icon: '/images/sponsors-corporate/karbook.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Adriana Carmona es una emprendedora innovadora con más de 8 años de experiencia en la construcción de empresas de tecnología en México y Europa. Su especialidad se basa en negocios y la industria automotriz.',
-			'',
-			'Con un enfoque social en sus empresas, es cofundadora de Karbook, una empresa comprometida con democratizar el acceso a la tecnología en la industria del Aftermarket Automotriz, que incluye refaccionarías, talleres automotrices y flotillas.',
-			'También es fundadora de la comunidad de líderes Mujer Automotriz, una iniciativa 100% social con la misión de impulsar el liderazgo femenino en la industria automotriz.',
-			'Además, es consejera en el Centro de Estados Unidos de Manufactura Avanzada y del Club Automotriz Karmona, que se dedica a la restauración de autos clásicos, mantenimiento automotriz y servicios para autos de alto rendimiento.',
-			'',
-			'Su enfoque en la creación y comercialización de productos innovadores le han llevado a varios reconocimientos, incluido el premio de Emprendimiento Femenino del Año por Accenture en Holanda, y ser seleccionada en 2022 como una de los 250 empresarios de alto impacto de Latinoamérica del programa Young Leaders of the Americas Initiative.',
-			'',
-			'Adriana es una líder natural y mentora apasionada por la educación y la inclusividad, impulsando las habilidades de sus colegas para alcanzar objetivos de manera rápida y eficiente.',
-			'Ha vivido en seis países, habla tres idiomas y tiene experiencia trabajando en el sector privado y público.'
-		]
+    },
+    {
+        title: 'Hazel Guerrero Hurtado',
+        slug: 'hazel-guerrero-hurtado',
+        description: t('General Director.'),
+        icon: '/images/sponsors-people/hazel-guerrero.avif',
+        company: 'BW Automotive Motor Parts',
+        company_icon: '/images/sponsors-corporate/bw.jpeg',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Hazel Guerrero Hurtado is recognized for her outstanding performance as General Director of the family-owned and transnational company BW Comercial Automotive Motor Parts, which specializes in the manufacturing of engine parts and globally in cooling systems.'),
+            '',
+            t('She holds a Bachelor\'s degree in Business Administration and Finance, graduated with honors from the Monterrey Institute of Technology, and has a Specialization in Marketing from New York University (NYU).'),
+            t('With 22 years of experience in marketing, branding, and new product development, she has worked in both transnational consumer product companies and the automotive industry.'),
+            t('She has received multiple awards from media and companies for her extensive career in brand development and marketing strategies.')
+        ]
 
-	},
-	{
-		title: 'Gimena Sanchez',
-		slug: 'gimena-sanchez',
-		description: 'Entrepreneurship Director.',
-		icon: '/images/sponsors-people/gimena-sanchez.avif',
-		company: 'Endeavor México',
-		company_icon: '/images/sponsors-corporate/endeavor.jpeg',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Gimena es una líder experimentada en la promoción del ambiente emprendedor, social y cultural a través de emprendimientos de alto impacto en México.',
-			'Como Entrepreneurship Director en Endeavor México, ha demostrado su habilidad en identificar y apoyar a las startups más prometedoras del país, con un enfoque en impulsar la innovación y el cambio.',
-			'',
-			'Su experiencia previa en finanzas y gestión de proyectos ha sido invaluable en su trabajo actual en Endeavor, donde ayuda a las empresas a navegar los desafíos del mercado y a alcanzar su máximo potencial de crecimiento.',
-			'Gimena es una apasionada defensora del emprendimiento como una fuerza transformadora para México, y ha sido clave en el éxito de numerosas empresas emergentes en el país.'
-		]
+    },
+    {
+        title: 'Mariana Carmona',
+        slug: 'mariana-carmona',
+        description: t('Head of HR / Sr HRBP.'),
+        icon: '/images/sponsors-people/mariana-carmona.avif',
+        company: 'Mercado Libre',
+        company_icon: '/images/sponsors-corporate/mercado-libre.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Mariana Carmona is the Head of Human Resources / Sr HRBP at Mercado Libre in Mexico City for the past three years, where she manages the operations of 5000 full-time employees.'),
+            t('Previously, she worked at Nestlé Mexico for 4 years and 6 months as Human Resources Manager - Project Management, providing support to HRBPs for the implementation of strategies in organizational development, training, and "Nestlé Employer Branding".'),
+            '',
+            t('Mariana also worked as a Human Resources Business Partner in Mexico City and Human Resources Administrator in Valle de México, ensuring compliance with Human Resources policies and procedures, as well as training, recruitment, and selection through assessment centers.'),
+            t('Mariana holds a Bachelor\'s degree in Industrial and Organizational Psychology since 2011.')
+        ]
 
-	},
-	{
-		title: 'Aaron Koivunen',
-		slug: 'aaron-koivunen',
-		description: 'CTO & Co-Funder.',
-		icon: '/images/sponsors-people/aaron-koivunen.avif',
-		company: 'TEDI / Karbook',
-		company_icon: '/images/sponsors-corporate/karbook.png',
-		nationality: 'Alemania 🇩🇪 - Finlandia 🇫🇮',
-		legacy: [
-			'Aaron Koivunen es un emprendedor y líder en el ámbito tecnológico, cofundador de Karbook, una empresa que busca democratizar el acceso a la tecnología en la industria de reparación automotriz.',
-			'Su misión es facilitar la transformación digital en talleres, refaccionarías y flotillas, con el objetivo de generar un cambio positivo en la industria y mejorar la eficiencia operativa de pequeñas y medianas empresas (PyMEs) en este sector.',
-			'',
-			'Reconocido por su capacidad de liderazgo y colaboración, Aaron ha demostrado su habilidad para superar desafíos en diversos contextos, siempre identificando y aprovechando las fortalezas de su equipo.',
-			'En 2024, fue seleccionado como uno de los 50 empresarios de alto impacto en Europa a través del programa Young Transatlantic Innovation Leaders Initiative (YTILI), en reconocimiento a su capacidad para impulsar la innovación tecnológica y el cambio social.',
-			'',
-			'Con más de ocho años de experiencia en la construcción de empresas de tecnología en México y Europa, Aaron se ha enfocado en promover la inclusión tecnológica y social a través de sus proyectos.',
-			'El gobierno mexicano reconoció su trabajo con Karbook al otorgarle un proyecto de alto impacto, resaltando su contribución al desarrollo de la industria automotriz y su compromiso con la transformación digital.',
-			'',
-			'Aaron es un apasionado defensor del empoderamiento de las nuevas generaciones, participando activamente en programas como Jóvenes Construyendo el Futuro, donde abre las puertas de su organización para enseñar habilidades en el desarrollo de software a jóvenes en situación de vulnerabilidad.',
-			'Asimismo, su experiencia como consultor por más de cinco años le ha permitido asesorar empresas en estrategias de digitalización y crecimiento, siendo un referente en la implementación de tecnologías disruptivas como la inteligencia artificial (IA).',
-			'',
-			'Además de su rol en Karbook, Aaron es consejero en el Centro de Manufactura Avanzada de Estados Unidos y miembro del Club Automotriz Karmona, enfocado en la restauración de autos clásicos y servicios de alto rendimiento.',
-			'Con un enfoque social y una visión clara de innovación, Aaron continúa impulsando la transformación tecnológica y el liderazgo inclusivo en diversas industrias.'
-		]
+    },
+    {
+        title: 'Paola Rodriguez',
+        slug: 'paola-rodriguez',
+        description: t('Engineering Manager'),
+        icon: '/images/sponsors-people/paola-rodriguez.avif',
+        company: 'Lyft',
+        company_icon: '/images/sponsors-corporate/microsoft.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Paola Rodríguez is a successful professional in the field of information technology, with a career spanning over 19 years in sectors such as telecommunications, manufacturing, banking, and IT consulting.'),
+            t('Currently, Paola is the Director of Engineering at Lyft and is known for her ability to lead innovative and efficient projects, generating efficiencies through lean methodologies in infrastructure, operations, and software development.'),
+            '',
+            t('Paola has been recognized for her leadership, negotiation, and high-performing team building skills, as well as her ability to design innovative thinking methodologies under agile methodologies.'),
+            t('Paola has also contributed significantly to compliance with local and global regulations, such as ISO and SOX.'),
+            t('In 2016, she served as Corporate Systems Manager at GRUPO LUIS HOYO.')
+        ]
 
-	},
-	{
-		title: 'Hazel Guerrero Hurtado',
-		slug: 'hazel-guerrero-hurtado',
-		description: 'Directora General.',
-		icon: '/images/sponsors-people/hazel-guerrero.avif',
-		company: 'BW Automotrive Motor Parts',
-		company_icon: '/images/sponsors-corporate/bw.jpeg',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Hazel Guerrero Hurtado es reconocida por su destacado desempeño como Directora General de la empresa familiar y transnacional BW Comercial Automotive Motor Parts, la cual se dedica a la fabricación de piezas de motor y a nivel mundial en sistemas de enfriamiento.',
-			'',
-			'Es Licenciada en Administración de Empresas y Finanzas, graduada con mención honorífica por el Instituto Tecnológico de Monterrey, y cuenta con una Especialidad en Mercadotecnia por la Universidad de Nueva York (NYU).',
-			'Con una experiencia de 22 años en mercadotecnia, branding y desarrollo de nuevos productos, ha trabajado tanto en empresas transnacionales de productos de consumo como en la industria automotriz.',
-			'Ha sido multipremiada por medios de comunicación y compañías por su amplia trayectoria en el desarrollo de marcas y estrategias de marketing.'
-		]
+    },
+    {
+        title: 'Monica Guerrero',
+        slug: 'monica-guerreo',
+        description: t('Regional Marketing Director for Mexico and Latin America'),
+        icon: '/images/sponsors-people/monica-guerrero.avif',
+        company: 'Denso',
+        company_icon: '/images/sponsors-corporate/denso.png',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Experienced marketing specialist with a focus on the Mexican and Latin American market.'),
+            t('Currently, she serves as Regional Marketing Manager at DENSO, where she leads the coordination of special events and regional marketing strategies.'),
+            '',
+            t('With over a decade of experience, Mónica has worked in prominent companies such as SAS and Yokogawa, where she also managed event coordination and the implementation of marketing campaigns, demonstrating her ability to connect brands with key audiences in the region.')
+        ]
 
-	},
-	{
-		title: 'Mariana Carmona',
-		slug: 'mariana-carmona',
-		description: 'Head of HR / Sr HRBP.',
-		icon: '/images/sponsors-people/mariana-carmona.avif',
-		company: 'Mercado LIbre',
-		company_icon: '/images/sponsors-corporate/mercado-libre.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Mariana Carmona es Jefe de Recursos Humanos / Sr HRBP en Mercado Libre en Ciudad de México desde hace tres años, donde administra las operaciones de 5000 empleados de tiempo completo.',
-			'Anteriormente, trabajó en Nestlé México durante 4 años y 6 meses como Gerente de Recursos Humanos - Gestión de Proyectos, brindando apoyo a los HRBP para la implementación de estrategias en desarrollo organizacional, capacitación y "Nestlé Employer Branding".',
-			'',
-			'Mariana también trabajó como Socio Comercial de Recursos Humanos en México DF y Administrador de Recursos Humanos en el Valle de México, asegurando el cumplimiento de políticas y procedimientos de Recursos Humanos, así como de formación, reclutamiento y selección mediante assessment center.',
-			'Mariana es Licenciada en Psicología Industrial y Organizacional desde 2011.'
-		]
-
-	},
-	{
-		title: 'Paola Rodriguez',
-		slug: 'paola-rodriguez',
-		description: 'Engineering Manager',
-		icon: '/images/sponsors-people/paola-rodriguez.avif',
-		company: 'Lyft',
-		company_icon: '/images/sponsors-corporate/microsoft.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Paola Rodríguez es una exitosa profesional en el campo de las tecnologías de la información, con una carrera de más de 19 años en sectores como telecomunicaciones, fabricación, banca y consultoría de TI.',
-			'Actualmente, Paola es Directora de Ingeniería en Lyft y es conocida por su capacidad para liderar proyectos innovadores y eficientes, generando eficiencias a través de metodologías lean en infraestructura, operaciones y desarrollo de software.',
-			'',
-			'Paola ha sido reconocida por sus habilidades de liderazgo, negociación y formación de equipos de alto rendimiento, así como por su capacidad para diseñar metodologías de pensamiento innovadoras bajo metodologías ágiles.',
-			'Paola también ha contribuido significativamente al cumplimiento de normativas locales y globales, como ISO y SOX.',
-			'En el 2016, se desempeñó como Gerente de Sistemas Corporativos en GRUPO LUIS HOYO.'
-		]
-
-	},
-	{
-		title: 'Monica Guerreo',
-		slug: 'monica-guerreo',
-		description: 'Directora Regional de Marketing de México y Latinoamerica',
-		icon: '/images/sponsors-people/monica-guerrero.avif',
-		company: 'Denso',
-		company_icon: '/images/sponsors-corporate/denso.png',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Experimentada especialista en marketing con un enfoque en el mercado de México y América Latina.',
-			'Actualmente, se desempeña como Gerente Regional de Marketing en DENSO, donde lidera la coordinación de eventos especiales y estrategias de marketing regionales.',
-			'',
-			'Con más de una década de experiencia, Mónica ha trabajado en empresas destacadas como SAS y Yokogawa, donde también se encargó de la coordinación de eventos y la implementación de campañas de marketing, demostrando su habilidad para conectar marcas con audiencias clave en la región.'
-		]
-
-	},
-	{
-		title: 'Denisse Tiznado ',
-		slug: 'denisse-tiznado',
-		description: 'Psicóloga Clinica Licenciada y Consultora DEI',
-		icon: '/images/sponsors-people/denisse-tiznado.avif',
-		company: 'University of Washington',
-		company_icon: '/images/sponsors-corporate/washington-sponsor.avif',
-		nationality: 'México 🇲🇽-USA 🇺🇸',
-		legacy: [
-			'Denisse Tiznado es una exitosa profesional en el campo de la psicología clínica.',
-			'Es Licenciada en Psicología Clínica y Consultora DEI en Washington, Estados Unidos.',
-			'En 2021, fue nombrada Profesora Asistente Interino - Clínico y Profesora II en la Facultad de Artes y Ciencias del Departamento de Psicología.',
-			'También se desempeña como Psicóloga de planta en el Sistema de Atención Médica de San Diego VA desde 2018.',
-			'',
-			'Con una amplia trayectoria en la prestación de terapia individual y grupal, Denisse ha trabajado en el Tratamiento de Adicciones Cronograma, brindando apoyo a veteranos con diversos diagnósticos, que incluyen trastornos por uso de sustancias, diagnóstico dual con Trastorno Depresivo Mayor, TEPT, TOC, Trastornos de Ansiedad, Adaptación Trastorno, Esquizofrenia, Trastorno Bipolar I y II, Trastornos de la Personalidad, entre otros.',
-			'Denisse obtuvo su Doctorado en Filosofía (Ph.D.) en Psicología Clínica de la Salud en la Universidad de Missouri-Kansas City en 2011.'
-		]
-	},
-	{
-		title: 'Paola Mendoza',
-		slug: 'paola-mendoza',
-		description: 'CEO & Co-Fundadora',
-		icon: '/images/sponsors-people/paola-mendoza.avif',
-		company: 'Carlota Flower Lab',
-		company_icon: '/images/sponsors-corporate/carlota-sponsor.avif',
-		nationality: 'México 🇲🇽',
-		legacy: [
-			'Paola Mendoza es una emprendedora apasionada por las flores y el arte floral.',
-			'Junto a su esposo, fundó en 2016 Carlota Flower Lab, una empresa que se dedica a difundir su amor por las flores y las técnicas más innovadoras en el panorama internacional, rompiendo las reglas tradicionales en México.',
-			'Paola estudió Diseño Gráfico, pero pronto descubrió que no quería trabajar en una oficina encerrada.',
-			'',
-			'En cambio, su pasión por las flores la llevó a crecer desde un pequeño negocio de venta de flores hasta convertirse en una exitosa empresaria dedicada a compartir su experiencia con otros apasionados de la floristería.',
-			'Con una formación de tres años en diversas escuelas de floristería junto a su esposo, decidieron crear un estilo propio que se hiciera reconocible en el mercado.',
-			'',
-			'En noviembre de 2018 impartieron su primer taller de formación de nuevos talentos, convirtiéndose rápidamente en un referente del arte floral mexicano.',
-			'Poco después, Carlota Flower Lab abrió las puertas del mercado estadounidense con su primer taller en Los Ángeles en marzo de 2020.',
-			'Su éxito no tiene límites y su visión es llevar su conocimiento a otros países para que más personas se unan a esta gran forma de emprender un negocio.'
-		]
-	}, {
-		title: 'Alessandra Cagnin Caballero',
-		slug: 'alessandra-cagnin',
-		description: 'Founder',
-		icon: '/images/sponsors-people/alessandra-cagnin.avif',
-		company: 'TBA',
-		company_icon: '/images/sponsors-corporate/tba-sponsor.avif',
-		nationality: 'México 🇲🇽 - Canada 🇨🇦',
-		legacy: ['TBA']
-	},
+    },
+    {
+        title: 'Denisse Tiznado ',
+        slug: 'denisse-tiznado',
+        description: t('Licensed Clinical Psychologist and DEI Consultant'),
+        icon: '/images/sponsors-people/denisse-tiznado.avif',
+        company: 'University of Washington',
+        company_icon: '/images/sponsors-corporate/washington-sponsor.avif',
+        nationality: t('Mexico 🇲🇽-USA 🇺🇸'),
+        legacy: [
+            t('Denisse Tiznado is a successful professional in the field of clinical psychology.'),
+            t('She is a Licensed Clinical Psychologist and DEI Consultant in Washington, United States.'),
+            t('In 2021, she was appointed Interim Assistant Professor - Clinical and Professor II in the College of Arts & Sciences, Department of Psychology.'),
+            t('She also serves as Staff Psychologist at the San Diego VA Health Care System since 2018.'),
+            '',
+            t('With extensive experience in providing individual and group therapy, Denisse has worked in the Addiction Treatment Schedule, providing support to veterans with various diagnoses, including substance use disorders, dual diagnosis with Major Depressive Disorder, PTSD, OCD, Anxiety Disorders, Adjustment Disorder, Schizophrenia, Bipolar Disorder I and II, Personality Disorders, among others.'),
+            t('Denisse obtained her Doctor of Philosophy (Ph.D.) in Clinical Health Psychology from the University of Missouri-Kansas City in 2011.')
+        ]
+    },
+    {
+        title: 'Paola Mendoza',
+        slug: 'paola-mendoza',
+        description: t('CEO & Co-Founder'),
+        icon: '/images/sponsors-people/paola-mendoza.avif',
+        company: 'Carlota Flower Lab',
+        company_icon: '/images/sponsors-corporate/carlota-sponsor.avif',
+        nationality: t('Mexico 🇲🇽'),
+        legacy: [
+            t('Paola Mendoza is an entrepreneur passionate about flowers and floral art.'),
+            t('Together with her husband, she founded Carlota Flower Lab in 2016, a company dedicated to spreading their love for flowers and the most innovative techniques in the international scene, breaking traditional rules in Mexico.'),
+            t('Paola studied Graphic Design, but soon discovered she didn\'t want to work in an enclosed office.'),
+            '',
+            t('Instead, her passion for flowers led her to grow from a small flower selling business to a successful entrepreneur dedicated to sharing her experience with other flower arranging enthusiasts.'),
+            t('With three years of training in various floristry schools alongside her husband, they decided to create their own recognizable style in the market.'),
+            '',
+            t('In November 2018, they held their first workshop for training new talents, quickly becoming a benchmark in Mexican floral art.'),
+            t('Shortly after, Carlota Flower Lab opened its doors to the U.S. market with its first workshop in Los Angeles in March 2020.'),
+            t('Their success knows no bounds and their vision is to take their knowledge to other countries so that more people can join this great way of starting a business.')
+        ]
+    }, {
+        title: 'Alessandra Cagnin Caballero',
+        slug: 'alessandra-cagnin',
+        description: t('Founder'),
+        icon: '/images/sponsors-people/alessandra-cagnin.avif',
+        company: 'TBA',
+        company_icon: '/images/sponsors-corporate/tba-sponsor.avif',
+        nationality: t('Mexico 🇲🇽 - Canada 🇨🇦'),
+        legacy: [t('TBA')]
+    },
 ];
-
 export type Benefits = {
 	title: string,
 	icon: IconName,
@@ -563,3 +559,16 @@ export const programs: Programs[] = [
         buttonText: t("Summit '23"),
     },
 ];
+
+export type Logos=string[];
+
+
+ export const logos:Logos = [
+    "./images/sponsors-corporate/irex-icon.png",
+    "./images/sponsors-corporate/karbook-icon.png",
+    "./images/sponsors-corporate/usa-departament.png",
+    "./images/sponsors-corporate/usa-icon.png",
+    "./images/sponsors-corporate/tedi-longlight.png",
+    "./images/sponsors-corporate/ylai_square.png",
+
+  ];

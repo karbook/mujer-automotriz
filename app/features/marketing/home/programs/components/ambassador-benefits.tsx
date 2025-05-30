@@ -53,7 +53,7 @@ export function AmbassadorBenefits() {
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="blackTransparent"
-                className="mt-4 ml-0 md:ml-5 text-black text-md md:text-xl py-2 md:py-4"              >
+                className="mt-4 ml-0 md:ml-5 text-black text-md md:text-xl py-2 md:py-4">
                 {t("Register")}
               </Button>
             </a>

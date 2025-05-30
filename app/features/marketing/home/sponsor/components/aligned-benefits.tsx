@@ -56,7 +56,7 @@ export function AlignedBenefits() {
                         variant="blackTransparent"
                         className="px-14 py-8 text-lg font-bold rounded-4xl text-black hover:text-black hover:dark:text-black  border-gray-400 hover:bg-gray-200 border hover:border-gray-400 transition-colors duration-300"
                     >
-                            {t('Begin')}
+                     {t('Begin')}
                     </Button>
                 </div>
             </div>

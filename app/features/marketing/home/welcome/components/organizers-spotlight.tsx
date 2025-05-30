@@ -10,6 +10,8 @@ import { useRef } from "react";
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
 import { useTranslation } from "react-i18next";
+
+import { logos } from "../constants";
 export function OrganizersSpotlight(){
   const{t}=useTranslation();
   const emblaApi = useRef<CarouselApi | null>(null);
@@ -20,15 +22,6 @@ export function OrganizersSpotlight(){
     direction: "forward",
   };
 
-  const logos = [
-    "./images/sponsors-corporate/irex-icon.png",
-    "./images/sponsors-corporate/karbook-icon.png",
-    "./images/sponsors-corporate/usa-departament.png",
-    "./images/sponsors-corporate/usa-icon.png",
-    "./images/sponsors-corporate/tedi-longlight.png",
-    "./images/sponsors-corporate/ylai_square.png",
-
-  ];
 
   const numRepetitions = 6;
   const repeatedLogos = Array(numRepetitions).fill([...logos]).flat();
@@ -50,8 +43,8 @@ export function OrganizersSpotlight(){
             className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 text-black dark:text-white leading-relaxed"
             style={{ fontFamily: "var(--font-SF-Pro)" }}
           >
-            <span className="text-purple-500">{t("Pioneers")}</span>{" "}
-            {t("in the creation of the first international network of women in the")}{" "}
+            <span className="text-purple-500">{t("Pioneers")}</span>
+            {t("in the creation of the first international network of women in the")}
             <span className="text-pink-500">{t("automotive industry")}</span>
           </h2>
           <p className="text-sm sm:text-2xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed" style={{ fontFamily: "var(--font-SF-Pro)" }}
@@ -81,7 +74,7 @@ export function OrganizersSpotlight(){
         </h1>
 
         <div className="overflow-hidden relative py-14 sm:py-28">
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#a0d7d6] dark:to-[#0c4247] pointer-events-none z-10 backdrop-blur-lg" />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#a20a72] dark:to-[#a20a72] pointer-events-none z-10 backdrop-blur-lg" />
           <Carousel
             className="w-full relative z-20 animate-fadeIn"
             setApi={(api) => (emblaApi.current = api)}

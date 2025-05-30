@@ -2,21 +2,23 @@ import { useParams } from 'react-router';
 import { ambassadors } from '../constants';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '@/components/ui/icon';
-
+import { useTranslation } from 'react-i18next';
 export default function AmbassadorInformation() {
   const { slug } = useParams();
   const ambassador = ambassadors.find(a => a.slug === slug);
   const navigate = useNavigate();
+  const { t } = useTranslation();
+  const translatedLegacy = ambassador.legacy.map(lineKey => t(lineKey));
 
   const handleGoBack = () => {
-    navigate(-1);
+    navigate(`/`);
   };
 
   if (!ambassador) {
     return (
       <section className="min-h-screen bg-white dark:bg-black text-black dark:text-white flex justify-center items-center">
         <p className="text-center text-xl font-semibold text-red-600 dark:text-red-500">
-          No se encontró el embajador con slug: <span className="font-mono">{slug}</span>
+          {t('The ambassador was not found with slug:')} <span className="font-mono">{slug}</span>
         </p>
       </section>
     );
@@ -65,16 +67,16 @@ export default function AmbassadorInformation() {
 
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col justify-center text-left animate-fadeIn space-y-6 mr-auto px-6 sm:px-0">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider text-dark dark:text-white bg-clip-text leading-relaxed py-4 mt-0 lg:mt-6 mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
-          {ambassador.title}
+          {t(ambassador.title)}
         </h1>
 
         <p className="text-xl sm:text-2xl lg:text-3xl text-gray-800 dark:text-gray-300 font-semibold leading-snug sm:max-w-lg lg:max-w-xl" style={{ fontFamily: 'var(--font-poppins)' }}>
-          {ambassador.description}
+          {t(ambassador.description)}
         </p>
 
         <div className="mt-4 space-y-4 text-gray-800 dark:text-gray-300 text-lg sm:text-xl lg:text-2xl">
           <div className="flex items-center gap-2 font-semibold" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
-            {ambassador.nationality}
+            {t(ambassador.nationality)}
           </div>
 
           <div className="flex items-center gap-3">
@@ -89,21 +91,21 @@ export default function AmbassadorInformation() {
               {ambassador.company}
             </span>
           </div>
-
           <div className="mt-6 space-y-6 text-gray-700 dark:text-gray-100 text-xl sm:text-2xl font-semibold leading-relaxed rounded-lg bg-gray-100 dark:bg-gray-800 p-6 shadow-lg" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
-            {Array.isArray(ambassador.legacy) ? (
+            {Array.isArray(translatedLegacy) ? (
               <ul className="list-disc list-inside space-y-3 border-l-4 border-orange-500 pl-6 shadow-md">
-                {ambassador.legacy.map((line, i) =>
-                  line.startsWith("•") ? (
-                    <li key={i} className="text-dark dark:text-white font-semibold" style={{ fontFamily: 'var(--font-SF-Pro)' }}>{line.replace("• ", "")}</li>
+                {translatedLegacy.map((lineKey, i) =>
+                  lineKey.startsWith("•") ? (
+                    <li key={i} className="text-dark dark:text-white font-semibold">{lineKey.replace("• ", "")}</li>
                   ) : (
-                    <p key={i} className="mt-2">{line}</p>
+                    <p key={i} className="mt-2">{lineKey}</p>
                   )
                 )}
               </ul>
             ) : (
-              <p>{ambassador.legacy}</p>
+              <p>{t(ambassador.legacy)}</p>
             )}
+
           </div>
 
         </div>

@@ -32,7 +32,7 @@ export function ContributorBenefits() {
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLScRo7-7qlgtJqNqj5T7wfS6htJ7LGjKNstdOsaVir1g3Me17w/viewform" target="_blank" rel="noopener noreferrer">
                             <Button
                                 variant="blackTransparent"
-                                className="mt-4 ml-0 md:ml-5 dark:border-gray-600 text-black text-md md:text-xl py-2 md:py-4"              >
+                                className="mt-4 ml-0 md:ml-5 dark:border-gray-600 text-black text-md md:text-xl py-2 md:py-4">
 
                                 {t("Register")}
                             </Button>
@@ -80,8 +80,8 @@ export function ContributorBenefits() {
 
             <section className="max-w-7xl mx-auto px-8 py-20">
                 <div className="text-center mb-12">
-                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white">{t('Benefits')}</h2>
-                    <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">
+                    <h2 className="text-5xl font-bold text-gray-900 dark:text-white">{t('Benefits')}</h2>
+                    <p className="text-2xl text-gray-600 dark:text-gray-300 mt-2">
                         {t('Be part of the community and access the following benefits')}
                     </p>
                 </div>
@@ -114,8 +114,8 @@ export function ContributorBenefits() {
                         {benefits.map((benefit, index) => (
                             <div key={index} className="p-6 rounded-3xl border border-gray-300 dark:border-white/20 hover:shadow-lg hover:border-blue-500 transition-all duration-300 bg-white dark:bg-black/20 text-center">
                                 <Icon name={benefit.icon} size="xxl" className={benefit.bgColor} />
-                                <h3 className="text-2xl font-bold mt-4 text-gray-900 dark:text-white">{t(benefit.title)}</h3>
-                                <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{t(benefit.description)}</p>
+                                <h3 className="text-3xl font-bold mt-4 text-gray-900 dark:text-white">{t(benefit.title)}</h3>
+                                <p className="text-xl text-gray-600 dark:text-gray-300 mt-2">{t(benefit.description)}</p>
                             </div>
                         ))}
                     </div>

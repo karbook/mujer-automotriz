@@ -13,7 +13,7 @@ import {CorporateSponsorships} from '../components/corporate-sponsorships'
 import {SponsorsPresentation} from '../components/sponsors-presentation'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
-	const title = t('TEDI Stack | React Router, Bun, Hono, and much more')
+	const title = t('Mujer Automotriz')
 	return { meta: { title } }
 }
 

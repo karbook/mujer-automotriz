@@ -24,7 +24,7 @@ export function Footer() {
           </p>
           <div>
             <Link to="/form-mujer-automotriz" className="inline-block"> 
-              <Button variant="black" className="px-8 py-6 text-base group">
+              <Button variant="blackTransparent" className="px-8 py-6 text-base group">
                 <span className="group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:via-pink-500 group-hover:to-red-500">
                   {t("Contact")}
                 </span>
