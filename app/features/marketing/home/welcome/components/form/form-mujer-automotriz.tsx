@@ -1,8 +1,14 @@
 "use client";
 
+// UTILS
+import { useTranslation } from "react-i18next";
+
+// VALIDATION
+import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+
+// COMPONENTS
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -14,7 +20,6 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/text-area";
-import { useTranslation } from "react-i18next";
 
 export default function ContactForm() {
   const { t } = useTranslation();
@@ -41,9 +46,7 @@ export default function ContactForm() {
   });
 
   async function onSubmit(values: ContactFormValues) {
-    console.log("Datos enviados:", values);
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    console.log("Mensaje procesado.");
     form.reset();
   }
 

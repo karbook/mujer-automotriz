@@ -1,8 +1,13 @@
-import { benefits } from "../constants";
+// UTILS
+import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+// COMPONENTS
 import { Icon } from "@/components/ui/icon";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
+
+// DATA
+import { benefits } from "../constants";
 
 export function CorporateSponsorships() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -14,26 +19,26 @@ export function CorporateSponsorships() {
         <h2 className="text-5xl font-bold text-center text-gray-900 dark:text-white" style={{ fontFamily: "var(--font-SF-Pro)" }}>
           {t("Corporate Sponsorships")}
         </h2>
-        <p className="text-xl text-center font-semibold text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" style={{ fontFamily: "var(--font-SF-Pro)" }}>
+        <p className="text-3xl text-center font-semibold text-gray-600 dark:text-gray-400 max-w-3xl mx-auto" style={{ fontFamily: "var(--font-SF-Pro)" }}>
           {t("Benefits aligned with your goals. Let's forge the future of the automotive industry in Mexico and Latin America together.")}
         </p>
 
         <Carousel className="block md:hidden relative" onIndexChange={setCurrentIndex}>
           <CarouselContent>
-            {benefits.map((benefit, index) => {
+            {benefits.map((benefit) => {
               const translatedDescription = Array.isArray(benefit.description)
-                ? benefit.description.map(item => t(item))
+                ? benefit.description.map((item) => t(item))
                 : [t(benefit.description)];
 
               return (
-                <CarouselItem key={index} className="basis-full">
+                <CarouselItem key={benefit.title} className="basis-full">
                   <div className="bg-[#001e22] dark:bg-[#001e22] text-white rounded-xl p-6 shadow-md border border-[#011f22] hover:border-green-400 transition duration-300">
                     <Icon name={benefit.icon} size="xxl" className="text-green-400" />
                     <h3 className="text-xl font-semibold mb-2">{t(benefit.title)}</h3>
 
                     <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 mt-2 font-semibold">
                       {translatedDescription.map((item, idx) => (
-                        <li key={idx}>{item}</li>
+                        <li key={`${benefit.title}-${idx}`}>{item}</li>
                       ))}
                     </ul>
                   </div>
@@ -52,22 +57,21 @@ export function CorporateSponsorships() {
           </div>
         </Carousel>
         <div className="hidden md:grid md:grid-cols-3 gap-10">
-          {benefits.map((benefit, index) => {
+          {benefits.map((benefit) => {
             const translatedDescription = Array.isArray(benefit.description)
-              ? benefit.description.map(item => t(item))
+              ? benefit.description.map((item) => t(item))
               : [t(benefit.description)];
-
             return (
               <div
-                key={index}
+                key={benefit.title}
                 className="bg-[#001e22] dark:bg-[#001e22] text-white rounded-xl p-6 shadow-md border border-[#011f22] hover:border-green-400 transition duration-300"
               >
                 <Icon name={benefit.icon} size="xxl" className="text-green-400" />
-                <h3 className="text-xl font-semibold mb-2">{t(benefit.title)}</h3>
+                <h3 className="text-2xl font-semibold mb-2 mt-5">{t(benefit.title)}</h3>
 
-                <ul className="list-disc list-inside text-sm text-gray-300 space-y-1 mt-2 font-semibold">
+                <ul className="list-disc list-inside text-lg text-gray-300 space-y-1 mt-2 font-semibold">
                   {translatedDescription.map((item, idx) => (
-                    <li key={idx}>{item}</li>
+                    <li key={`${benefit.title}-${idx}`}>{item}</li>
                   ))}
                 </ul>
               </div>

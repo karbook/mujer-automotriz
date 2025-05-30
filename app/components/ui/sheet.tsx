@@ -65,7 +65,7 @@ const SheetContent = React.forwardRef<
 			ref={ref}
 			className={cn(
 				sheetVariants({ side }),
-				'w-[30%] min-w-72 overflow-auto', // Custom styles: default width and overflow
+				'w-[30%] min-w-72 overflow-auto',
 				className
 			)}
 			{...props}

@@ -448,6 +448,7 @@ export const ambassadors = [
         legacy: [t('TBA')]
     },
 ];
+
 export type Benefits = {
 	title: string,
 	icon: IconName,
@@ -559,6 +560,7 @@ export const programs: Programs[] = [
         buttonText: t("Summit '23"),
     },
 ];
+
 
 export type Logos=string[];
 

@@ -1,24 +1,24 @@
 "use client";
 
-import { useState } from "react";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselPrevious,
-    CarouselNext,
-} from "@/components/ui/carousel";
-import { Icon } from "@/components/ui/icon";
-import { sponsorships } from "../constants";
+// UTILS
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+// COMPONENTS
+import { Icon } from "@/components/ui/icon";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
+// DATA
+import { sponsorships } from "../constants";
+
 export function BecomeSponsor() {
-    const {t}=useTranslation();
+    const { t } = useTranslation();
     const [currentIndex, setCurrentIndex] = useState(0);
 
     return (
         <section className="w-full px-4 sm:px-6 py-12 bg-white dark:bg-black">
             <div className="max-w-[90rem] mx-auto mb-8 text-left px-2 sm:px-4">
-                <h2 className="inline-block ml-[-18px] sm:ml-[-20px] px-4 py-1 rounded-full text-5xl font-semibold bg-gradient-to-r from-[#06c8b3] via-[#09dfaa] to-[#04c8cc] bg-clip-text text-transparent"style={{ fontFamily: 'var(--font-SF-Pro)'}}>
+                <h2 className="inline-block ml-[-18px] sm:ml-[-20px] px-4 py-1 rounded-full text-5xl font-semibold bg-gradient-to-r from-[#06c8b3] via-[#09dfaa] to-[#04c8cc] bg-clip-text text-transparent" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
                     {t('Contact us')}
                 </h2>
                 <h2 className="text-2xl sm:text-6xl font-bold text-dark leading-relaxed" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
@@ -38,9 +38,9 @@ export function BecomeSponsor() {
                     <Carousel onIndexChange={setCurrentIndex}>
                         <div className="overflow-hidden py-4">
                             <CarouselContent className="gap-4 sm:gap-0 min-h-[220px]">
-                                {sponsorships.map((sponsorship, index) => (
+                                {sponsorships.map((sponsorship) => (
                                     <CarouselItem
-                                        key={index}
+                                        key={sponsorship.title} 
                                         className="basis-full sm:basis-1/2 md:basis-1/3 min-h-[240px]"
                                     >
                                         <div className="p-4 sm:p-6 rounded-2xl text-left shadow-md bg-gradient-to-br from-[#04352e] to-[#021c18] text-[#ECF0F7] h-[240px] sm:h-[220px] border border-[#089283] flex flex-col justify-start">
@@ -50,12 +50,13 @@ export function BecomeSponsor() {
                                             <h3 className="text-2xl sm:text-3xl font-semibold mb-1">
                                                 {t(sponsorship.title)}
                                             </h3>
-                                            <p className="text-lg sm:text-xl text-[#D1D5DB]" style={{ fontFamily: 'var(--font-Inter)' }}>
+                                            <p className="text-lg sm:text-xl text-[#D1D5DB] font-semibold" style={{ fontFamily: "var(--font-SF-Pro)" }}>
                                                 {t(sponsorship.description)}
                                             </p>
                                         </div>
                                     </CarouselItem>
                                 ))}
+
                             </CarouselContent>
                         </div>
 

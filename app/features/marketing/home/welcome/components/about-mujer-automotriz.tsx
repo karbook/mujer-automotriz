@@ -1,8 +1,15 @@
-
-import { programs } from "../constants";
-import { Button } from "@/components/ui/button";
+// CORE
 import { Link } from "react-router";
+
+// UTILS
 import { useTranslation } from "react-i18next";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
+
+// DATA
+import { programs } from "../constants";
+
 export function AboutMujerAutomotriz() {
 
     const {t} =useTranslation();
@@ -24,7 +31,7 @@ export function AboutMujerAutomotriz() {
                                 style={{ aspectRatio: '4 / 3' }}
                             />
                         </div>
-                        <div className="sm:w-1/2 text-white text-left bg-[#1d011acc] backdrop-blur-md backdrop-saturate-150 border border-white/10 shadow-inner rounded-xl p-4 sm:p-6 flex flex-col justify-between h-full">
+                        <div className="sm:w-1/2 text-white text-left bg-[#31021e] backdrop-blur-md backdrop-saturate-150 border border-white/10 shadow-inner rounded-xl p-4 sm:p-6 flex flex-col justify-between h-full">
                             <div className="flex-grow">
                                 <h3 className="text-xl sm:text-3xl font-semibold mb-2 sm:mb-4">
                                     {t(program.title)}

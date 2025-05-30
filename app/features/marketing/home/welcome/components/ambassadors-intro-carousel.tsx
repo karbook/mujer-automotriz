@@ -1,12 +1,21 @@
 "use client";
 
+// CORE
+import { Link } from "react-router";
+
+// UTILS
+import { useTranslation } from "react-i18next";
 import { useRef, useState } from "react";
+
+// COMPONENTS
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
-import { ambassadors } from "../constants";
+
+// TYPES
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
-import { Link } from "react-router";
-import { useTranslation } from "react-i18next";
+
+// DATA
+import { ambassadors } from "../constants";
 
 export function AmbassadorsIntroCarousel() {
   const { t } = useTranslation();
@@ -26,7 +35,6 @@ export function AmbassadorsIntroCarousel() {
       setDisabledLinks((prev) => ({ ...prev, [slug]: false }));
     }, 3000);
   };
-
   return (
     <section className="w-full pt-6 sm:pt-10 pb-0 px-4 sm:px-6 lg:px-10 bg-white dark:bg-black overflow-hidden">
       <div className="max-w-7xl mx-auto text-left relative">
@@ -49,14 +57,13 @@ export function AmbassadorsIntroCarousel() {
               if (!isReady) setIsReady(true);
             }}
             opts={{ loop: true }}
-            autoScroll={true} 
+            autoScroll={true}
             autoScrollOptions={autoScrollOptions}
           >
-            <CarouselContent className="-ml-2 sm:-ml-4 opacity-0 transition-opacity duration-500" 
-              style={{ opacity: isReady ? 1 : 0 }}
-            >
-              {ambassadors.map((ambassador, index) => (
-                <CarouselItem key={index} className="basis-[55%] sm:basis-1/3 md:basis-1/4 p-2 sm:p-4">
+            <CarouselContent className={`-ml-2 sm:-ml-4 transition-opacity duration-500 ${isReady ? "opacity-100" : "opacity-0"}`}>
+
+              {ambassadors.map((ambassador) => (
+                <CarouselItem key={ambassador.slug} className="basis-[55%] sm:basis-1/3 md:basis-1/4 p-2 sm:p-4">
                   <Link
                     to={`/information/${ambassador.slug}`}
                     onClick={() => handleClick(ambassador.slug)}
@@ -87,7 +94,7 @@ export function AmbassadorsIntroCarousel() {
                         <p className="text-xs sm:text-xl font-semibold" style={{ fontFamily: "var(--font-poppins)" }}>
                           {t(ambassador.company)}
                         </p>
-                        <div className="flex-grow"/>
+                        <div className="flex-grow" />
                         <div className="flex justify-end text-xs sm:text-xl font-semibold dark:text-black font-semibold text-white/80">
                           {t(ambassador.nationality)}
                         </div>

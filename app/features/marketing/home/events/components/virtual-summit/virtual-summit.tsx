@@ -1,12 +1,18 @@
-import { useState } from "react";
-import { allSchedules } from "../../constants";
-const glowColorPrimary = "#f97316";
-const glowColorSecondary = "#fb923c";
-import { Button } from "@/components/ui/button";
+// UTILS
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
+
+// DATA
+import { allSchedules } from "../../constants";
+
 
 export default function VirtualSummit() {
 
+  const glowColorPrimary = "#f97316";
+  const glowColorSecondary = "#fb923c";
   const { t } = useTranslation();
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [activeItemIndex, setActiveItemIndex] = useState<number | null>(null);

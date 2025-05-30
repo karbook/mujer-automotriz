@@ -49,18 +49,17 @@ export function MobileNavigation() {
           className={`${currentOption?.bgColor} ${currentOption?.hoverColor} p-3 rounded-full transition-colors duration-200`}
         >
           <Icon name="menu" className={currentOption?.bgColor.includes('text-white') ? 'text-white' : 'text-black'} />
-          <span className="sr-only">Menu</span>
+          <span className="sr-only">{t('Menu')}</span>
         </Button>
       </SheetTrigger>
       <SheetContent side="left" className="hide-scrollbar w-4/6 overflow-y-auto lg:hidden">
         <SheetHeader>
           <Logo className="h-8 w-32" variant="long" />
-          <SheetTitle className="sr-only">Menú of Navigation</SheetTitle>
+          <SheetTitle className="sr-only">{('Menú of Navigation')}</SheetTitle>
           <SheetDescription className="sr-only">
-            Navigation
+            {('Navigation')}
           </SheetDescription>
         </SheetHeader>
-        
         <div className="mt-8 h-full px-2">
           <ul className="space-y-4">
             <li>

@@ -1,8 +1,16 @@
-import { useParams } from 'react-router';
-import { ambassadors } from '../constants';
-import { useNavigate } from 'react-router-dom';
-import { Icon } from '@/components/ui/icon';
-import { useTranslation } from 'react-i18next';
+// CORE
+import { useParams } from "react-router";
+import { useNavigate } from "react-router-dom";
+
+// UTILS
+import { useTranslation } from "react-i18next";
+
+// COMPONENTS
+import { Icon } from "@/components/ui/icon";
+
+// DATA
+import { ambassadors } from "../constants";
+
 export default function AmbassadorInformation() {
   const { slug } = useParams();
   const ambassador = ambassadors.find(a => a.slug === slug);
@@ -13,7 +21,6 @@ export default function AmbassadorInformation() {
   const handleGoBack = () => {
     navigate(`/`);
   };
-
   if (!ambassador) {
     return (
       <section className="min-h-screen bg-white dark:bg-black text-black dark:text-white flex justify-center items-center">
@@ -23,7 +30,6 @@ export default function AmbassadorInformation() {
       </section>
     );
   }
-
   return (
     <main className="relative min-h-screen flex flex-col lg:flex-row items-stretch gap-0 lg:gap-12 px-0 sm:px-12 lg:px-24 overflow-hidden bg-white dark:bg-black text-black dark:text-white">
       <button

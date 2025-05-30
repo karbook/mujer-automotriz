@@ -1,15 +1,14 @@
-import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
-} from "@/components/ui/carousel";
-import { ambassadors } from "../constants";
-import { useState } from "react";
-import { Icon } from '@/components/ui/icon';
+// UTILS
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
+
+// DATA
+import { ambassadors } from "../constants";
 
 export function AmbassadorBenefits() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -37,9 +36,6 @@ export function AmbassadorBenefits() {
           </p>
         </div>
       </section>
-
-
-
       <section className="max-w-6xl mx-auto px-6 py-8 mt-6 text-black dark:text-white relative">
         <div className="absolute inset-0 bg-gray-100 dark:bg-[#31021e] rounded-2xl shadow-lg"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-12">

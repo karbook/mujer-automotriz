@@ -1,28 +1,35 @@
 "use client";
-
 import * as React from 'react';
+
+// UTILS
+import { useTranslation } from "react-i18next";
+import { useRef } from "react";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselPrevious,
     CarouselNext,
-} from '@/components/ui/carousel';
-
+} from "@/components/ui/carousel";
 import {
     Dialog,
     DialogContent,
     DialogDescription,
     DialogTitle,
 } from "@/components/ui/dialog";
-import { logos } from '../../constants';
-import { Button } from "@/components/ui/button";
-import { useRef } from "react";
-import { useTranslation } from 'react-i18next';
-import { sessions } from '../../constants';
-import type { Sessions } from '../../constants';
+
+// DATA
+import { logos } from "../../constants";
+import { sessions } from "../../constants";
+
+// TYPES
+import type { Sessions } from "../../constants";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
 import type { CarouselApi } from "@/components/ui/carousel";
+
 export default function LeadershipInMotion() {
     const [selectedItem, setSelectedItem] = React.useState<Sessions | null>(null);
     const [isDialogOpen, setIsDialogOpen] = React.useState(false);
@@ -62,12 +69,12 @@ export default function LeadershipInMotion() {
                     mousewheel={true}
                 >
                     <CarouselContent className="flex w-full gap-x-4 md:gap-x-12 py-4">
-                        {sessions.map((session, index) => (
+                        {sessions.map((session) => (
                             <CarouselItem
-                                key={index}
+                                key={session.name}
                                 className={`flex-shrink-0 cursor-pointer
-                                        basis-full md:basis-1/5 flex flex-col relative overflow-hidden
-                                        ${session.backgroundColor} ${session.textColor} h-[600px] md:h-[950px] rounded-4xl`}
+        basis-full md:basis-1/5 flex flex-col relative overflow-hidden
+        ${session.backgroundColor} ${session.textColor} h-[600px] md:h-[950px] rounded-4xl`}
                                 onClick={() => handleItemClick(session)}
                             >
                                 {session.itemBgImage && (
@@ -81,20 +88,24 @@ export default function LeadershipInMotion() {
                                 {session.itemBgImage && (
                                     <div className="absolute left-0 right-0 bottom-[-50px] w-full h-full bg-gradient-to-t from-black/70 to-transparent" style={{ zIndex: 1 }} />
                                 )}
-                                <div className={`p-6 z-10 w-full`}>
-                                    <h1 className='text-4xl md:text-2xl font-semibold mb-1 leading-tight' style={{ fontFamily: ('var(--font-SF-Pro)') }}>{t('Session')} {session.numberSession}</h1>
-                                    <h2 className="text-4xl md:text-6xl font-semibold mb-1 leading-tight" style={{ fontFamily: ('var(--font-SF-Pro)') }}>{t(session.name)}</h2>
+                                <div className="p-6 z-10 w-full">
+                                    <h1 className='text-4xl md:text-2xl font-semibold mb-1 leading-tight' style={{ fontFamily: 'var(--font-SF-Pro)' }}>
+                                        {t('Session')} {session.numberSession}
+                                    </h1>
+                                    <h2 className="text-4xl md:text-6xl font-semibold mb-1 leading-tight" style={{ fontFamily: 'var(--font-SF-Pro)' }}>
+                                        {t(session.name)}
+                                    </h2>
                                     <h3
                                         className="text-xl sm:text-4xl md:text-5xl lg:text-4xl font-semibold"
-                                        style={{ fontFamily: ('var(--font-SF-Pro)') }}
+                                        style={{ fontFamily: 'var(--font-SF-Pro)' }}
                                     >
                                         {t(session.position)}
                                     </h3>
                                 </div>
-
                                 <div className="flex-grow" />
                             </CarouselItem>
                         ))}
+
                     </CarouselContent>
                     <div className="flex justify-center gap-x-4 mt-4 md:hidden">
                         <CarouselPrevious className="px-4 py-6 rounded-full border border-gray-800 bg-white dark:bg-black dark:text-white dark:border border-gray-500 text-black hover:bg-gray-300 dark:hover:bg-gray-900" />

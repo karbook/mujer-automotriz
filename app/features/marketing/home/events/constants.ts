@@ -142,7 +142,7 @@ export type DaySchedule = {
 
 export const allSchedules: DaySchedule[] = [
   {
-    date: t("May 24, 2025"), 
+    date: t("May 24, 2023"), 
     day: t("Day 1"), 
     borderColor: "border-orange-500",
 
@@ -215,7 +215,7 @@ export const allSchedules: DaySchedule[] = [
     ],
   },
   {
-    date: t("May 25, 2025"), 
+    date: t("May 25, 2023"), 
     day: t("Day 2"), 
     borderColor: "border-pink-500",
     items: [
@@ -280,7 +280,7 @@ export const allSchedules: DaySchedule[] = [
     ],
   },
   {
-    date: t("May 26, 2025"), 
+    date: t("May 26, 2023"), 
     day: t("Day 3"), 
     borderColor: "border-red-500",
     items: [
@@ -364,7 +364,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Mónica Doger',
     fullText: t('In this talk, we dive into essential topics through a dialogue with an industry leader and expert, such as the current state, technology, challenges, and possibilities in the automotive field. Joining us is Mónica Doger, a prominent leader in the automotive sector and business growth in Mexico, who serves as General Director of the Automotive Cluster of Puebla and Tlaxcala, fostering innovation, industry expansion, and interaction among key players in the automotive sector. Don’t miss it!'),
-    imageUrl: '/images/leadership/doger.avif',
+    imageUrl: '/images/leadership/monica-doger-session.avif',
     itemBgImage: '/images/conferents-people/monica-doger.png',
     imageBackground: '/images/backgrounds-abstract/form-abstract-small.png',
     backgroundColor: 'bg-gray-200',
@@ -377,7 +377,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Katria Oviedo',
     fullText: t('Join us in this inspiring session with Katria Oviedo, an outstanding entrepreneur and leader in the tech and automotive sectors. As co-founder of Jetz App, Katria has revolutionized the auto parts supply chain in Latin America through disruptive digital solutions. During this talk, she will share her path to success, the challenges she has overcome, and how women are making their mark and leading with passion in an industry traditionally dominated by men.'),
-    imageUrl: '/images/leadership/katria.avif',
+    imageUrl: '/images/leadership/katria-session.avif',
     itemBgImage: '/images/conferents-people/katria-oviedo.png',
     imageBackground: '/images/backgrounds-abstract/form-abstract-pink-form.png',
     backgroundColor: 'bg-black',
@@ -390,7 +390,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Paola Rodríguez',
     fullText: t('In this exciting session, Paola Rodríguez, a leader in the tech industry, will share her inspiring professional journey. From her entry into the world of technology and the automotive sector to her success in holding leadership positions at international companies, Paola will reveal how women are transforming industries traditionally dominated by men.'),
-    imageUrl: '/images/leadership/paola.avif',
+    imageUrl: '/images/leadership/paola-session.avif',
     itemBgImage: '/images/conferents-people/paola-rodriguez.png',
     backgroundColor: 'bg-gray-200',
     imageBackground: '/images/backgrounds-abstract/form-abstract-pink.png',
@@ -403,7 +403,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Aaron Koivunen',
     fullText: t('In this interactive session, we will explore key technologies and resources for innovation in the automotive industry. Aaron will share fundamental strategies for business growth and digitization, including the use of artificial intelligence and advanced tools to optimize processes and make strategic decisions.'),
-    imageUrl: '/images/leadership/aaron.avif',
+    imageUrl: '/images/leadership/aaron-session.avif',
     itemBgImage: '/images/conferents-people/aaron-koivunen.png',
     backgroundColor: 'bg-black',
     textColor: 'text-white',
@@ -416,7 +416,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Mónica Guerrero',
     fullText: t('In this discussion, we will introduce Mónica Guerrero and her remarkable career in marketing. She will share her experience and how she has persisted in this field, which is largely controlled by men, as well as strategies she has implemented at Denso for international market expansion, focusing on the Latin American sector.'),
-    imageUrl: '/images/leadership/monica.avif',
+    imageUrl: '/images/leadership/monica-guerrero-session.avif',
     itemBgImage: '/images/conferents-people/monica-guerrero.png',
     backgroundColor: 'bg-gray-200',
     textColor: 'text-black',
@@ -429,7 +429,7 @@ export const sessions: Sessions[] = [
   {
     name: 'Lizeth Correa',
     fullText: t('In this session titled “Connection and Empowerment: Keys to Effective Communication,” Lizeth Correa will share key communication techniques and skills in the automotive and tech sector. With her experience at Courier Network, she will teach us how persuasion, leadership, and clarity are essential in negotiations and client management.'),
-    imageUrl: '/images/leadership/lizeth.avif',
+    imageUrl: '/images/leadership/lizeth-session.avif',
     itemBgImage: '/images/conferents-people/lizeth-correa.png',
     backgroundColor: 'bg-black',
     imageBackground: '/images/backgrounds-abstract/form-abstract-pink-form.png',

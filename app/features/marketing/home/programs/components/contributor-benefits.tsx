@@ -1,6 +1,12 @@
 "use client";
 
+// UTILS
+import { useTranslation } from "react-i18next";
 import { useState } from "react";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 import {
     Carousel,
     CarouselContent,
@@ -8,11 +14,11 @@ import {
     CarouselPrevious,
     CarouselNext,
 } from "@/components/ui/carousel";
+
+// DATA
 import { collaborators } from "../constants";
-import { Icon } from '@/components/ui/icon';
 import { benefits } from "../constants";
-import { Button } from "@/components/ui/button";
-import { useTranslation } from "react-i18next";
+
 export function ContributorBenefits() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const { t } = useTranslation();

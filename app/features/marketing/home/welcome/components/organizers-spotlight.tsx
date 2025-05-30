@@ -1,19 +1,22 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
+// UTILS
+import { useTranslation } from "react-i18next";
 import { useRef } from "react";
+
+// COMPONENTS
+import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+
+// TYPES
 import type { CarouselApi } from "@/components/ui/carousel";
 import type { AutoScrollOptionsType } from "embla-carousel-auto-scroll";
-import { useTranslation } from "react-i18next";
 
+// DATA
 import { logos } from "../constants";
-export function OrganizersSpotlight(){
-  const{t}=useTranslation();
+
+export function OrganizersSpotlight() {
+  const { t } = useTranslation();
   const emblaApi = useRef<CarouselApi | null>(null);
   const autoScrollOptions: Partial<AutoScrollOptionsType> = {
     speed: 1.2,
@@ -44,7 +47,7 @@ export function OrganizersSpotlight(){
             style={{ fontFamily: "var(--font-SF-Pro)" }}
           >
             <span className="text-purple-500">{t("Pioneers")}</span>
-            {t("in the creation of the first international network of women in the")}
+            {t(" in the creation of the first international network of women in the ")}
             <span className="text-pink-500">{t("automotive industry")}</span>
           </h2>
           <p className="text-sm sm:text-2xl text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed" style={{ fontFamily: "var(--font-SF-Pro)" }}
@@ -83,14 +86,14 @@ export function OrganizersSpotlight(){
             autoScrollOptions={autoScrollOptions}
           >
             <CarouselContent className="flex whitespace-nowrap relative -ml-8 sm:-ml-18">
-              {repeatedLogos.map((logo, index) => (
+              {repeatedLogos.map((logo) => (
                 <CarouselItem
-                  key={index}
+                  key={logo}
                   className="basis-[20%] sm:basis-auto shrink-0 grow-0 px-4 sm:px-8 flex justify-center items-center relative opacity-70 hover:opacity-100 transition-opacity duration-300"
                 >
                   <img
                     src={logo}
-                    alt={`Logo ${index + 1}`}
+                    alt={`Logo ${logo}`}
                     className="h-8 sm:h-16 w-auto object-contain grayscale dark:filter-none transition-transform duration-300 ease-in-out transform scale-110 hover:scale-125"
                     style={{
                       filter: "brightness(180%) contrast(60%)",

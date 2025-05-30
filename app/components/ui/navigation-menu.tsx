@@ -124,13 +124,10 @@ function NavigationMenuLink({
 	  <NavigationMenuPrimitive.Link
 		data-slot="navigation-menu-link"
 		className={cn(
-		  // Estilos de hover con el color gris personalizado
 		  "hover:bg-[#282929] hover:text-gray-100 focus:bg-[#282929] focus:text-gray-100 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gray-400",
 	
-		  // Disposición y espaciado con bordes completamente redondeados
 		  "flex items-center justify-between rounded-full p-3 text-lg transition-all duration-200",
 	
-		  // Estilo del ícono
 		  "[&_svg]:text-gray-700 [&_svg]:size-5",
 		  className
 		)}

@@ -36,7 +36,6 @@
   }
 
 :root {
-	--font-sans: nunito, nunito fallback;
 	--font-poppins: 'Poppins-Light', sans-serif;
 	--font-poppins-bold: 'Poppins-Bold', sans-serif;
 	--font-inter: 'Inter-Variable', sans-serif;
