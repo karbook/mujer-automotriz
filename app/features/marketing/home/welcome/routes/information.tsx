@@ -56,7 +56,7 @@ export default function AmbassadorInformation() {
         <div className="z-10 mt-20 sm:mt-24 lg:mt-32 w-full flex justify-center">
           <img
             src={ambassador.icon}
-            alt={`Foto de ${ambassador.title}`}
+            alt={`Photograph of ${ambassador.title}`}
             loading="lazy"
             className="w-52 h-52 sm:w-64 sm:h-64 lg:w-96 lg:h-96 aspect-square rounded-2xl object-cover ring-4 ring-[#ff6700] shadow-[0_0_12px_#ff6700] hover:scale-105 hover:shadow-[0_0_20px_#ff6700] transition-all duration-500"
           />
@@ -70,7 +70,6 @@ export default function AmbassadorInformation() {
           />
         </div>
       </div>
-
       <div className="w-full lg:w-1/2 min-h-screen flex flex-col justify-center text-left animate-fadeIn space-y-6 mr-auto px-6 sm:px-0">
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-wider text-dark dark:text-white bg-clip-text leading-relaxed py-4 mt-0 lg:mt-6 mb-4" style={{ fontFamily: 'var(--font-poppins)' }}>
           {t(ambassador.title)}

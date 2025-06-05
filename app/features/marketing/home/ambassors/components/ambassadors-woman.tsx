@@ -20,7 +20,7 @@ export function AmbassadorsWoman() {
       <section
         className="relative w-full min-h-[50vh] px-6 sm:px-8 lg:px-10 text-white bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center"
         style={{
-          backgroundImage: "url('/images/backgrounds-abstract/background-woman.png')",
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/backgrounds-abstract/background-woman.png')",
         }}
       >
         <div className="container mx-auto text-center">
@@ -29,7 +29,7 @@ export function AmbassadorsWoman() {
               className="text-4xl sm:text-8xl font-bold tracking-tight"
               style={{ fontFamily: "var(--font-poppins)" }}
             >
-              🌟 {t('Ambassadors')} 🌟
+              {t('Ambassadors')}
             </motion.h1>
             <motion.p
               className="text-lg sm:text-3xl max-w-xl mx-auto leading-relaxed text-gray-300"

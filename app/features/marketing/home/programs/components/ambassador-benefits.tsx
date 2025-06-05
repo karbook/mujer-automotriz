@@ -14,7 +14,6 @@ export function AmbassadorBenefits() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const { t } = useTranslation();
  
-
   return (
     <>
       <section className="w-full text-white relative">
@@ -25,10 +24,10 @@ export function AmbassadorBenefits() {
         />
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative px-6 py-16 md:py-24 max-w-screen-xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold mt-8 md:mt-10 mb-12 text-left drop-shadow-lg">
+          <h1 className="text-4xl md:text-6xl font-extrabold mt-8 md:mt-10 mb-12 text-left drop-shadow-lg"style={{ fontFamily: 'var(--font-SF-Pro)' }}>
             {t('Mujer Automotriz')}
           </h1>
-          <h2 className="text-5xl md:text-7xl font-extrabold mb-4 text-left drop-shadow-lg text-pink-500">
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-4 text-left drop-shadow-lg text-pink-500"style={{ fontFamily: 'var(--font-SF-Pro)' }}>
             {t('Join and be part of the network')}
           </h2>
           <p className="text-base md:text-2xl max-w-xl md:max-w-4xl mb-8 text-left text-justify" style={{ fontFamily: 'var(--font-SF-Pro)' }}>

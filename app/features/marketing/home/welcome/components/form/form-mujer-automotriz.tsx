@@ -1,4 +1,4 @@
-"use client";
+import { sendEmail } from "./send-email";
 
 // UTILS
 import { useTranslation } from "react-i18next";
@@ -54,7 +54,7 @@ export default function ContactForm() {
     <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white p-6 md:p-8">
       <div className="relative grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl xl:max-w-screen-xl bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
         <div className="relative flex items-center justify-center p-8 md:p-16 lg:p-24 bg-cover bg-center min-h-[200px] md:min-h-full"
-             style={{ backgroundImage: "url('/images/backgrounds-abstract/background-hands.png')" }}>
+          style={{ backgroundImage: "url('/images/backgrounds-abstract/background-hands.png')" }}>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
         </div>
         <div className="p-8 md:p-16 lg:p-24 flex flex-col justify-center space-y-6 md:space-y-8">
@@ -134,7 +134,33 @@ export default function ContactForm() {
                 disabled={form.formState.isSubmitting}
                 className="w-full py-4 md:py-6 text-lg md:text-xl font-bold text-black rounded-full transition-colors duration-200"
               >
-                {form.formState.isSubmitting ? t("Sending...") : t("Send message")}
+                {form.formState.isSubmitting ? (
+                  <span className="flex items-center justify-center">
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-black"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0a12 12 0 00-12 12h4z"
+                      />
+                    </svg>
+                    {t("Sending...")}
+                  </span>
+                ) : (
+                  t("Send message")
+                )}
               </Button>
             </form>
           </Form>

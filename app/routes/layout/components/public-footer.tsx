@@ -39,9 +39,8 @@ export function Footer() {
         </div>
         <div className="text-sm text-white dark:text-white flex flex-col items-center md:items-end">
           <p className="mb-1 text-lg">
-            ©2025 <span className="font-semibold text-[#1d156c] dark:text-white">tedi.club</span>
+            ©2025 <span className="font-semibold text-[#1d156c] dark:text-white">Mujer Automotriz</span>
           </p>
-          <p className="text-lg font-semibold" style={{fontFamily:('var(--font-SF-Pro)')}}>{t("Founded with passion in a Finnish sauna")}</p>
         </div>
       </div>
     </footer>

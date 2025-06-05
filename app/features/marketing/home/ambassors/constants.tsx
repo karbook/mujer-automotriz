@@ -16,7 +16,7 @@ export const ambassadors = [
 	{
 		title: 'Majo Rodríguez',
 		slug: 'majo-rodriguez',
-		description: t('Professional Driver.'),
+		description: t('Professional Driver'),
 		icon: '/images/sponsors-people/majo-rodriguez.avif',
 		company: 'Majo Rodriguez',
 		company_icon: '/images/sponsors-corporate/majo.png',
@@ -41,9 +41,9 @@ export const ambassadors = [
 	{
 		title: 'Naomi Fellows',
 		slug: 'naomi-fellows',
-		description: t('Labor Counselor and Head of the Labor and Competitiveness Unit.'),
+		description: t('Counselor for Public Affairs, U.S. Embassy, Addis Ababa, Ethiopia'),
 		icon: '/images/sponsors-people/naomi-fellows.avif',
-		company: 'Embassy of the United States in Mexico',
+		company: 'U.S. Embassy in Ethiopia',
 		company_icon: '/images/sponsors-corporate/usa-departament.png',
 		nationality: t('Venezuela 🇻🇪 - USA 🇺🇸'),
 		legacy: [
@@ -84,7 +84,7 @@ export const ambassadors = [
 	{
 		title: 'Monica Doger',
 		slug: 'monica-doger',
-		description: t('Director of the Puebla and Tlaxcala Automotive Cluster at Cluster Automotriz Zona Centro.'),
+		description: t('Director of the Puebla and Tlaxcala Automotive Cluster at Cluster Automotriz Zona Centro'),
 		icon: '/images/sponsors-people/monica-doger.avif',
 		company: 'CLAUZ',
 		company_icon: '/images/sponsors-corporate/clauz-icon.png',
@@ -104,10 +104,10 @@ export const ambassadors = [
 	{
 		title: 'Ana Arias',
 		slug: 'ana-arias',
-		description: t('Director of Marketing and Corporate Communications.'),
+		description: t('Marketing and Communications Director'),
 		icon: '/images/sponsors-people/ana-arias.avif',
-		company: 'Grupo Apymsa',
-		company_icon: '/images/sponsors-corporate/apymsa-icon.png',
+		company: 'SYD (Suspensión y Dirección)',
+		company_icon: '/images/sponsors-corporate/SYD.jpeg',
 		nationality: t('Mexico 🇲🇽'),
 		legacy: [
 			t('Ana is a bilingual executive with over 25 years of experience in the retail, industrial, health, consumer, and technology sectors, contributing to the positioning and profitability of leading brands in the market through the development of marketing, commercial, and communication strategies, including 360 Communications plans (Offline / Digital).'),
@@ -120,10 +120,10 @@ export const ambassadors = [
 	{
 		title: 'Claudia Marquez',
 		slug: 'claudia-marquez',
-		description: t('COO.'),
+		description: t('Chief Operating Officer'),
 		icon: '/images/sponsors-people/claudia-marquez.avif',
-		company: 'Genesis Motor North America',
-		company_icon: '/images/sponsors-corporate/genesis-motor.png',
+		company: 'Hyundai Motor America',
+		company_icon: '/images/sponsors-corporate/hyundai.png',
 		nationality: t('Mexico 🇲🇽 - USA 🇺🇸'),
 		legacy: [
 			t('Claudia Marquez, COO of Genesis Motor North America, is one of the most recognized women in the automotive industry with over 25 years of experience.'),
@@ -140,7 +140,7 @@ export const ambassadors = [
 	{
 		title: 'Katria Oviedo',
 		slug: 'katria-oviedo',
-		description: t('CEO.'),
+		description: t('CEO'),
 		icon: '/images/sponsors-people/katria-oviedo.avif',
 		company: 'Jetz',
 		company_icon: '/images/sponsors-corporate/jetz.jpeg',
@@ -161,7 +161,7 @@ export const ambassadors = [
 	{
 		title: 'Claudia Quintanilla',
 		slug: 'claudia-quintanilla',
-		description: t('CEO & Co-Funder.'),
+		description: t('CEO & Co-Funder'),
 		icon: '/images/sponsors-people/claudia-quintanilla.avif',
 		company: 'Rextie',
 		company_icon: '/images/sponsors-corporate/rextie.png',
@@ -180,7 +180,7 @@ export const ambassadors = [
 	{
 		title: 'Lilia Acosta',
 		slug: 'lilia-acosta',
-		description: t('Founder and Entrepreneur.'),
+		description: t('Founder and Entrepreneur'),
 		icon: '/images/sponsors-people/lilia-acosta.avif',
 		company: 'AMEXME Cápitulo Cholula',
 		company_icon: '/images/sponsors-corporate/amexme.jpeg',
@@ -197,7 +197,7 @@ export const ambassadors = [
 	{
 		title: 'Inna Makhniboroda',
 		slug: 'inna-makhniboroda',
-		description: t('Founder and Partner.'),
+		description: t('Founder and Partner'),
 		icon: '/images/sponsors-people/inna-makhniboroda.avif',
 		company: 'Sigue Derecho / E&M Business Lawyers',
 		company_icon: '/images/sponsors-corporate/lawyer.png',
@@ -230,10 +230,10 @@ export const ambassadors = [
 	{
 		title: 'Edgar Espejel',
 		slug: 'edgar-espejel',
-		description: t('Founding Partner.'),
+		description: t('Founding Partner'),
 		icon: '/images/sponsors-people/edgar-espejel.avif',
-		company: 'E&M Business Lawyer',
-		company_icon: '/images/sponsors-corporate/lawyer.png',
+		company: 'Club Rotario Lindavista de la Ciudad de México',
+		company_icon: '/images/sponsors-corporate/rotario.jpeg',
 		nationality: t('Mexico 🇲🇽'),
 		legacy: [
 			t('Edgar Espejel is a lawyer specializing in business law, graduated with an LLM from the University of Cambridge.'),
@@ -249,7 +249,7 @@ export const ambassadors = [
 	{
 		title: 'Adriana Carmona',
 		slug: 'adriana-carmona',
-		description: t('CEO & Co-Founder.'),
+		description: t('CEO & Co-Founder'),
 		icon: '/images/sponsors-people/adriana-carmona.avif',
 		company: 'TEDI / Karbook',
 		company_icon: '/images/sponsors-corporate/karbook.png',
@@ -271,7 +271,7 @@ export const ambassadors = [
 	{
 		title: 'Gimena Sanchez',
 		slug: 'gimena-sanchez',
-		description: t('Entrepreneurship Director.'),
+		description: t('Entrepreneurship Director'),
 		icon: '/images/sponsors-people/gimena-sanchez.avif',
 		company: 'Endeavor México',
 		company_icon: '/images/sponsors-corporate/endeavor.jpeg',
@@ -287,7 +287,7 @@ export const ambassadors = [
 	{
 		title: 'Aaron Koivunen',
 		slug: 'aaron-koivunen',
-		description: t('CTO & Co-Funder.'),
+		description: t('CTO & Co-Funder'),
 		icon: '/images/sponsors-people/aaron-koivunen.avif',
 		company: 'TEDI / Karbook',
 		company_icon: '/images/sponsors-corporate/karbook.png',
@@ -313,7 +313,7 @@ export const ambassadors = [
 	{
 		title: 'Hazel Guerrero Hurtado',
 		slug: 'hazel-guerrero-hurtado',
-		description: t('General Director.'),
+		description: t('General Director'),
 		icon: '/images/sponsors-people/hazel-guerrero.avif',
 		company: 'BW Automotive Motor Parts',
 		company_icon: '/images/sponsors-corporate/bw.jpeg',
@@ -330,7 +330,7 @@ export const ambassadors = [
 	{
 		title: 'Mariana Carmona',
 		slug: 'mariana-carmona',
-		description: t('Head of HR / Sr HRBP.'),
+		description: t('Head of HR / Sr HRBP'),
 		icon: '/images/sponsors-people/mariana-carmona.avif',
 		company: 'Mercado Libre',
 		company_icon: '/images/sponsors-corporate/mercado-libre.png',
@@ -347,9 +347,9 @@ export const ambassadors = [
 	{
 		title: 'Paola Rodriguez',
 		slug: 'paola-rodriguez',
-		description: t('Engineering Manager'),
+		description: t('IT Operations Manager'),
 		icon: '/images/sponsors-people/paola-rodriguez.avif',
-		company: 'Lyft',
+		company: 'Microsoft',
 		company_icon: '/images/sponsors-corporate/microsoft.png',
 		nationality: t('Mexico 🇲🇽'),
 		legacy: [
@@ -385,7 +385,7 @@ export const ambassadors = [
 		icon: '/images/sponsors-people/denisse-tiznado.avif',
 		company: 'University of Washington',
 		company_icon: '/images/sponsors-corporate/washington-sponsor.avif',
-		nationality: t('Mexico 🇲🇽-USA 🇺🇸'),
+		nationality: t('Mexico 🇲🇽 - USA 🇺🇸'),
 		legacy: [
 			t('Denisse Tiznado is a successful professional in the field of clinical psychology.'),
 			t('She is a Licensed Clinical Psychologist and DEI Consultant in Washington, United States.'),
