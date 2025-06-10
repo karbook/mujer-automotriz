@@ -18,17 +18,17 @@ import Logo from './logo';
 import LanguageDropDown from './language-dropdown';
 import { MobileNavigation } from './public-mobile-navigation';
 
-const menuItems = [
-  { path: '/', label: 'Home' },
-  { path: '/events', label: 'Events' },
-  { path: '/programs', label: 'Programs' },
-  { path: '/ambassors', label: 'Ambassadors' },
-  { path: '/sponsor', label: 'Sponsors' },
-] as const;
-
 export function Header() {
   const { t } = useTranslation();
   const location = useLocation();
+
+  const menuItems = [
+    { path: '/', label: t('Home') },
+    { path: '/events', label: t('Events') },
+    { path: '/programs', label: t('Programs') },
+    { path: '/ambassors', label: t('Ambassadors') },
+    { path: '/sponsor', label: t('Sponsors') },
+  ] as const;
 
   return (
     <nav className="sticky top-0 w-full py-8 min-h-[80px] bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-md z-50 flex items-center justify-center lg:justify-between px-4 2xl:px-20">
@@ -62,7 +62,7 @@ export function Header() {
                     )}
                     style={{ fontFamily: 'var(--font-poppins)' }}
                   >
-                    {t(item.label)}
+                    {item.label}
                   </Link>
                 </NavigationMenuItem>
               );

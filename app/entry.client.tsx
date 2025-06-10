@@ -2,7 +2,6 @@
 if (ENV.MODE === 'production' && ENV.SENTRY_DSN) {
 	import('./features/analytics/sentry/sentry.client.tsx').then(({ init }) => init())
 }
-
 // CORE
 import { startTransition, StrictMode } from 'react'
 import { hydrateRoot } from 'react-dom/client'

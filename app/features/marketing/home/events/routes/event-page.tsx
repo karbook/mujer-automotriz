@@ -11,7 +11,7 @@ import {EventMovementLeadership} from '../components/event-movement-leadership'
 import {EventWomanSummit} from '../components/event-women-summit'
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
-	const title = t('Women in Automotive | Empowering Women in the Automotive Industry - Free Training')
+	const title = t('Mujer Automotriz | Empowering Women in the Automotive Industry - Free Training')
 	return { meta: { title } }
 }
 

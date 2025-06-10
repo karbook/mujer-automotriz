@@ -1,3 +1,5 @@
+"use client";
+
 // CORE
 import { Link } from "react-router";
 
@@ -49,11 +51,11 @@ export function EventMovementLeadership() {
               key={programHighlight.title}
               className="relative p-10 border-t border-blue-500 hover:bg-[#043b5f] group min-h-[300px] flex flex-col"
             >
-              <div
-                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent ${programHighlight.borderColors?.[0] ? `via-${programHighlight.borderColors[0]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
+                            <div
+                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent ${programHighlight.borderColors?.[0] ? `via-${programHighlight.borderColors[0]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-opacity transition-transform duration-300 will-change-[opacity,transform]`}
               />
               <div
-                className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent ${programHighlight.borderColors?.[1] ? `via-${programHighlight.borderColors[1]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
+                className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent ${programHighlight.borderColors?.[1] ? `via-${programHighlight.borderColors[1]}` : "via-blue-500"} to-transparent opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-opacity transition-transform duration-300 will-change-[opacity,transform]`}
               />
 
               <h2 className="text-4xl font-bold mb-4 text-black dark:text-white group-hover:text-white transition-colors duration-300">

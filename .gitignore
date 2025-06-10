@@ -6,6 +6,9 @@
 
 # Environment variables
 .env
+.env.op
+.env.local
+.env.*.local
 
 # Misc
 .DS_Store

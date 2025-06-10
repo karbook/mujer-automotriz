@@ -1,10 +1,10 @@
-import { sendEmail } from "./send-email";
-
 // UTILS
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 // VALIDATION
 import { z } from "zod";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 
@@ -20,10 +20,12 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/text-area";
+import { Drawer, DrawerContent, DrawerHeader, DrawerTitle, DrawerDescription,DrawerClose } from "@/components/ui/drawer";
+
 
 export default function ContactForm() {
   const { t } = useTranslation();
-
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
   const contactFormSchema = z.object({
     fullName: z.string()
       .min(2, { message: t("The name must be at least 2 characters.") })
@@ -43,17 +45,46 @@ export default function ContactForm() {
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: { fullName: "", email: "", subject: "", message: "" },
+    mode: "onBlur",
+
   });
 
-  async function onSubmit(values: ContactFormValues) {
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    form.reset();
-  }
+  const [submissionStatus, setSubmissionStatus] = useState<"idle" | "success" | "error">("idle");
+  const [feedbackMessage, setFeedbackMessage] = useState<string>("");
+
+  const onSubmit = async (values: ContactFormValues) => {
+    setSubmissionStatus("idle");
+    setFeedbackMessage("");
+    try {
+      const response = await fetch("/r/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmissionStatus("success");
+        setFeedbackMessage(t("Your message has been sent successfully!"));
+        setIsDrawerOpen(true);
+        form.reset();
+      } else {
+        setSubmissionStatus("error");
+      }
+    } catch (error) {
+      setSubmissionStatus("error");
+      console.error("Error submitting form:", error);
+      setFeedbackMessage(t("There was a problem connecting to the server. Please try again later."));
+    }
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white p-6 md:p-8">
       <div className="relative grid grid-cols-1 md:grid-cols-2 w-full max-w-7xl xl:max-w-screen-xl bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl border border-gray-200 dark:border-gray-700">
-        <div className="relative flex items-center justify-center p-8 md:p-16 lg:p-24 bg-cover bg-center min-h-[200px] md:min-h-full"
+        <div className="relative flex items-center justify-center p-8 md:p-16 lg:p-24 bg-cover bg-center min-h-[200px] md:min-h[full]"
           style={{ backgroundImage: "url('/images/backgrounds-abstract/background-hands.png')" }}>
           <div className="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
         </div>
@@ -78,7 +109,7 @@ export default function ContactForm() {
                       style={{ fontFamily: "var(--font-SF-Pro)" }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="border border-red-500 bg-red-50 dark:bg-red-950 p-2 rounded-md text-red-700 dark:text-red-300 text-sm mt-1" />
                 </FormItem>
               )} />
 
@@ -94,7 +125,7 @@ export default function ContactForm() {
                       style={{ fontFamily: "var(--font-SF-Pro)" }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="border border-red-500 bg-red-50 dark:bg-red-950 p-2 rounded-md text-red-700 dark:text-red-300 text-sm mt-1" />
                 </FormItem>
               )} />
 
@@ -109,7 +140,7 @@ export default function ContactForm() {
                       style={{ fontFamily: "var(--font-SF-Pro)" }}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="border border-red-500 bg-red-50 dark:bg-red-950 p-2 rounded-md text-red-700 dark:text-red-300 text-sm mt-1" />
                 </FormItem>
               )} />
 
@@ -124,9 +155,12 @@ export default function ContactForm() {
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="border border-red-500 bg-red-50 dark:bg-red-950 p-2 rounded-md text-red-700 dark:text-red-300 text-sm mt-1" />
                 </FormItem>
               )} />
+              {submissionStatus === "error" && (
+                <p className="text-red-600 text-center font-bold">{feedbackMessage}</p>
+              )}
 
               <Button
                 type="submit"
@@ -166,6 +200,26 @@ export default function ContactForm() {
           </Form>
         </div>
       </div>
+      <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
+        <DrawerContent className="flex flex-col dark:bg-[#08090a] items-center justify-center text-center py-14 px-8">
+          <DrawerHeader>
+            <DrawerTitle className="text-4xl text-center font-semibold text-black-500 dark:text-white" style={{ fontFamily: "var(--font-SF-Pro)" }}>
+              {t("Message Sent Successfully!")}
+            </DrawerTitle>
+            <DrawerDescription className="text-xl text-center text-gray-500 dark:text-gray-400 mt-2" style={{ fontFamily: "var(--font-SF-Pro)" }}>
+              {t("Thank you for reaching out!")}
+            </DrawerDescription>
+          </DrawerHeader>
+          <p className="text-2xl text-gray-600 dark:text-gray-300 mt-6 max-w-lg" style={{ fontFamily: "var(--font-SF-Pro)" }}>
+            {feedbackMessage}
+          </p>
+          <DrawerClose asChild>
+            <Button variant="blackTransparent" className="mt-8 text-xl text-black px-6 py-3 dark:hover:bg-gray-800">
+              {t("Close")}
+            </Button>
+          </DrawerClose>
+        </DrawerContent>
+      </Drawer>
     </div>
   );
 }

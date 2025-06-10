@@ -10,7 +10,7 @@ import { Layout } from './components/public-layout'
 
 export async function loader({ request }: Route.LoaderArgs) {
 	const t = await remixI18Next.getFixedT(request)
-	const title = t('TEDI Stack | Get started with cutting edge technologies')
+	const title = t('Mujer Automotriz')
 	return { meta: { title } }
 }
 

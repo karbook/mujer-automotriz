@@ -560,12 +560,12 @@ export const programs: Programs[] = [
 	},
 ];
 
-export type Logos = string[];
-export const logos: Logos = [
-	"./images/sponsors-corporate/irex-icon.png",
-	"./images/sponsors-corporate/karbook-icon.png",
-	"./images/sponsors-corporate/usa-departament.png",
-	"./images/sponsors-corporate/usa-icon.png",
-	"./images/sponsors-corporate/tedi-longlight.png",
-	"./images/sponsors-corporate/ylai_square.png",
+export type Logo = { id: string; src: string };
+export const logos: Logo[] = [
+  { id: "irex-icon", src: "./images/sponsors-corporate/irex-icon.png" },
+  { id: "karbook-icon", src: "./images/sponsors-corporate/karbook-icon.png" },
+  { id: "usa-department", src: "./images/sponsors-corporate/usa-departament.png" },
+  { id: "usa-icon", src: "./images/sponsors-corporate/usa-icon.png" },
+  { id: "tedi-longlight", src: "./images/sponsors-corporate/tedi-longlight.png" },
+  { id: "ylai-square", src: "./images/sponsors-corporate/ylai_square.png" },
 ];

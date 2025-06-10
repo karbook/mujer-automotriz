@@ -24,6 +24,8 @@
 			"@/*": ["./app/*"],
 			"@/icon-name": ["./app/components/ui/icons/types.ts"],
 			"@/rr/*": [".react-router/types/app/*"]
-		}
+		},
+     "jsx": "react-jsx" 
+
 	}
 }

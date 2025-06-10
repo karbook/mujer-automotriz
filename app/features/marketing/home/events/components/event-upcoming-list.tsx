@@ -1,8 +1,11 @@
+"use client";
+
 // CORE
 import { Link } from "react-router";
 
 // UTILS
 import { useTranslation } from "react-i18next";
+import { useMemo } from "react";
 
 // COMPONENTS
 import { Button } from "@/components/ui/button";
@@ -20,8 +23,10 @@ import {
 import { eventDetails, featuredEvents } from "../constants";
 
 export function EventUpcomingList() {
-
   const { t } = useTranslation();
+
+  const memoizedEventDetails = useMemo(() => eventDetails, []);
+  const memoizedFeaturedEvents = useMemo(() => featuredEvents, []);
 
   return (
     <>
@@ -47,7 +52,7 @@ export function EventUpcomingList() {
         </div>
       </section>
 
-      {eventDetails.map((eventDetail) => (
+      {memoizedEventDetails.map((eventDetail) => (
         <section key={eventDetail.title} className="max-w-7xl mx-auto px-4 py-20 relative min-h-[500px] text-white">
           <div
             className="bg-black/60 rounded-3xl p-10 text-left w-full min-h-[400px]"
@@ -75,27 +80,25 @@ export function EventUpcomingList() {
           </div>
         </section>
       ))}
+
       <section className="max-w-7xl mx-auto px-4">
         <div className="relative shadow-lg overflow-hidden rounded-3xl bg-white dark:bg-black text-black dark:text-white border border-pink-500">
-          {featuredEvents.map((featuredEvent) => (
-            <div
-              key={featuredEvent.title}
-              className="relative p-10 border-t border-pink-500 hover:bg-[#2d0a1f] group min-h-[300px]"
-            >
+          {memoizedFeaturedEvents.map((featuredEvent) => (
+            <div key={featuredEvent.title} className="relative p-10 border-t border-pink-500 hover:bg-[#2d0a1f] group min-h-[300px]">
               <div
-                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent via-${featuredEvent.borderColors[0]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
+                className={`absolute inset-x-1/4 top-0 h-[4px] bg-gradient-to-r from-transparent via-${featuredEvent.borderColors[0]} to-transparent opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-opacity transition-transform duration-300 will-change-[opacity,transform]`}
+              />
+              <div
+                className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent via-${featuredEvent.borderColors[1]} to-transparent opacity-0 group-hover:opacity-100 transform scale-95 group-hover:scale-100 transition-opacity transition-transform duration-300 will-change-[opacity,transform]`}
               />
 
-              <div
-                className={`absolute inset-x-1/4 bottom-0 h-[4px] bg-gradient-to-r from-transparent via-${featuredEvent.borderColors[1]} to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300`}
-              />
-
-              <h2 className="text-4xl font-bold mb-4 text-black dark:text-white group-hover:text-white transition-colors duration-300" style={{ fontFamily: "var(--font-SF-Pro)" }} >
+              <h2 className="text-4xl font-bold mb-4 text-black dark:text-white transition-colors duration-300 group-hover:text-white" style={{ fontFamily: "var(--font-SF-Pro)" }}>
                 {t(featuredEvent.title)}
               </h2>
-              <p className="mb-6 text-2xl font-semibold max-w-4xl group-hover:text-white transition-colors duration-300" style={{ fontFamily: "var(--font-SF-Pro)" }}>
+              <p className="mb-6 text-2xl font-semibold max-w-4xl transition-colors duration-300 group-hover:text-white" style={{ fontFamily: "var(--font-SF-Pro)" }}>
                 {t(featuredEvent.description)}
               </p>
+
               <div className="flex flex-col sm:flex-row gap-4 mt-6 sm:mt-0 sm:absolute sm:bottom-10 sm:right-10 w-full sm:w-auto items-start sm:items-center sm:justify-end">
                 {featuredEvent.buttonText && (
                   <Link to="/sponsor" className="w-full sm:w-auto">
@@ -146,7 +149,6 @@ export function EventUpcomingList() {
           ))}
         </div>
       </section>
-
     </>
   );
 }

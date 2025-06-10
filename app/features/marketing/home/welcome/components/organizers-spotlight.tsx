@@ -24,10 +24,10 @@ export function OrganizersSpotlight() {
     stopOnInteraction: true,
     direction: "forward",
   };
-
-
   const numRepetitions = 6;
-  const repeatedLogos = Array(numRepetitions).fill([...logos]).flat();
+ const repeatedLogos = Array.from({ length: numRepetitions }, (_, index) =>
+  logos.map((logo) => ({ ...logo, id: `${logo.id}-${index}` }))
+).flat();
 
   return (
     <>
@@ -87,13 +87,12 @@ export function OrganizersSpotlight() {
           >
             <CarouselContent className="flex whitespace-nowrap relative -ml-8 sm:-ml-18">
               {repeatedLogos.map((logo) => (
-                <CarouselItem
-                  key={logo}
+                <CarouselItem key={logo.id}
                   className="basis-[20%] sm:basis-auto shrink-0 grow-0 px-4 sm:px-8 flex justify-center items-center relative opacity-70 hover:opacity-100 transition-opacity duration-300"
                 >
                   <img
-                    src={logo}
-                    alt={`Logo ${logo}`}
+                    src={logo.src}
+                    alt={`Logo ${logo.id}`}
                     className="h-8 sm:h-16 w-auto object-contain grayscale dark:filter-none transition-transform duration-300 ease-in-out transform scale-110 hover:scale-125"
                     style={{
                       filter: "brightness(180%) contrast(60%)",
@@ -101,6 +100,7 @@ export function OrganizersSpotlight() {
                   />
                 </CarouselItem>
               ))}
+
             </CarouselContent>
           </Carousel>
         </div>

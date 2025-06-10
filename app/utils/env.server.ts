@@ -20,6 +20,9 @@ const envSchema = z.object({
 	// POSTHOG
 	POSTHOG_API_KEY: z.string(),
 	POSTHOG_API_ENDPOINT: z.string(),
+
+	// RESEND
+    RESEND_API_KEY: z.string(),
 })
 
 type ServerEnv = z.infer<typeof envSchema>
@@ -40,6 +43,8 @@ export function initEnv() {
 	}
 
 	env = parsed.data
+    console.log("DEBUG: RESEND_API_KEY parseada:", env.RESEND_API_KEY);
+
 	Object.freeze(env)
 
 	return env

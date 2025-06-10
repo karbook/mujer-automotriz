@@ -72,8 +72,8 @@ export const loader = async ({ context, request }: Route.LoaderArgs) => {
 	const colorScheme = await getColorScheme(request)
 	const domainUrl = getDomainUrl(request)
 
-	const title = t('TEDI Stack | React Router v7 + Hono + Bun')
-	const description = t('The fast, modern stack for building web applications')
+	const title = t('Mujer Automotriz')
+	const description = t('Empowering Women in the Automotive Industry - Free Training')
 	const error = t('Error | TEDI Stack')
 
 	return data(

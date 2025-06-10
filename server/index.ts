@@ -3,7 +3,6 @@ import * as fs from 'node:fs'
 import { createHonoServer } from 'react-router-hono-server/bun'
 import { Hono } from 'hono/quick'
 import sourceMapSupport from 'source-map-support'
-
 // UTILS
 // import { compress } from 'hono/compress' // IMPORTANT: This middleware is not compatible with Hono's bun adapter. - https://hono.dev/docs/middleware/builtin/compress
 import { i18next } from 'remix-hono/i18next'
