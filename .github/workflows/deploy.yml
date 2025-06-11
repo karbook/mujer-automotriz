@@ -57,7 +57,7 @@ jobs:
         env:
           FLY_API_TOKEN: op://mujer-automotriz/FLY/FLY_API_TOKEN
           SENTRY_AUTH_TOKEN: op://mujer-automotriz/SENTRY/SENTRY_AUTH_TOKEN
-
+          RESEND_API_KEY: op://mujer-automotriz/RESEND/RESEND_API_KEY
       - name: Install 1Password CLI
         uses: 1password/install-cli-action@v1
 
@@ -69,7 +69,8 @@ jobs:
         run: |
           flyctl machines list --json | jq -r '.[].id' | xargs -n1 flyctl machines destroy --force
         env:
-          FLY_API_TOKEN: ${{ env.FLY_API_TOKEN }}
+          FLY_API_TOKEN: ${{ env.FLY_API_TOKEN }} 
+          RESEND_API_KEY: ${{ env.RESEND_API_KEY }}
 
       - name: 🚀 Deploy Production 🚀
         if: ${{ github.ref == 'refs/heads/main' }}
