@@ -1,5 +1,4 @@
 name: 🚀 Deploy
-
 on:
   push:
     branches:
@@ -7,7 +6,6 @@ on:
   pull_request:
     branches:
       - main
-
 env:
   APP_NAME: mujer-automotriz
 
@@ -23,6 +21,7 @@ jobs:
   deploy:
     name: 🚀 Deploy
     runs-on: ubuntu-22.04
+    # only build/deploy branches on pushes and PRs
     if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
 
     steps:
@@ -47,30 +46,24 @@ jobs:
       - name: ⚙️ Install 1password CLI
         uses: 1password/load-secrets-action/configure@v2
         with:
+          # Persist the 1Password Service Account Authorization token
+          # for next steps.
+          # Keep in mind that every single step in the job is now able
+          # to access the token.
           service-account-token: ${{ secrets.OP_SERVICE_ACCOUNT_TOKEN }}
 
       - name: 🔑 Load environment variables
         id: op_secrets
         uses: 1password/load-secrets-action@v2
         with:
+          # Export loaded secrets as environment variables
           export-env: true
         env:
           FLY_API_TOKEN: op://mujer-automotriz/FLY/FLY_API_TOKEN
           SENTRY_AUTH_TOKEN: op://mujer-automotriz/SENTRY/SENTRY_AUTH_TOKEN
-          RESEND_API_KEY: op://mujer-automotriz/RESEND/RESEND_API_KEY
+
       - name: Install 1Password CLI
         uses: 1password/install-cli-action@v1
-
-      - name: 🧰 Install jq
-        run: sudo apt-get update && sudo apt-get install -y jq
-
-      - name: 🧨 Destroy all Fly.io Machines
-        if: ${{ github.ref == 'refs/heads/main' }}
-        run: |
-          flyctl machines list --json | jq -r '.[].id' | xargs -n1 flyctl machines destroy --force
-        env:
-          FLY_API_TOKEN: ${{ env.FLY_API_TOKEN }} 
-          RESEND_API_KEY: ${{ env.RESEND_API_KEY }}
 
       - name: 🚀 Deploy Production 🚀
         if: ${{ github.ref == 'refs/heads/main' }}
