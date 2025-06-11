@@ -22,7 +22,6 @@ const envSchema = z.object({
 	POSTHOG_API_ENDPOINT: z.string(),
 
 	// RESEND
-    RESEND_API_KEY: z.string(),
 })
 
 type ServerEnv = z.infer<typeof envSchema>
