@@ -9,7 +9,7 @@ export type EventDetails = {
 }
 export const eventDetails: EventDetails[] = [
     {
-        title: t("Upcoming events"),
+        title: t("Events held"),
         name: t("Motor Ladies Night"),
         location: t("CDMX - 14 November 2024"),
         buttonText: t("Contact"),
@@ -53,7 +53,7 @@ export type Eventmovements = {
 export const eventmovements: Eventmovements = {
     title: t("Leadership in Motion"),
     subtitle: t("Government of San Luis Potosí and Future Entrepreneurs"),
-    date: t("Virtual Event - September 19-27"),
+    date: t("Virtual Event - September 19-27 2023"),
     buttonText: t("Contact"),
     image: "/images/backgrounds-colors/background-blue.png",
 };
@@ -94,7 +94,7 @@ export const highlightedEvents: HighlightedEvents[] = [
     {
         title: t("Summit Mujer Automotriz"),
         subtitle: t("Diversity, Empowerment and Leadership"),
-        date: t("Virtual - May 6, 2024"),
+        date: t("Virtual - May 6, 2023"),
         buttonText: t("Contact"),
         image: "/images/backgrounds-colors/background-yellow.png",
     },
