@@ -5,16 +5,24 @@ import { ContactUsEmail } from './contact-use-email';
 import { render } from '@react-email/render';
 import { ContactFormSchema } from '@/routes/resource/contact-form-schema';
 
-const env = getServerEnv();
-if (!env.RESEND_API_KEY) {
-    throw new Error("RESEND_API_KEY not configured.");
-}
-const resend = new Resend(env.RESEND_API_KEY);
-
 export async function sendContactEmail(data: z.infer<typeof ContactFormSchema>) {
+    const env = getServerEnv();
+    if (!env.RESEND_API_KEY) {
+        return { success: false, message: "RESEND_API_KEY is missing or not configured." };
+    }
+
+    const resend = new Resend(env.RESEND_API_KEY);
+
     const validationResult = ContactFormSchema.safeParse(data);
     if (!validationResult.success) {
-        return { success: false, message: "Invalid contact form data.", errors: validationResult.error.format() };
+        return { 
+            success: false, 
+            message: "Invalid contact form data.", 
+            errors: validationResult.error.errors.map(err => ({
+                path: err.path,
+                message: err.message
+            })) 
+        };
     }
 
     const emailHtmlContent = await render(
@@ -33,11 +41,11 @@ export async function sendContactEmail(data: z.infer<typeof ContactFormSchema>) 
         html: emailHtmlContent,
     });
 
-    if (!response) {
-        return { success: false, message: "Resend API did not return a response." };
+    if (!response || typeof response !== "object") {
+        return { success: false, message: "Invalid response from Resend API." };
     }
 
-    if ('error' in response && response.error) {
+    if ("error" in response && response.error) {
         return { success: false, message: `Resend API Error: ${response.error.message || 'Unknown error'}` };
     }
 
